@@ -1,0 +1,338 @@
+date,region,variable,method,value,expected,deviation,score,severity,direction,description,anomaly_id
+1980-02-01,New York,rainfall_mm,climatology_zscore,153.1,44.5,244.1,3.014,moderate,wet,"Wet: 153 mm vs normal 44 mm (244% of normal, +3.0σ)",ANM-0001
+1980-03-01,Singapore,multivariate,isolation_forest,24.34,26.59,-2.25,0.0152,moderate,cold,"Unusual climate state (temp -2.2°C, rain +79%)",ANM-0002
+1980-05-01,Sydney,temp_mean_c,climatology_zscore,18.09,21.98,-3.89,-2.562,moderate,cold,Cold anomaly: 18.1°C vs normal 22.0°C (-2.6σ),ANM-0003
+1980-08-01,New York,rainfall_mm,climatology_zscore,1006.5,160.7,526.2,4.717,high,wet,"Wet: 1006 mm vs normal 161 mm (526% of normal, +4.7σ)",ANM-0004
+1980-08-01,New York,multivariate,isolation_forest,4.89,2.94,1.95,0.0654,high,hot,"Unusual climate state (temp +1.9°C, rain +526%)",ANM-0005
+1981-03-01,Sydney,rainfall_mm,climatology_zscore,554.4,163.3,239.5,3.217,moderate,wet,"Wet: 554 mm vs normal 163 mm (240% of normal, +3.2σ)",ANM-0006
+1981-06-01,London,temp_mean_c,stl_residual,5.76,2.45,3.31,3.261,high,hot,Unexpected 5.8°C month: residual +3.3°C (+3.3σ),ANM-0007
+1981-08-01,New York,temp_mean_c,stl_residual,-0.37,3.02,-3.39,-3.503,high,cold,Unexpected -0.4°C month: residual -3.4°C (-3.5σ),ANM-0008
+1981-10-01,London,temp_mean_c,climatology_zscore,8.17,11.56,-3.39,-2.824,moderate,cold,Cold anomaly: 8.2°C vs normal 11.6°C (-2.8σ),ANM-0009
+1981-10-01,London,temp_mean_c,stl_residual,8.17,12.61,-4.44,-4.371,high,cold,Unexpected 8.2°C month: residual -4.4°C (-4.4σ),ANM-0010
+1981-11-01,Sydney,rainfall_mm,climatology_zscore,554.6,139.3,298.1,3.303,moderate,wet,"Wet: 555 mm vs normal 139 mm (298% of normal, +3.3σ)",ANM-0011
+1981-12-01,Sydney,temp_mean_c,stl_residual,10.65,13.75,-3.1,-3.267,high,cold,Unexpected 10.7°C month: residual -3.1°C (-3.3σ),ANM-0012
+1982-01-01,New York,temp_mean_c,stl_residual,25.64,23.44,2.2,2.279,moderate,hot,Unexpected 25.6°C month: residual +2.2°C (+2.3σ),ANM-0013
+1982-04-01,New York,temp_mean_c,climatology_zscore,9.6,13.45,-3.85,-3.272,moderate,cold,Cold anomaly: 9.6°C vs normal 13.5°C (-3.3σ),ANM-0014
+1982-05-01,New York,temp_mean_c,climatology_zscore,3.38,7.45,-4.07,-2.837,moderate,cold,Cold anomaly: 3.4°C vs normal 7.5°C (-2.8σ),ANM-0015
+1982-05-01,New York,temp_mean_c,stl_residual,3.38,5.9,-2.52,-2.61,moderate,cold,Unexpected 3.4°C month: residual -2.5°C (-2.6σ),ANM-0016
+1982-05-01,Sydney,temp_mean_c,stl_residual,22.03,19.93,2.1,2.209,moderate,hot,Unexpected 22.0°C month: residual +2.1°C (+2.2σ),ANM-0017
+1982-06-01,London,multivariate,isolation_forest,1.7,5.02,-3.32,0.0077,moderate,cold,"Unusual climate state (temp -3.3°C, rain -50%)",ANM-0018
+1982-08-01,Hyderabad,temp_mean_c,stl_residual,29.21,31.23,-2.02,-2.219,moderate,cold,Unexpected 29.2°C month: residual -2.0°C (-2.2σ),ANM-0019
+1982-11-01,Singapore,temp_mean_c,stl_residual,26.42,29.1,-2.68,-2.81,moderate,cold,Unexpected 26.4°C month: residual -2.7°C (-2.8σ),ANM-0020
+1982-12-01,Singapore,temp_mean_c,stl_residual,26.25,28.62,-2.37,-2.478,moderate,cold,Unexpected 26.2°C month: residual -2.4°C (-2.5σ),ANM-0021
+1983-01-01,London,temp_mean_c,stl_residual,16.85,19.21,-2.36,-2.328,moderate,cold,Unexpected 16.9°C month: residual -2.4°C (-2.3σ),ANM-0022
+1983-04-01,London,rainfall_mm,climatology_zscore,221.8,65.4,239.3,2.675,moderate,wet,"Wet: 222 mm vs normal 65 mm (239% of normal, +2.7σ)",ANM-0023
+1983-06-01,New York,rainfall_mm,climatology_zscore,669.9,180.4,271.4,2.709,moderate,wet,"Wet: 670 mm vs normal 180 mm (271% of normal, +2.7σ)",ANM-0024
+1983-06-01,New York,multivariate,isolation_forest,6.05,3.31,2.74,0.0369,moderate,hot,"Unusual climate state (temp +2.7°C, rain +271%)",ANM-0025
+1983-06-01,New York,temp_mean_c,stl_residual,6.05,1.4,4.65,4.815,high,hot,Unexpected 6.0°C month: residual +4.7°C (+4.8σ),ANM-0026
+1983-07-01,Singapore,rainfall_mm,climatology_zscore,389.7,139.8,178.7,2.538,moderate,wet,"Wet: 390 mm vs normal 140 mm (179% of normal, +2.5σ)",ANM-0027
+1984-02-01,Singapore,temp_mean_c,stl_residual,23.41,25.52,-2.11,-2.212,moderate,cold,Unexpected 23.4°C month: residual -2.1°C (-2.2σ),ANM-0028
+1984-03-01,London,temp_mean_c,stl_residual,18.04,15.05,2.99,2.942,moderate,hot,Unexpected 18.0°C month: residual +3.0°C (+2.9σ),ANM-0029
+1984-04-01,Hyderabad,temp_mean_c,stl_residual,19.76,21.59,-1.83,-2.008,moderate,cold,Unexpected 19.8°C month: residual -1.8°C (-2.0σ),ANM-0030
+1984-04-01,London,temp_mean_c,stl_residual,15.01,11.74,3.27,3.221,high,hot,Unexpected 15.0°C month: residual +3.3°C (+3.2σ),ANM-0031
+1984-05-01,London,temp_mean_c,stl_residual,10.21,6.62,3.59,3.536,high,hot,Unexpected 10.2°C month: residual +3.6°C (+3.5σ),ANM-0032
+1984-07-01,New York,rainfall_mm,climatology_zscore,514.0,156.0,229.4,2.581,moderate,wet,"Wet: 514 mm vs normal 156 mm (229% of normal, +2.6σ)",ANM-0033
+1984-09-01,London,rainfall_mm,climatology_zscore,271.1,60.8,345.8,3.864,high,wet,"Wet: 271 mm vs normal 61 mm (346% of normal, +3.9σ)",ANM-0034
+1984-09-01,London,multivariate,isolation_forest,6.31,7.59,-1.28,0.0463,moderate,cold,"Unusual climate state (temp -1.3°C, rain +346%)",ANM-0035
+1984-12-01,Singapore,rainfall_mm,climatology_zscore,677.9,186.1,264.3,2.788,moderate,wet,"Wet: 678 mm vs normal 186 mm (264% of normal, +2.8σ)",ANM-0036
+1985-01-01,London,temp_mean_c,stl_residual,21.2,18.5,2.7,2.661,moderate,hot,Unexpected 21.2°C month: residual +2.7°C (+2.7σ),ANM-0037
+1985-10-01,London,rainfall_mm,climatology_zscore,118.6,43.7,171.2,2.638,moderate,wet,"Wet: 119 mm vs normal 44 mm (171% of normal, +2.6σ)",ANM-0038
+1986-01-01,Hyderabad,rainfall_mm,climatology_zscore,379.3,71.4,431.1,4.718,high,wet,"Wet: 379 mm vs normal 71 mm (431% of normal, +4.7σ)",ANM-0039
+1986-01-01,Hyderabad,multivariate,isolation_forest,28.39,27.94,0.45,0.0436,moderate,hot,"Unusual climate state (temp +0.5°C, rain +431%)",ANM-0040
+1986-02-01,Singapore,temp_mean_c,stl_residual,28.81,26.35,2.46,2.575,moderate,hot,Unexpected 28.8°C month: residual +2.5°C (+2.6σ),ANM-0041
+1986-05-01,Singapore,temp_mean_c,climatology_zscore,31.39,27.37,4.02,3.323,moderate,hot,Hot anomaly: 31.4°C vs normal 27.4°C (+3.3σ),ANM-0042
+1986-05-01,Singapore,multivariate,isolation_forest,31.39,27.37,4.02,0.0466,moderate,hot,"Unusual climate state (temp +4.0°C, rain +167%)",ANM-0043
+1986-05-01,Singapore,temp_mean_c,stl_residual,31.39,28.68,2.71,2.839,moderate,hot,Unexpected 31.4°C month: residual +2.7°C (+2.8σ),ANM-0044
+1986-06-01,New York,temp_mean_c,climatology_zscore,-0.26,3.31,-3.57,-2.611,moderate,cold,Cold anomaly: -0.3°C vs normal 3.3°C (-2.6σ),ANM-0045
+1986-06-01,New York,temp_mean_c,stl_residual,-0.26,1.81,-2.07,-2.137,moderate,cold,Unexpected -0.3°C month: residual -2.1°C (-2.1σ),ANM-0046
+1986-07-01,Sydney,temp_mean_c,stl_residual,22.47,26.05,-3.58,-3.771,high,cold,Unexpected 22.5°C month: residual -3.6°C (-3.8σ),ANM-0047
+1986-08-01,Sydney,temp_mean_c,stl_residual,21.32,24.23,-2.91,-3.071,high,cold,Unexpected 21.3°C month: residual -2.9°C (-3.1σ),ANM-0048
+1986-09-01,Hyderabad,rainfall_mm,climatology_zscore,233.2,50.0,366.3,4.036,high,wet,"Wet: 233 mm vs normal 50 mm (366% of normal, +4.0σ)",ANM-0049
+1986-09-01,Hyderabad,multivariate,isolation_forest,32.63,32.79,-0.16,0.0557,high,cold,"Unusual climate state (temp -0.2°C, rain +366%)",ANM-0050
+1986-10-01,Singapore,rainfall_mm,climatology_zscore,341.7,100.8,238.8,2.907,moderate,wet,"Wet: 342 mm vs normal 101 mm (239% of normal, +2.9σ)",ANM-0051
+1986-11-01,Hyderabad,multivariate,isolation_forest,31.8,32.69,-0.89,0.0038,moderate,cold,"Unusual climate state (temp -0.9°C, rain +178%)",ANM-0052
+1986-12-01,Singapore,temp_mean_c,stl_residual,25.47,28.41,-2.94,-3.081,high,cold,Unexpected 25.5°C month: residual -2.9°C (-3.1σ),ANM-0053
+1987-01-01,Sydney,temp_mean_c,climatology_zscore,7.65,13.03,-5.38,-3.52,high,cold,Cold anomaly: 7.7°C vs normal 13.0°C (-3.5σ),ANM-0054
+1987-01-01,Sydney,temp_mean_c,stl_residual,7.65,12.71,-5.06,-5.339,high,cold,Unexpected 7.7°C month: residual -5.1°C (-5.3σ),ANM-0055
+1987-04-01,London,temp_mean_c,stl_residual,8.32,11.51,-3.19,-3.146,high,cold,Unexpected 8.3°C month: residual -3.2°C (-3.1σ),ANM-0056
+1987-07-01,Singapore,temp_mean_c,stl_residual,30.96,28.64,2.32,2.432,moderate,hot,Unexpected 31.0°C month: residual +2.3°C (+2.4σ),ANM-0057
+1987-08-01,New York,temp_mean_c,stl_residual,-0.13,3.11,-3.24,-3.353,high,cold,Unexpected -0.1°C month: residual -3.2°C (-3.4σ),ANM-0058
+1987-09-01,New York,temp_mean_c,stl_residual,4.38,7.49,-3.11,-3.217,high,cold,Unexpected 4.4°C month: residual -3.1°C (-3.2σ),ANM-0059
+1987-10-01,Hyderabad,rainfall_mm,climatology_zscore,148.3,36.1,310.7,3.336,moderate,wet,"Wet: 148 mm vs normal 36 mm (311% of normal, +3.3σ)",ANM-0060
+1987-10-01,Hyderabad,multivariate,isolation_forest,31.15,33.54,-2.39,0.0682,high,cold,"Unusual climate state (temp -2.4°C, rain +311%)",ANM-0061
+1987-10-01,New York,temp_mean_c,stl_residual,10.36,13.74,-3.38,-3.493,high,cold,Unexpected 10.4°C month: residual -3.4°C (-3.5σ),ANM-0062
+1987-11-01,New York,temp_mean_c,climatology_zscore,16.04,19.6,-3.56,-2.797,moderate,cold,Cold anomaly: 16.0°C vs normal 19.6°C (-2.8σ),ANM-0063
+1987-11-01,New York,temp_mean_c,stl_residual,16.04,19.65,-3.61,-3.736,high,cold,Unexpected 16.0°C month: residual -3.6°C (-3.7σ),ANM-0064
+1987-12-01,London,temp_mean_c,stl_residual,16.35,18.48,-2.13,-2.102,moderate,cold,Unexpected 16.4°C month: residual -2.1°C (-2.1σ),ANM-0065
+1988-04-01,Hyderabad,temp_mean_c,stl_residual,23.09,20.28,2.81,3.077,high,hot,Unexpected 23.1°C month: residual +2.8°C (+3.1σ),ANM-0066
+1989-05-01,Sydney,rainfall_mm,climatology_zscore,317.0,90.5,250.2,3.389,moderate,wet,"Wet: 317 mm vs normal 91 mm (250% of normal, +3.4σ)",ANM-0067
+1989-07-01,Sydney,temp_mean_c,stl_residual,23.58,26.86,-3.28,-3.459,high,cold,Unexpected 23.6°C month: residual -3.3°C (-3.5σ),ANM-0068
+1989-09-01,Hyderabad,temp_mean_c,stl_residual,34.85,32.04,2.81,3.08,high,hot,Unexpected 34.9°C month: residual +2.8°C (+3.1σ),ANM-0069
+1989-09-01,Singapore,rainfall_mm,climatology_zscore,452.4,103.8,335.7,3.854,high,wet,"Wet: 452 mm vs normal 104 mm (336% of normal, +3.9σ)",ANM-0070
+1989-09-01,Singapore,multivariate,isolation_forest,29.16,29.86,-0.7,0.0488,moderate,cold,"Unusual climate state (temp -0.7°C, rain +336%)",ANM-0071
+1989-10-01,Sydney,rainfall_mm,climatology_zscore,662.6,137.0,383.6,3.665,high,wet,"Wet: 663 mm vs normal 137 mm (384% of normal, +3.7σ)",ANM-0072
+1989-10-01,Sydney,multivariate,isolation_forest,21.26,18.98,2.28,0.0724,high,hot,"Unusual climate state (temp +2.3°C, rain +384%)",ANM-0073
+1989-11-01,Singapore,rainfall_mm,climatology_zscore,727.4,182.5,298.5,3.467,moderate,wet,"Wet: 727 mm vs normal 183 mm (299% of normal, +3.5σ)",ANM-0074
+1989-11-01,Singapore,multivariate,isolation_forest,29.13,29.19,-0.06,0.0363,moderate,cold,"Unusual climate state (temp -0.1°C, rain +299%)",ANM-0075
+1989-12-01,Singapore,rainfall_mm,climatology_zscore,665.8,186.1,257.8,2.719,moderate,wet,"Wet: 666 mm vs normal 186 mm (258% of normal, +2.7σ)",ANM-0076
+1989-12-01,Sydney,temp_mean_c,stl_residual,11.74,14.06,-2.32,-2.445,moderate,cold,Unexpected 11.7°C month: residual -2.3°C (-2.4σ),ANM-0077
+1990-02-01,Hyderabad,rainfall_mm,climatology_zscore,309.9,90.9,241.1,3.189,moderate,wet,"Wet: 310 mm vs normal 91 mm (241% of normal, +3.2σ)",ANM-0078
+1990-05-01,Sydney,temp_mean_c,stl_residual,24.48,21.01,3.47,3.653,high,hot,Unexpected 24.5°C month: residual +3.5°C (+3.7σ),ANM-0079
+1990-07-01,London,temp_mean_c,stl_residual,5.8,2.93,2.87,2.83,moderate,hot,Unexpected 5.8°C month: residual +2.9°C (+2.8σ),ANM-0080
+1990-09-01,Sydney,rainfall_mm,climatology_zscore,301.1,87.9,242.7,3.135,moderate,wet,"Wet: 301 mm vs normal 88 mm (243% of normal, +3.1σ)",ANM-0081
+1990-09-01,Sydney,multivariate,isolation_forest,20.04,21.95,-1.91,0.0098,moderate,cold,"Unusual climate state (temp -1.9°C, rain +243%)",ANM-0082
+1990-10-01,Singapore,temp_mean_c,stl_residual,31.77,29.09,2.68,2.806,moderate,hot,Unexpected 31.8°C month: residual +2.7°C (+2.8σ),ANM-0083
+1990-11-01,London,temp_mean_c,climatology_zscore,12.09,15.58,-3.49,-2.507,moderate,cold,Cold anomaly: 12.1°C vs normal 15.6°C (-2.5σ),ANM-0084
+1990-11-01,Singapore,temp_mean_c,stl_residual,32.1,29.55,2.55,2.669,moderate,hot,Unexpected 32.1°C month: residual +2.5°C (+2.7σ),ANM-0085
+1991-06-01,Hyderabad,temp_mean_c,stl_residual,28.13,25.01,3.12,3.421,high,hot,Unexpected 28.1°C month: residual +3.1°C (+3.4σ),ANM-0086
+1991-09-01,Singapore,temp_mean_c,climatology_zscore,25.49,29.86,-4.37,-3.585,high,cold,Cold anomaly: 25.5°C vs normal 29.9°C (-3.6σ),ANM-0087
+1991-09-01,Singapore,multivariate,isolation_forest,25.49,29.86,-4.37,0.0068,moderate,cold,"Unusual climate state (temp -4.4°C, rain -67%)",ANM-0088
+1991-09-01,Singapore,temp_mean_c,stl_residual,25.49,29.24,-3.75,-3.924,high,cold,Unexpected 25.5°C month: residual -3.7°C (-3.9σ),ANM-0089
+1991-11-01,Singapore,temp_mean_c,stl_residual,25.95,28.55,-2.6,-2.726,moderate,cold,Unexpected 25.9°C month: residual -2.6°C (-2.7σ),ANM-0090
+1991-12-01,London,temp_mean_c,stl_residual,15.42,18.14,-2.72,-2.681,moderate,cold,Unexpected 15.4°C month: residual -2.7°C (-2.7σ),ANM-0091
+1992-01-01,Singapore,temp_mean_c,stl_residual,28.28,26.24,2.04,2.131,moderate,hot,Unexpected 28.3°C month: residual +2.0°C (+2.1σ),ANM-0092
+1992-04-01,Sydney,rainfall_mm,climatology_zscore,378.3,106.9,254.0,3.39,moderate,wet,"Wet: 378 mm vs normal 107 mm (254% of normal, +3.4σ)",ANM-0093
+1992-05-01,London,temp_mean_c,stl_residual,6.0,8.41,-2.41,-2.373,moderate,cold,Unexpected 6.0°C month: residual -2.4°C (-2.4σ),ANM-0094
+1992-06-01,London,temp_mean_c,stl_residual,2.96,5.47,-2.51,-2.472,moderate,cold,Unexpected 3.0°C month: residual -2.5°C (-2.5σ),ANM-0095
+1992-08-01,Singapore,rainfall_mm,climatology_zscore,353.2,84.9,316.2,3.057,moderate,wet,"Wet: 353 mm vs normal 85 mm (316% of normal, +3.1σ)",ANM-0096
+1992-08-01,Singapore,multivariate,isolation_forest,29.47,29.57,-0.1,0.0047,moderate,cold,"Unusual climate state (temp -0.1°C, rain +316%)",ANM-0097
+1992-10-01,New York,temp_mean_c,stl_residual,15.64,13.42,2.22,2.294,moderate,hot,Unexpected 15.6°C month: residual +2.2°C (+2.3σ),ANM-0098
+1992-10-01,Singapore,temp_mean_c,stl_residual,30.73,28.08,2.65,2.772,moderate,hot,Unexpected 30.7°C month: residual +2.6°C (+2.8σ),ANM-0099
+1993-08-01,Singapore,rainfall_mm,climatology_zscore,377.4,84.9,344.7,3.333,moderate,wet,"Wet: 377 mm vs normal 85 mm (345% of normal, +3.3σ)",ANM-0100
+1993-08-01,Singapore,multivariate,isolation_forest,28.56,29.57,-1.01,0.0496,moderate,cold,"Unusual climate state (temp -1.0°C, rain +345%)",ANM-0101
+1993-09-01,New York,temp_mean_c,stl_residual,9.85,7.45,2.4,2.486,moderate,hot,Unexpected 9.8°C month: residual +2.4°C (+2.5σ),ANM-0102
+1993-11-01,New York,rainfall_mm,climatology_zscore,246.9,63.4,289.7,3.515,high,wet,"Wet: 247 mm vs normal 63 mm (290% of normal, +3.5σ)",ANM-0103
+1993-11-01,New York,multivariate,isolation_forest,19.93,19.6,0.33,0.0289,moderate,hot,"Unusual climate state (temp +0.3°C, rain +290%)",ANM-0104
+1993-12-01,Singapore,temp_mean_c,stl_residual,30.55,27.59,2.96,3.096,high,hot,Unexpected 30.6°C month: residual +3.0°C (+3.1σ),ANM-0105
+1994-01-01,New York,multivariate,isolation_forest,25.82,25.68,0.14,0.0158,moderate,hot,"Unusual climate state (temp +0.1°C, rain +204%)",ANM-0106
+1994-02-01,Sydney,rainfall_mm,climatology_zscore,744.3,172.7,331.1,4.298,high,wet,"Wet: 744 mm vs normal 173 mm (331% of normal, +4.3σ)",ANM-0107
+1994-02-01,Sydney,multivariate,isolation_forest,13.13,13.59,-0.46,0.01,moderate,cold,"Unusual climate state (temp -0.5°C, rain +331%)",ANM-0108
+1994-03-01,Sydney,temp_mean_c,stl_residual,18.11,16.19,1.92,2.027,moderate,hot,Unexpected 18.1°C month: residual +1.9°C (+2.0σ),ANM-0109
+1994-04-01,London,temp_mean_c,stl_residual,9.52,11.67,-2.15,-2.115,moderate,cold,Unexpected 9.5°C month: residual -2.1°C (-2.1σ),ANM-0110
+1994-05-01,Hyderabad,rainfall_mm,climatology_zscore,439.5,136.1,222.9,2.86,moderate,wet,"Wet: 440 mm vs normal 136 mm (223% of normal, +2.9σ)",ANM-0111
+1994-05-01,Sydney,temp_mean_c,stl_residual,24.94,22.01,2.93,3.093,high,hot,Unexpected 24.9°C month: residual +2.9°C (+3.1σ),ANM-0112
+1994-08-01,New York,temp_mean_c,stl_residual,-0.26,3.49,-3.75,-3.878,high,cold,Unexpected -0.3°C month: residual -3.7°C (-3.9σ),ANM-0113
+1994-09-01,Singapore,temp_mean_c,stl_residual,32.89,29.89,3.0,3.141,high,hot,Unexpected 32.9°C month: residual +3.0°C (+3.1σ),ANM-0114
+1994-11-01,Singapore,temp_mean_c,stl_residual,31.98,28.77,3.21,3.358,high,hot,Unexpected 32.0°C month: residual +3.2°C (+3.4σ),ANM-0115
+1994-12-01,Singapore,temp_mean_c,stl_residual,30.69,27.87,2.82,2.954,moderate,hot,Unexpected 30.7°C month: residual +2.8°C (+3.0σ),ANM-0116
+1995-04-01,Hyderabad,temp_mean_c,stl_residual,25.18,22.66,2.52,2.767,moderate,hot,Unexpected 25.2°C month: residual +2.5°C (+2.8σ),ANM-0117
+1995-05-01,Hyderabad,rainfall_mm,climatology_zscore,419.7,136.1,208.3,2.673,moderate,wet,"Wet: 420 mm vs normal 136 mm (208% of normal, +2.7σ)",ANM-0118
+1995-07-01,Hyderabad,temp_mean_c,stl_residual,25.94,29.27,-3.33,-3.655,high,cold,Unexpected 25.9°C month: residual -3.3°C (-3.7σ),ANM-0119
+1995-07-01,Singapore,temp_mean_c,stl_residual,27.31,29.9,-2.59,-2.714,moderate,cold,Unexpected 27.3°C month: residual -2.6°C (-2.7σ),ANM-0120
+1995-09-01,Sydney,temp_mean_c,climatology_zscore,18.86,21.95,-3.09,-2.534,moderate,cold,Cold anomaly: 18.9°C vs normal 21.9°C (-2.5σ),ANM-0121
+1995-10-01,New York,temp_mean_c,stl_residual,10.4,13.14,-2.74,-2.834,moderate,cold,Unexpected 10.4°C month: residual -2.7°C (-2.8σ),ANM-0122
+1995-11-01,Sydney,temp_mean_c,climatology_zscore,12.25,15.95,-3.7,-3.1,moderate,cold,Cold anomaly: 12.2°C vs normal 15.9°C (-3.1σ),ANM-0123
+1995-11-01,Sydney,temp_mean_c,stl_residual,12.25,14.47,-2.22,-2.344,moderate,cold,Unexpected 12.2°C month: residual -2.2°C (-2.3σ),ANM-0124
+1995-12-01,Hyderabad,rainfall_mm,climatology_zscore,159.4,50.1,218.2,2.763,moderate,wet,"Wet: 159 mm vs normal 50 mm (218% of normal, +2.8σ)",ANM-0125
+1995-12-01,New York,temp_mean_c,stl_residual,21.06,23.42,-2.36,-2.441,moderate,cold,Unexpected 21.1°C month: residual -2.4°C (-2.4σ),ANM-0126
+1996-01-01,London,temp_mean_c,stl_residual,14.91,17.8,-2.89,-2.85,moderate,cold,Unexpected 14.9°C month: residual -2.9°C (-2.9σ),ANM-0127
+1996-03-01,London,temp_mean_c,stl_residual,17.55,15.0,2.55,2.513,moderate,hot,Unexpected 17.6°C month: residual +2.6°C (+2.5σ),ANM-0128
+1996-06-01,London,temp_mean_c,stl_residual,2.53,5.37,-2.84,-2.797,moderate,cold,Unexpected 2.5°C month: residual -2.8°C (-2.8σ),ANM-0129
+1996-08-01,Hyderabad,temp_mean_c,stl_residual,32.33,30.17,2.16,2.373,moderate,hot,Unexpected 32.3°C month: residual +2.2°C (+2.4σ),ANM-0130
+1996-11-01,London,temp_mean_c,climatology_zscore,19.08,15.58,3.5,2.514,moderate,hot,Hot anomaly: 19.1°C vs normal 15.6°C (+2.5σ),ANM-0131
+1996-11-01,London,temp_mean_c,stl_residual,19.08,16.68,2.4,2.37,moderate,hot,Unexpected 19.1°C month: residual +2.4°C (+2.4σ),ANM-0132
+1997-03-01,New York,temp_mean_c,stl_residual,21.78,19.11,2.67,2.762,moderate,hot,Unexpected 21.8°C month: residual +2.7°C (+2.8σ),ANM-0133
+1997-08-01,New York,temp_mean_c,stl_residual,6.43,2.75,3.68,3.812,high,hot,Unexpected 6.4°C month: residual +3.7°C (+3.8σ),ANM-0134
+1998-05-01,Sydney,temp_mean_c,stl_residual,24.58,21.44,3.14,3.308,high,hot,Unexpected 24.6°C month: residual +3.1°C (+3.3σ),ANM-0135
+1998-06-01,Sydney,temp_mean_c,stl_residual,26.66,24.56,2.1,2.217,moderate,hot,Unexpected 26.7°C month: residual +2.1°C (+2.2σ),ANM-0136
+1998-09-01,Hyderabad,temp_mean_c,stl_residual,35.89,33.2,2.69,2.947,moderate,hot,Unexpected 35.9°C month: residual +2.7°C (+2.9σ),ANM-0137
+1998-09-01,New York,temp_mean_c,stl_residual,4.73,7.67,-2.94,-3.045,high,cold,Unexpected 4.7°C month: residual -2.9°C (-3.0σ),ANM-0138
+1998-10-01,Hyderabad,temp_mean_c,stl_residual,36.22,34.3,1.92,2.101,moderate,hot,Unexpected 36.2°C month: residual +1.9°C (+2.1σ),ANM-0139
+1998-10-01,Sydney,rainfall_mm,climatology_zscore,647.8,137.0,372.8,3.561,high,wet,"Wet: 648 mm vs normal 137 mm (373% of normal, +3.6σ)",ANM-0140
+1998-10-01,Sydney,multivariate,isolation_forest,19.87,18.98,0.89,0.0305,moderate,hot,"Unusual climate state (temp +0.9°C, rain +373%)",ANM-0141
+1999-03-01,Singapore,rainfall_mm,climatology_zscore,982.2,318.7,208.2,2.54,moderate,wet,"Wet: 982 mm vs normal 319 mm (208% of normal, +2.5σ)",ANM-0142
+1999-04-01,Hyderabad,temp_mean_c,stl_residual,24.96,22.85,2.11,2.309,moderate,hot,Unexpected 25.0°C month: residual +2.1°C (+2.3σ),ANM-0143
+1999-05-01,Singapore,temp_mean_c,stl_residual,26.14,28.55,-2.41,-2.519,moderate,cold,Unexpected 26.1°C month: residual -2.4°C (-2.5σ),ANM-0144
+1999-07-01,Hyderabad,rainfall_mm,climatology_zscore,357.9,90.4,296.1,2.754,moderate,wet,"Wet: 358 mm vs normal 90 mm (296% of normal, +2.8σ)",ANM-0145
+1999-07-01,Hyderabad,multivariate,isolation_forest,25.61,27.95,-2.34,0.0422,moderate,cold,"Unusual climate state (temp -2.3°C, rain +296%)",ANM-0146
+1999-08-01,Singapore,rainfall_mm,climatology_zscore,304.3,84.9,258.6,2.5,moderate,wet,"Wet: 304 mm vs normal 85 mm (259% of normal, +2.5σ)",ANM-0147
+1999-11-01,Singapore,temp_mean_c,stl_residual,27.07,29.55,-2.48,-2.601,moderate,cold,Unexpected 27.1°C month: residual -2.5°C (-2.6σ),ANM-0148
+2000-05-01,New York,temp_mean_c,stl_residual,5.02,7.91,-2.89,-2.994,moderate,cold,Unexpected 5.0°C month: residual -2.9°C (-3.0σ),ANM-0149
+2000-06-01,Hyderabad,temp_mean_c,stl_residual,26.61,23.95,2.66,2.915,moderate,hot,Unexpected 26.6°C month: residual +2.7°C (+2.9σ),ANM-0150
+2000-07-01,Hyderabad,temp_mean_c,stl_residual,30.36,26.07,4.29,4.706,high,hot,Unexpected 30.4°C month: residual +4.3°C (+4.7σ),ANM-0151
+2000-09-01,Sydney,temp_mean_c,stl_residual,23.62,21.43,2.19,2.304,moderate,hot,Unexpected 23.6°C month: residual +2.2°C (+2.3σ),ANM-0152
+2000-11-01,Hyderabad,temp_mean_c,stl_residual,34.31,32.26,2.05,2.251,moderate,hot,Unexpected 34.3°C month: residual +2.1°C (+2.3σ),ANM-0153
+2000-12-01,London,temp_mean_c,stl_residual,21.01,17.1,3.91,3.852,high,hot,Unexpected 21.0°C month: residual +3.9°C (+3.9σ),ANM-0154
+2001-01-01,London,temp_mean_c,stl_residual,20.32,17.35,2.97,2.924,moderate,hot,Unexpected 20.3°C month: residual +3.0°C (+2.9σ),ANM-0155
+2001-01-01,New York,multivariate,isolation_forest,25.09,25.68,-0.59,0.0188,moderate,cold,"Unusual climate state (temp -0.6°C, rain +244%)",ANM-0156
+2001-04-01,London,temp_mean_c,stl_residual,14.68,12.36,2.32,2.291,moderate,hot,Unexpected 14.7°C month: residual +2.3°C (+2.3σ),ANM-0157
+2001-06-01,New York,rainfall_mm,climatology_zscore,874.3,180.4,384.7,3.84,high,wet,"Wet: 874 mm vs normal 180 mm (385% of normal, +3.8σ)",ANM-0158
+2001-06-01,New York,multivariate,isolation_forest,6.2,3.31,2.89,0.0847,high,hot,"Unusual climate state (temp +2.9°C, rain +385%)",ANM-0159
+2001-06-01,New York,temp_mean_c,stl_residual,6.2,4.19,2.01,2.078,moderate,hot,Unexpected 6.2°C month: residual +2.0°C (+2.1σ),ANM-0160
+2001-07-01,London,temp_mean_c,stl_residual,6.93,3.91,3.02,2.972,moderate,hot,Unexpected 6.9°C month: residual +3.0°C (+3.0σ),ANM-0161
+2001-08-01,London,temp_mean_c,stl_residual,7.08,4.31,2.77,2.727,moderate,hot,Unexpected 7.1°C month: residual +2.8°C (+2.7σ),ANM-0162
+2001-08-01,New York,temp_mean_c,climatology_zscore,7.33,2.94,4.39,2.702,moderate,hot,Hot anomaly: 7.3°C vs normal 2.9°C (+2.7σ),ANM-0163
+2001-08-01,New York,temp_mean_c,stl_residual,7.33,3.46,3.87,4.001,high,hot,Unexpected 7.3°C month: residual +3.9°C (+4.0σ),ANM-0164
+2001-12-01,London,rainfall_mm,climatology_zscore,115.1,26.3,337.6,3.849,high,wet,"Wet: 115 mm vs normal 26 mm (338% of normal, +3.8σ)",ANM-0165
+2001-12-01,London,multivariate,isolation_forest,17.69,18.21,-0.52,0.0148,moderate,cold,"Unusual climate state (temp -0.5°C, rain +338%)",ANM-0166
+2002-01-01,London,rainfall_mm,climatology_zscore,57.4,19.5,194.8,2.601,moderate,wet,"Wet: 57 mm vs normal 19 mm (195% of normal, +2.6σ)",ANM-0167
+2002-06-01,Sydney,temp_mean_c,stl_residual,26.78,24.68,2.1,2.209,moderate,hot,Unexpected 26.8°C month: residual +2.1°C (+2.2σ),ANM-0168
+2002-07-01,Singapore,temp_mean_c,stl_residual,28.35,30.52,-2.17,-2.269,moderate,cold,Unexpected 28.4°C month: residual -2.2°C (-2.3σ),ANM-0169
+2002-10-01,Sydney,rainfall_mm,climatology_zscore,503.3,137.0,267.3,2.554,moderate,wet,"Wet: 503 mm vs normal 137 mm (267% of normal, +2.6σ)",ANM-0170
+2002-11-01,Singapore,temp_mean_c,stl_residual,32.78,30.0,2.78,2.909,moderate,hot,Unexpected 32.8°C month: residual +2.8°C (+2.9σ),ANM-0171
+2002-12-01,Singapore,temp_mean_c,stl_residual,31.5,28.95,2.55,2.674,moderate,hot,Unexpected 31.5°C month: residual +2.6°C (+2.7σ),ANM-0172
+2003-01-01,Sydney,rainfall_mm,climatology_zscore,590.3,162.6,263.1,3.376,moderate,wet,"Wet: 590 mm vs normal 163 mm (263% of normal, +3.4σ)",ANM-0173
+2003-02-01,Singapore,rainfall_mm,climatology_zscore,1925.3,286.5,572.0,5.117,high,wet,"Wet: 1925 mm vs normal 286 mm (572% of normal, +5.1σ)",ANM-0174
+2003-02-01,Singapore,multivariate,isolation_forest,27.15,26.76,0.39,0.0453,moderate,hot,"Unusual climate state (temp +0.4°C, rain +572%)",ANM-0175
+2003-04-01,Singapore,rainfall_mm,climatology_zscore,933.1,247.0,277.8,3.288,moderate,wet,"Wet: 933 mm vs normal 247 mm (278% of normal, +3.3σ)",ANM-0176
+2003-10-01,New York,temp_mean_c,stl_residual,15.19,11.72,3.47,3.589,high,hot,Unexpected 15.2°C month: residual +3.5°C (+3.6σ),ANM-0177
+2004-01-01,London,temp_mean_c,stl_residual,22.57,16.88,5.69,5.606,high,hot,Unexpected 22.6°C month: residual +5.7°C (+5.6σ),ANM-0178
+2004-03-01,Hyderabad,rainfall_mm,climatology_zscore,360.9,106.8,238.1,3.011,moderate,wet,"Wet: 361 mm vs normal 107 mm (238% of normal, +3.0σ)",ANM-0179
+2004-04-01,Singapore,temp_mean_c,stl_residual,24.06,26.09,-2.03,-2.123,moderate,cold,Unexpected 24.1°C month: residual -2.0°C (-2.1σ),ANM-0180
+2004-07-01,Hyderabad,rainfall_mm,climatology_zscore,399.1,90.4,341.7,3.178,moderate,wet,"Wet: 399 mm vs normal 90 mm (342% of normal, +3.2σ)",ANM-0181
+2004-07-01,Hyderabad,multivariate,isolation_forest,28.46,27.95,0.51,0.0281,moderate,hot,"Unusual climate state (temp +0.5°C, rain +342%)",ANM-0182
+2004-07-01,London,temp_mean_c,stl_residual,1.85,4.47,-2.62,-2.585,moderate,cold,Unexpected 1.9°C month: residual -2.6°C (-2.6σ),ANM-0183
+2004-09-01,New York,temp_mean_c,stl_residual,5.13,8.06,-2.93,-3.031,high,cold,Unexpected 5.1°C month: residual -2.9°C (-3.0σ),ANM-0184
+2005-01-01,New York,temp_mean_c,stl_residual,23.96,26.74,-2.78,-2.876,moderate,cold,Unexpected 24.0°C month: residual -2.8°C (-2.9σ),ANM-0185
+2005-02-01,New York,rainfall_mm,climatology_zscore,159.1,44.5,257.5,3.18,moderate,wet,"Wet: 159 mm vs normal 44 mm (258% of normal, +3.2σ)",ANM-0186
+2005-02-01,New York,multivariate,isolation_forest,23.08,23.77,-0.69,0.0601,high,cold,"Unusual climate state (temp -0.7°C, rain +258%)",ANM-0187
+2005-04-01,London,rainfall_mm,climatology_zscore,254.5,65.4,289.3,3.234,moderate,wet,"Wet: 254 mm vs normal 65 mm (289% of normal, +3.2σ)",ANM-0188
+2005-04-01,London,multivariate,isolation_forest,10.53,11.93,-1.4,0.0009,moderate,cold,"Unusual climate state (temp -1.4°C, rain +289%)",ANM-0189
+2005-07-01,Singapore,temp_mean_c,stl_residual,30.01,27.82,2.19,2.297,moderate,hot,Unexpected 30.0°C month: residual +2.2°C (+2.3σ),ANM-0190
+2005-10-01,New York,temp_mean_c,stl_residual,16.11,13.07,3.04,3.142,high,hot,Unexpected 16.1°C month: residual +3.0°C (+3.1σ),ANM-0191
+2005-12-01,London,temp_mean_c,stl_residual,16.19,19.37,-3.18,-3.136,high,cold,Unexpected 16.2°C month: residual -3.2°C (-3.1σ),ANM-0192
+2006-01-01,Sydney,temp_mean_c,stl_residual,10.84,14.98,-4.14,-4.36,high,cold,Unexpected 10.8°C month: residual -4.1°C (-4.4σ),ANM-0193
+2006-02-01,New York,temp_mean_c,stl_residual,26.18,23.45,2.73,2.822,moderate,hot,Unexpected 26.2°C month: residual +2.7°C (+2.8σ),ANM-0194
+2006-03-01,New York,temp_mean_c,climatology_zscore,23.97,19.34,4.63,2.939,moderate,hot,Hot anomaly: 24.0°C vs normal 19.3°C (+2.9σ),ANM-0195
+2006-03-01,New York,multivariate,isolation_forest,23.97,19.34,4.63,0.0779,high,hot,"Unusual climate state (temp +4.6°C, rain +119%)",ANM-0196
+2006-03-01,New York,temp_mean_c,stl_residual,23.97,20.42,3.55,3.669,high,hot,Unexpected 24.0°C month: residual +3.5°C (+3.7σ),ANM-0197
+2006-05-01,New York,rainfall_mm,climatology_zscore,347.7,88.9,291.3,3.196,moderate,wet,"Wet: 348 mm vs normal 89 mm (291% of normal, +3.2σ)",ANM-0198
+2006-10-01,Hyderabad,rainfall_mm,climatology_zscore,163.3,36.1,352.2,3.782,high,wet,"Wet: 163 mm vs normal 36 mm (352% of normal, +3.8σ)",ANM-0199
+2006-10-01,Hyderabad,multivariate,isolation_forest,34.85,33.54,1.31,0.0592,high,hot,"Unusual climate state (temp +1.3°C, rain +352%)",ANM-0200
+2006-11-01,Sydney,temp_mean_c,stl_residual,15.29,18.34,-3.05,-3.211,high,cold,Unexpected 15.3°C month: residual -3.0°C (-3.2σ),ANM-0201
+2006-12-01,New York,temp_mean_c,stl_residual,22.35,24.53,-2.18,-2.252,moderate,cold,Unexpected 22.4°C month: residual -2.2°C (-2.3σ),ANM-0202
+2006-12-01,Singapore,rainfall_mm,climatology_zscore,712.1,186.1,282.6,2.982,moderate,wet,"Wet: 712 mm vs normal 186 mm (283% of normal, +3.0σ)",ANM-0203
+2007-01-01,Hyderabad,temp_mean_c,stl_residual,26.77,29.38,-2.61,-2.86,moderate,cold,Unexpected 26.8°C month: residual -2.6°C (-2.9σ),ANM-0204
+2007-01-01,New York,rainfall_mm,climatology_zscore,237.2,43.0,452.1,4.462,high,wet,"Wet: 237 mm vs normal 43 mm (452% of normal, +4.5σ)",ANM-0205
+2007-01-01,New York,multivariate,isolation_forest,25.05,25.68,-0.63,0.0913,high,cold,"Unusual climate state (temp -0.6°C, rain +452%)",ANM-0206
+2007-02-01,London,temp_mean_c,stl_residual,21.08,18.1,2.98,2.941,moderate,hot,Unexpected 21.1°C month: residual +3.0°C (+2.9σ),ANM-0207
+2007-06-01,Sydney,temp_mean_c,stl_residual,26.96,24.91,2.05,2.161,moderate,hot,Unexpected 27.0°C month: residual +2.1°C (+2.2σ),ANM-0208
+2007-07-01,Singapore,temp_mean_c,stl_residual,31.99,28.35,3.64,3.815,high,hot,Unexpected 32.0°C month: residual +3.6°C (+3.8σ),ANM-0209
+2007-08-01,Singapore,humidity_pct,iqr,70.5,81.6,-11.1,2.362,moderate,low,IQR outlier in humidity_pct: 70.5 (fences 72.2 / 91.1),ANM-0210
+2007-08-01,Singapore,temp_mean_c,stl_residual,32.5,30.06,2.44,2.552,moderate,hot,Unexpected 32.5°C month: residual +2.4°C (+2.6σ),ANM-0211
+2007-10-01,Hyderabad,temp_mean_c,stl_residual,31.82,33.87,-2.05,-2.25,moderate,cold,Unexpected 31.8°C month: residual -2.1°C (-2.2σ),ANM-0212
+2007-10-01,Sydney,temp_mean_c,stl_residual,16.39,18.38,-1.99,-2.098,moderate,cold,Unexpected 16.4°C month: residual -2.0°C (-2.1σ),ANM-0213
+2007-11-01,New York,temp_mean_c,stl_residual,21.64,19.7,1.94,2.003,moderate,hot,Unexpected 21.6°C month: residual +1.9°C (+2.0σ),ANM-0214
+2008-03-01,London,temp_mean_c,stl_residual,16.66,13.38,3.28,3.232,high,hot,Unexpected 16.7°C month: residual +3.3°C (+3.2σ),ANM-0215
+2008-03-01,Singapore,rainfall_mm,climatology_zscore,1247.2,318.7,291.4,3.555,high,wet,"Wet: 1247 mm vs normal 319 mm (291% of normal, +3.6σ)",ANM-0216
+2008-05-01,New York,rainfall_mm,climatology_zscore,305.9,88.9,244.2,2.68,moderate,wet,"Wet: 306 mm vs normal 89 mm (244% of normal, +2.7σ)",ANM-0217
+2008-11-01,Hyderabad,temp_mean_c,stl_residual,30.45,33.13,-2.68,-2.935,moderate,cold,Unexpected 30.4°C month: residual -2.7°C (-2.9σ),ANM-0218
+2009-03-01,London,temp_mean_c,stl_residual,17.25,14.8,2.45,2.417,moderate,hot,Unexpected 17.2°C month: residual +2.5°C (+2.4σ),ANM-0219
+2009-03-01,New York,temp_mean_c,stl_residual,17.13,19.17,-2.04,-2.109,moderate,cold,Unexpected 17.1°C month: residual -2.0°C (-2.1σ),ANM-0220
+2009-10-01,Singapore,temp_mean_c,stl_residual,27.73,30.03,-2.3,-2.411,moderate,cold,Unexpected 27.7°C month: residual -2.3°C (-2.4σ),ANM-0221
+2009-11-01,London,temp_mean_c,stl_residual,18.67,15.9,2.77,2.733,moderate,hot,Unexpected 18.7°C month: residual +2.8°C (+2.7σ),ANM-0222
+2010-04-01,Hyderabad,temp_mean_c,stl_residual,24.07,21.68,2.39,2.618,moderate,hot,Unexpected 24.1°C month: residual +2.4°C (+2.6σ),ANM-0223
+2010-04-01,London,temp_mean_c,stl_residual,10.29,14.91,-4.62,-4.555,high,cold,Unexpected 10.3°C month: residual -4.6°C (-4.6σ),ANM-0224
+2010-05-01,Hyderabad,temp_mean_c,stl_residual,21.92,23.98,-2.06,-2.262,moderate,cold,Unexpected 21.9°C month: residual -2.1°C (-2.3σ),ANM-0225
+2010-06-01,Sydney,temp_mean_c,stl_residual,27.92,24.05,3.87,4.081,high,hot,Unexpected 27.9°C month: residual +3.9°C (+4.1σ),ANM-0226
+2010-07-01,Singapore,rainfall_mm,climatology_zscore,395.0,139.8,182.5,2.592,moderate,wet,"Wet: 395 mm vs normal 140 mm (183% of normal, +2.6σ)",ANM-0227
+2010-10-01,Hyderabad,temp_mean_c,stl_residual,34.93,33.1,1.83,2.011,moderate,hot,Unexpected 34.9°C month: residual +1.8°C (+2.0σ),ANM-0228
+2010-11-01,Singapore,rainfall_mm,climatology_zscore,619.9,182.5,239.6,2.783,moderate,wet,"Wet: 620 mm vs normal 183 mm (240% of normal, +2.8σ)",ANM-0229
+2010-11-01,Sydney,rainfall_mm,climatology_zscore,531.4,139.3,281.4,3.119,moderate,wet,"Wet: 531 mm vs normal 139 mm (281% of normal, +3.1σ)",ANM-0230
+2010-11-01,Sydney,multivariate,isolation_forest,17.56,15.95,1.61,0.0061,moderate,hot,"Unusual climate state (temp +1.6°C, rain +281%)",ANM-0231
+2010-12-01,New York,multivariate,isolation_forest,26.19,23.88,2.31,0.0309,moderate,hot,"Unusual climate state (temp +2.3°C, rain +5%)",ANM-0232
+2011-01-01,New York,multivariate,isolation_forest,27.81,25.68,2.13,0.0161,moderate,hot,"Unusual climate state (temp +2.1°C, rain -75%)",ANM-0233
+2011-02-01,Hyderabad,temp_mean_c,climatology_zscore,28.77,25.33,3.44,2.685,moderate,hot,Hot anomaly: 28.8°C vs normal 25.3°C (+2.7σ),ANM-0234
+2011-02-01,Hyderabad,multivariate,isolation_forest,28.77,25.33,3.44,0.0313,moderate,hot,"Unusual climate state (temp +3.4°C, rain +174%)",ANM-0235
+2011-02-01,Hyderabad,temp_mean_c,stl_residual,28.77,26.17,2.6,2.851,moderate,hot,Unexpected 28.8°C month: residual +2.6°C (+2.9σ),ANM-0236
+2011-03-01,Sydney,temp_mean_c,climatology_zscore,20.19,15.84,4.35,3.021,moderate,hot,Hot anomaly: 20.2°C vs normal 15.8°C (+3.0σ),ANM-0237
+2011-03-01,Sydney,temp_mean_c,stl_residual,20.19,17.62,2.57,2.708,moderate,hot,Unexpected 20.2°C month: residual +2.6°C (+2.7σ),ANM-0238
+2011-04-01,New York,temp_mean_c,stl_residual,15.77,13.59,2.18,2.252,moderate,hot,Unexpected 15.8°C month: residual +2.2°C (+2.3σ),ANM-0239
+2011-07-01,Sydney,rainfall_mm,climatology_zscore,220.6,58.3,278.6,3.056,moderate,wet,"Wet: 221 mm vs normal 58 mm (279% of normal, +3.1σ)",ANM-0240
+2011-07-01,Sydney,multivariate,isolation_forest,26.81,25.07,1.74,0.0238,moderate,hot,"Unusual climate state (temp +1.7°C, rain +279%)",ANM-0241
+2011-08-01,London,rainfall_mm,climatology_zscore,319.4,91.5,248.9,3.105,moderate,wet,"Wet: 319 mm vs normal 92 mm (249% of normal, +3.1σ)",ANM-0242
+2011-09-01,London,temp_mean_c,stl_residual,6.02,8.54,-2.52,-2.48,moderate,cold,Unexpected 6.0°C month: residual -2.5°C (-2.5σ),ANM-0243
+2011-09-01,New York,rainfall_mm,climatology_zscore,554.3,122.9,351.0,3.685,high,wet,"Wet: 554 mm vs normal 123 mm (351% of normal, +3.7σ)",ANM-0244
+2011-09-01,New York,multivariate,isolation_forest,8.71,7.43,1.28,0.0262,moderate,hot,"Unusual climate state (temp +1.3°C, rain +351%)",ANM-0245
+2011-10-01,Singapore,temp_mean_c,climatology_zscore,34.08,29.66,4.42,3.362,moderate,hot,Hot anomaly: 34.1°C vs normal 29.7°C (+3.4σ),ANM-0246
+2011-10-01,Singapore,temp_mean_c,iqr,34.08,28.19,5.89,2.379,moderate,high,IQR outlier in temp_mean_c: 34.1 (fences 23.2 / 33.1),ANM-0247
+2011-10-01,Singapore,humidity_pct,iqr,70.7,81.6,-10.9,2.319,moderate,low,IQR outlier in humidity_pct: 70.7 (fences 72.2 / 91.1),ANM-0248
+2011-10-01,Singapore,temp_mean_c,stl_residual,34.08,30.71,3.37,3.525,high,hot,Unexpected 34.1°C month: residual +3.4°C (+3.5σ),ANM-0249
+2011-10-01,Sydney,temp_mean_c,stl_residual,17.08,19.44,-2.36,-2.489,moderate,cold,Unexpected 17.1°C month: residual -2.4°C (-2.5σ),ANM-0250
+2011-11-01,London,rainfall_mm,climatology_zscore,79.2,26.5,199.4,2.584,moderate,wet,"Wet: 79 mm vs normal 26 mm (199% of normal, +2.6σ)",ANM-0251
+2011-11-01,Singapore,temp_mean_c,stl_residual,32.92,29.46,3.46,3.619,high,hot,Unexpected 32.9°C month: residual +3.5°C (+3.6σ),ANM-0252
+2012-01-01,London,temp_mean_c,stl_residual,20.53,17.75,2.78,2.743,moderate,hot,Unexpected 20.5°C month: residual +2.8°C (+2.7σ),ANM-0253
+2012-04-01,London,temp_mean_c,stl_residual,10.03,12.31,-2.28,-2.244,moderate,cold,Unexpected 10.0°C month: residual -2.3°C (-2.2σ),ANM-0254
+2012-05-01,Hyderabad,temp_mean_c,stl_residual,21.59,25.36,-3.77,-4.13,high,cold,Unexpected 21.6°C month: residual -3.8°C (-4.1σ),ANM-0255
+2012-06-01,Hyderabad,rainfall_mm,climatology_zscore,380.5,96.6,293.8,2.76,moderate,wet,"Wet: 380 mm vs normal 97 mm (294% of normal, +2.8σ)",ANM-0256
+2012-06-01,Sydney,temp_mean_c,stl_residual,25.89,22.74,3.15,3.32,high,hot,Unexpected 25.9°C month: residual +3.1°C (+3.3σ),ANM-0257
+2013-01-01,New York,multivariate,isolation_forest,24.56,25.68,-1.12,0.0144,moderate,cold,"Unusual climate state (temp -1.1°C, rain +66%)",ANM-0258
+2013-04-01,Singapore,temp_mean_c,stl_residual,27.96,25.42,2.54,2.665,moderate,hot,Unexpected 28.0°C month: residual +2.5°C (+2.7σ),ANM-0259
+2013-05-01,New York,temp_mean_c,stl_residual,5.67,8.2,-2.53,-2.612,moderate,cold,Unexpected 5.7°C month: residual -2.5°C (-2.6σ),ANM-0260
+2013-05-01,Singapore,temp_mean_c,stl_residual,28.65,26.32,2.33,2.442,moderate,hot,Unexpected 28.6°C month: residual +2.3°C (+2.4σ),ANM-0261
+2013-10-01,Sydney,temp_mean_c,stl_residual,21.55,19.31,2.24,2.363,moderate,hot,Unexpected 21.6°C month: residual +2.2°C (+2.4σ),ANM-0262
+2013-12-01,Hyderabad,temp_mean_c,climatology_zscore,26.31,30.66,-4.35,-3.109,moderate,cold,Cold anomaly: 26.3°C vs normal 30.7°C (-3.1σ),ANM-0263
+2013-12-01,Hyderabad,temp_mean_c,stl_residual,26.31,29.65,-3.34,-3.662,high,cold,Unexpected 26.3°C month: residual -3.3°C (-3.7σ),ANM-0264
+2014-01-01,Hyderabad,temp_mean_c,climatology_zscore,24.46,27.94,-3.48,-3.009,moderate,cold,Cold anomaly: 24.5°C vs normal 27.9°C (-3.0σ),ANM-0265
+2014-01-01,Hyderabad,temp_mean_c,stl_residual,24.46,27.08,-2.62,-2.876,moderate,cold,Unexpected 24.5°C month: residual -2.6°C (-2.9σ),ANM-0266
+2014-02-01,Hyderabad,temp_mean_c,climatology_zscore,22.12,25.33,-3.21,-2.503,moderate,cold,Cold anomaly: 22.1°C vs normal 25.3°C (-2.5σ),ANM-0267
+2014-02-01,New York,multivariate,isolation_forest,26.87,23.77,3.1,0.0479,moderate,hot,"Unusual climate state (temp +3.1°C, rain +162%)",ANM-0268
+2014-02-01,New York,temp_mean_c,stl_residual,26.87,24.28,2.59,2.681,moderate,hot,Unexpected 26.9°C month: residual +2.6°C (+2.7σ),ANM-0269
+2014-05-01,London,rainfall_mm,climatology_zscore,292.9,81.1,261.0,3.158,moderate,wet,"Wet: 293 mm vs normal 81 mm (261% of normal, +3.2σ)",ANM-0270
+2014-08-01,Hyderabad,temp_mean_c,stl_residual,32.82,30.34,2.48,2.715,moderate,hot,Unexpected 32.8°C month: residual +2.5°C (+2.7σ),ANM-0271
+2014-08-01,New York,temp_mean_c,stl_residual,4.74,2.38,2.36,2.444,moderate,hot,Unexpected 4.7°C month: residual +2.4°C (+2.4σ),ANM-0272
+2014-08-01,Sydney,rainfall_mm,climatology_zscore,212.7,58.0,266.9,3.32,moderate,wet,"Wet: 213 mm vs normal 58 mm (267% of normal, +3.3σ)",ANM-0273
+2015-01-01,New York,multivariate,isolation_forest,27.33,25.68,1.65,0.004,moderate,hot,"Unusual climate state (temp +1.7°C, rain +31%)",ANM-0274
+2015-02-01,London,rainfall_mm,climatology_zscore,142.7,33.8,322.4,3.985,high,wet,"Wet: 143 mm vs normal 34 mm (322% of normal, +4.0σ)",ANM-0275
+2015-02-01,London,multivariate,isolation_forest,20.53,18.4,2.13,0.0415,moderate,hot,"Unusual climate state (temp +2.1°C, rain +322%)",ANM-0276
+2015-05-01,New York,temp_mean_c,stl_residual,7.47,9.78,-2.31,-2.387,moderate,cold,Unexpected 7.5°C month: residual -2.3°C (-2.4σ),ANM-0277
+2015-06-01,Singapore,rainfall_mm,climatology_zscore,954.1,244.0,291.0,3.383,moderate,wet,"Wet: 954 mm vs normal 244 mm (291% of normal, +3.4σ)",ANM-0278
+2015-06-01,Singapore,multivariate,isolation_forest,26.46,28.31,-1.85,0.0455,moderate,cold,"Unusual climate state (temp -1.9°C, rain +291%)",ANM-0279
+2015-06-01,Singapore,temp_mean_c,stl_residual,26.46,30.05,-3.59,-3.754,high,cold,Unexpected 26.5°C month: residual -3.6°C (-3.8σ),ANM-0280
+2015-07-01,London,rainfall_mm,climatology_zscore,302.3,81.0,273.2,3.25,moderate,wet,"Wet: 302 mm vs normal 81 mm (273% of normal, +3.2σ)",ANM-0281
+2016-03-01,Singapore,temp_mean_c,climatology_zscore,29.19,26.59,2.6,2.818,moderate,hot,Hot anomaly: 29.2°C vs normal 26.6°C (+2.8σ),ANM-0282
+2016-03-01,Singapore,multivariate,isolation_forest,29.19,26.59,2.6,0.0059,moderate,hot,"Unusual climate state (temp +2.6°C, rain -83%)",ANM-0283
+2016-07-01,Sydney,temp_mean_c,stl_residual,22.95,24.96,-2.01,-2.115,moderate,cold,Unexpected 22.9°C month: residual -2.0°C (-2.1σ),ANM-0284
+2017-04-01,Hyderabad,temp_mean_c,stl_residual,24.85,22.39,2.46,2.697,moderate,hot,Unexpected 24.9°C month: residual +2.5°C (+2.7σ),ANM-0285
+2017-04-01,Singapore,temp_mean_c,stl_residual,29.34,26.86,2.48,2.593,moderate,hot,Unexpected 29.3°C month: residual +2.5°C (+2.6σ),ANM-0286
+2017-05-01,London,temp_mean_c,stl_residual,6.04,8.91,-2.87,-2.825,moderate,cold,Unexpected 6.0°C month: residual -2.9°C (-2.8σ),ANM-0287
+2017-07-01,Hyderabad,temp_mean_c,climatology_zscore,31.59,27.95,3.64,2.709,moderate,hot,Hot anomaly: 31.6°C vs normal 27.9°C (+2.7σ),ANM-0288
+2017-08-01,Hyderabad,temp_mean_c,stl_residual,34.41,30.93,3.48,3.812,high,hot,Unexpected 34.4°C month: residual +3.5°C (+3.8σ),ANM-0289
+2017-09-01,London,temp_mean_c,stl_residual,10.57,7.94,2.63,2.591,moderate,hot,Unexpected 10.6°C month: residual +2.6°C (+2.6σ),ANM-0290
+2017-11-01,Singapore,temp_mean_c,stl_residual,26.27,29.81,-3.54,-3.711,high,cold,Unexpected 26.3°C month: residual -3.5°C (-3.7σ),ANM-0291
+2017-12-01,New York,rainfall_mm,climatology_zscore,161.4,41.1,293.0,3.727,high,wet,"Wet: 161 mm vs normal 41 mm (293% of normal, +3.7σ)",ANM-0292
+2017-12-01,New York,multivariate,isolation_forest,24.96,23.88,1.08,0.0447,moderate,hot,"Unusual climate state (temp +1.1°C, rain +293%)",ANM-0293
+2018-01-01,New York,multivariate,isolation_forest,25.12,25.68,-0.56,0.0007,moderate,cold,"Unusual climate state (temp -0.6°C, rain +224%)",ANM-0294
+2018-02-01,Singapore,temp_mean_c,stl_residual,24.79,27.69,-2.9,-3.037,high,cold,Unexpected 24.8°C month: residual -2.9°C (-3.0σ),ANM-0295
+2018-04-01,Hyderabad,humidity_pct,iqr,78.4,61.5,16.9,2.061,moderate,high,IQR outlier in humidity_pct: 78.4 (fences 45.0 / 77.8),ANM-0296
+2018-04-01,New York,rainfall_mm,climatology_zscore,285.6,100.2,184.9,2.503,moderate,wet,"Wet: 286 mm vs normal 100 mm (185% of normal, +2.5σ)",ANM-0297
+2018-05-01,London,rainfall_mm,climatology_zscore,289.5,81.1,256.8,3.107,moderate,wet,"Wet: 290 mm vs normal 81 mm (257% of normal, +3.1σ)",ANM-0298
+2018-06-01,Hyderabad,temp_mean_c,stl_residual,22.53,25.04,-2.51,-2.75,moderate,cold,Unexpected 22.5°C month: residual -2.5°C (-2.7σ),ANM-0299
+2018-06-01,New York,temp_mean_c,stl_residual,1.05,4.93,-3.88,-4.013,high,cold,Unexpected 1.1°C month: residual -3.9°C (-4.0σ),ANM-0300
+2018-07-01,Hyderabad,temp_mean_c,stl_residual,25.58,28.5,-2.92,-3.2,high,cold,Unexpected 25.6°C month: residual -2.9°C (-3.2σ),ANM-0301
+2018-10-01,Singapore,temp_mean_c,stl_residual,27.18,29.7,-2.52,-2.642,moderate,cold,Unexpected 27.2°C month: residual -2.5°C (-2.6σ),ANM-0302
+2018-12-01,New York,rainfall_mm,climatology_zscore,146.8,41.1,257.5,3.275,moderate,wet,"Wet: 147 mm vs normal 41 mm (257% of normal, +3.3σ)",ANM-0303
+2019-01-01,New York,multivariate,isolation_forest,28.43,25.68,2.75,0.0274,moderate,hot,"Unusual climate state (temp +2.8°C, rain +4%)",ANM-0304
+2019-01-01,New York,temp_mean_c,stl_residual,28.43,26.29,2.14,2.215,moderate,hot,Unexpected 28.4°C month: residual +2.1°C (+2.2σ),ANM-0305
+2019-06-01,Hyderabad,rainfall_mm,climatology_zscore,568.8,96.6,488.8,4.591,high,wet,"Wet: 569 mm vs normal 97 mm (489% of normal, +4.6σ)",ANM-0306
+2019-06-01,Hyderabad,multivariate,isolation_forest,24.86,25.15,-0.29,0.0576,high,cold,"Unusual climate state (temp -0.3°C, rain +489%)",ANM-0307
+2019-08-01,London,temp_mean_c,climatology_zscore,8.43,5.18,3.25,2.918,moderate,hot,Hot anomaly: 8.4°C vs normal 5.2°C (+2.9σ),ANM-0308
+2019-10-01,Hyderabad,multivariate,isolation_forest,36.87,33.54,3.33,0.0135,moderate,hot,"Unusual climate state (temp +3.3°C, rain -2%)",ANM-0309
+2019-10-01,Singapore,rainfall_mm,climatology_zscore,372.4,100.8,269.3,3.277,moderate,wet,"Wet: 372 mm vs normal 101 mm (269% of normal, +3.3σ)",ANM-0310
+2019-10-01,Singapore,multivariate,isolation_forest,31.01,29.66,1.35,0.0051,moderate,hot,"Unusual climate state (temp +1.4°C, rain +269%)",ANM-0311
+2020-01-01,Singapore,temp_mean_c,climatology_zscore,30.8,27.41,3.39,2.881,moderate,hot,Hot anomaly: 30.8°C vs normal 27.4°C (+2.9σ),ANM-0312
+2020-01-01,Singapore,multivariate,isolation_forest,30.8,27.41,3.39,0.0132,moderate,hot,"Unusual climate state (temp +3.4°C, rain -57%)",ANM-0313
+2020-01-01,Singapore,temp_mean_c,stl_residual,30.8,27.86,2.94,3.074,high,hot,Unexpected 30.8°C month: residual +2.9°C (+3.1σ),ANM-0314
+2020-09-01,Hyderabad,temp_mean_c,stl_residual,35.45,33.54,1.91,2.097,moderate,hot,Unexpected 35.5°C month: residual +1.9°C (+2.1σ),ANM-0315
+2020-09-01,Sydney,temp_mean_c,stl_residual,24.91,22.94,1.97,2.08,moderate,hot,Unexpected 24.9°C month: residual +2.0°C (+2.1σ),ANM-0316
+2020-10-01,New York,temp_mean_c,stl_residual,15.85,13.64,2.21,2.286,moderate,hot,Unexpected 15.8°C month: residual +2.2°C (+2.3σ),ANM-0317
+2021-03-01,New York,temp_mean_c,stl_residual,17.09,20.05,-2.96,-3.061,high,cold,Unexpected 17.1°C month: residual -3.0°C (-3.1σ),ANM-0318
+2021-06-01,London,temp_mean_c,stl_residual,3.09,5.5,-2.41,-2.376,moderate,cold,Unexpected 3.1°C month: residual -2.4°C (-2.4σ),ANM-0319
+2021-06-01,Sydney,temp_mean_c,stl_residual,25.55,23.58,1.97,2.074,moderate,hot,Unexpected 25.6°C month: residual +2.0°C (+2.1σ),ANM-0320
+2021-10-01,Hyderabad,temp_mean_c,stl_residual,32.92,35.05,-2.13,-2.332,moderate,cold,Unexpected 32.9°C month: residual -2.1°C (-2.3σ),ANM-0321
+2021-11-01,Hyderabad,temp_mean_c,stl_residual,29.93,33.71,-3.78,-4.144,high,cold,Unexpected 29.9°C month: residual -3.8°C (-4.1σ),ANM-0322
+2021-12-01,Hyderabad,temp_mean_c,stl_residual,29.48,31.76,-2.28,-2.498,moderate,cold,Unexpected 29.5°C month: residual -2.3°C (-2.5σ),ANM-0323
+2022-01-01,Singapore,temp_mean_c,stl_residual,28.42,25.93,2.49,2.603,moderate,hot,Unexpected 28.4°C month: residual +2.5°C (+2.6σ),ANM-0324
+2022-06-01,London,rainfall_mm,climatology_zscore,278.7,93.5,198.1,2.657,moderate,wet,"Wet: 279 mm vs normal 94 mm (198% of normal, +2.7σ)",ANM-0325
+2022-10-01,London,rainfall_mm,climatology_zscore,115.0,43.7,163.0,2.512,moderate,wet,"Wet: 115 mm vs normal 44 mm (163% of normal, +2.5σ)",ANM-0326
+2023-01-01,London,temp_mean_c,stl_residual,18.22,20.66,-2.44,-2.403,moderate,cold,Unexpected 18.2°C month: residual -2.4°C (-2.4σ),ANM-0327
+2023-01-01,Singapore,temp_mean_c,stl_residual,28.56,25.45,3.11,3.261,high,hot,Unexpected 28.6°C month: residual +3.1°C (+3.3σ),ANM-0328
+2023-02-01,Singapore,temp_mean_c,stl_residual,28.05,25.5,2.55,2.675,moderate,hot,Unexpected 28.1°C month: residual +2.6°C (+2.7σ),ANM-0329
+2023-07-01,Sydney,temp_mean_c,stl_residual,26.85,24.94,1.91,2.013,moderate,hot,Unexpected 26.9°C month: residual +1.9°C (+2.0σ),ANM-0330
+2023-08-01,Hyderabad,temp_mean_c,stl_residual,30.95,34.02,-3.07,-3.369,high,cold,Unexpected 30.9°C month: residual -3.1°C (-3.4σ),ANM-0331
+2023-11-01,London,temp_mean_c,stl_residual,15.02,17.59,-2.57,-2.535,moderate,cold,Unexpected 15.0°C month: residual -2.6°C (-2.5σ),ANM-0332
+2024-02-01,London,temp_mean_c,stl_residual,21.09,17.53,3.56,3.511,high,hot,Unexpected 21.1°C month: residual +3.6°C (+3.5σ),ANM-0333
+2024-05-01,Singapore,rainfall_mm,climatology_zscore,887.5,243.1,265.1,3.693,high,wet,"Wet: 888 mm vs normal 243 mm (265% of normal, +3.7σ)",ANM-0334
+2024-05-01,Singapore,multivariate,isolation_forest,30.2,27.37,2.83,0.0733,high,hot,"Unusual climate state (temp +2.8°C, rain +265%)",ANM-0335
+2024-08-01,Hyderabad,multivariate,isolation_forest,34.19,30.84,3.35,0.03,moderate,hot,"Unusual climate state (temp +3.3°C, rain +166%)",ANM-0336
+2024-12-01,New York,multivariate,isolation_forest,26.25,23.88,2.37,0.0461,moderate,hot,"Unusual climate state (temp +2.4°C, rain +54%)",ANM-0337

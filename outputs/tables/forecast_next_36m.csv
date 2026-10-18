@@ -1,0 +1,181 @@
+region,date,prediction,ci_low,ci_high,model,target
+Hyderabad,2024-12-01,31.22059334521796,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2025-01-01,28.15797819135748,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2025-02-01,25.33633150242602,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2025-03-01,23.278817526988053,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2025-04-01,22.594532411665863,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2025-05-01,23.26496001560201,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2025-06-01,25.579106427565684,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2025-07-01,28.31885124700382,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2025-08-01,31.195267170966964,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2025-09-01,32.508340565553176,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2025-10-01,33.372421573178165,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2025-11-01,32.47243904619988,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2025-12-01,30.652014439981368,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2026-01-01,27.83211525292845,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2026-02-01,25.043533708319384,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2026-03-01,22.96516675572277,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2026-04-01,22.210062463569123,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2026-05-01,22.92290650719622,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2026-06-01,24.95076348108904,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2026-07-01,27.66212000571382,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2026-08-01,30.366502712008504,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2026-09-01,32.234537597478926,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2026-10-01,32.92681175935569,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2026-11-01,32.122391002253174,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2026-12-01,30.08615730373366,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2027-01-01,27.26812757976185,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2027-02-01,24.45241417118621,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2027-03-01,22.371774262907252,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2027-04-01,21.5852085202959,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2027-05-01,22.277811343292512,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2027-06-01,24.25101033420579,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2027-07-01,26.947491489068227,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2027-08-01,29.63265966345133,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2027-09-01,31.56034225654755,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2027-10-01,32.21600571173204,,,Ridge (engineered features),temp_mean_c
+Hyderabad,2027-11-01,31.39002051452953,,,Ridge (engineered features),temp_mean_c
+London,2024-12-01,19.110660002722838,,,Ridge (engineered features),temp_mean_c
+London,2025-01-01,20.222728917586394,,,Ridge (engineered features),temp_mean_c
+London,2025-02-01,19.033867865780692,,,Ridge (engineered features),temp_mean_c
+London,2025-03-01,16.1716580310861,,,Ridge (engineered features),temp_mean_c
+London,2025-04-01,12.44411167375244,,,Ridge (engineered features),temp_mean_c
+London,2025-05-01,8.717983379356426,,,Ridge (engineered features),temp_mean_c
+London,2025-06-01,5.890208166280024,,,Ridge (engineered features),temp_mean_c
+London,2025-07-01,4.636496057966862,,,Ridge (engineered features),temp_mean_c
+London,2025-08-01,5.500792304429404,,,Ridge (engineered features),temp_mean_c
+London,2025-09-01,8.219756540249872,,,Ridge (engineered features),temp_mean_c
+London,2025-10-01,12.044869940926505,,,Ridge (engineered features),temp_mean_c
+London,2025-11-01,15.864636879429398,,,Ridge (engineered features),temp_mean_c
+London,2025-12-01,18.622894822075537,,,Ridge (engineered features),temp_mean_c
+London,2026-01-01,19.617429147272546,,,Ridge (engineered features),temp_mean_c
+London,2026-02-01,18.601397953577916,,,Ridge (engineered features),temp_mean_c
+London,2026-03-01,15.837235712935996,,,Ridge (engineered features),temp_mean_c
+London,2026-04-01,12.036880928113925,,,Ridge (engineered features),temp_mean_c
+London,2026-05-01,8.193444272777365,,,Ridge (engineered features),temp_mean_c
+London,2026-06-01,5.321158464756416,,,Ridge (engineered features),temp_mean_c
+London,2026-07-01,4.1812993173046005,,,Ridge (engineered features),temp_mean_c
+London,2026-08-01,5.061863292354121,,,Ridge (engineered features),temp_mean_c
+London,2026-09-01,7.701649102480996,,,Ridge (engineered features),temp_mean_c
+London,2026-10-01,11.366617341124858,,,Ridge (engineered features),temp_mean_c
+London,2026-11-01,15.051193201908031,,,Ridge (engineered features),temp_mean_c
+London,2026-12-01,17.74717046242124,,,Ridge (engineered features),temp_mean_c
+London,2027-01-01,18.70845743944858,,,Ridge (engineered features),temp_mean_c
+London,2027-02-01,17.648896248721925,,,Ridge (engineered features),temp_mean_c
+London,2027-03-01,14.820562951927409,,,Ridge (engineered features),temp_mean_c
+London,2027-04-01,10.948360857332064,,,Ridge (engineered features),temp_mean_c
+London,2027-05-01,7.036326891113787,,,Ridge (engineered features),temp_mean_c
+London,2027-06-01,4.097823950182268,,,Ridge (engineered features),temp_mean_c
+London,2027-07-01,2.8830331697089253,,,Ridge (engineered features),temp_mean_c
+London,2027-08-01,3.6779146899413977,,,Ridge (engineered features),temp_mean_c
+London,2027-09-01,6.228135588232363,,,Ridge (engineered features),temp_mean_c
+London,2027-10-01,9.807492737696373,,,Ridge (engineered features),temp_mean_c
+London,2027-11-01,13.412270425090353,,,Ridge (engineered features),temp_mean_c
+New York,2024-12-01,25.00384557625499,,,Ridge (engineered features),temp_mean_c
+New York,2025-01-01,26.542827389494963,,,Ridge (engineered features),temp_mean_c
+New York,2025-02-01,24.942618289238375,,,Ridge (engineered features),temp_mean_c
+New York,2025-03-01,20.315452858955243,,,Ridge (engineered features),temp_mean_c
+New York,2025-04-01,14.403168619450906,,,Ridge (engineered features),temp_mean_c
+New York,2025-05-01,8.55473669296116,,,Ridge (engineered features),temp_mean_c
+New York,2025-06-01,4.155062938517034,,,Ridge (engineered features),temp_mean_c
+New York,2025-07-01,2.479440765806487,,,Ridge (engineered features),temp_mean_c
+New York,2025-08-01,4.131043081163105,,,Ridge (engineered features),temp_mean_c
+New York,2025-09-01,8.466104769549226,,,Ridge (engineered features),temp_mean_c
+New York,2025-10-01,14.404908660576723,,,Ridge (engineered features),temp_mean_c
+New York,2025-11-01,20.397950652774345,,,Ridge (engineered features),temp_mean_c
+New York,2025-12-01,24.75063930233881,,,Ridge (engineered features),temp_mean_c
+New York,2026-01-01,26.252445752676156,,,Ridge (engineered features),temp_mean_c
+New York,2026-02-01,24.52295868354507,,,Ridge (engineered features),temp_mean_c
+New York,2026-03-01,19.997343004282627,,,Ridge (engineered features),temp_mean_c
+New York,2026-04-01,13.912172133305656,,,Ridge (engineered features),temp_mean_c
+New York,2026-05-01,7.850931086502334,,,Ridge (engineered features),temp_mean_c
+New York,2026-06-01,3.393085889005235,,,Ridge (engineered features),temp_mean_c
+New York,2026-07-01,1.712603082825682,,,Ridge (engineered features),temp_mean_c
+New York,2026-08-01,3.2446642761278337,,,Ridge (engineered features),temp_mean_c
+New York,2026-09-01,7.529956884080136,,,Ridge (engineered features),temp_mean_c
+New York,2026-10-01,13.388890184002094,,,Ridge (engineered features),temp_mean_c
+New York,2026-11-01,19.21348815168398,,,Ridge (engineered features),temp_mean_c
+New York,2026-12-01,23.391421503750735,,,Ridge (engineered features),temp_mean_c
+New York,2027-01-01,24.751931044462346,,,Ridge (engineered features),temp_mean_c
+New York,2027-02-01,22.882919230463145,,,Ridge (engineered features),temp_mean_c
+New York,2027-03-01,18.230865812955802,,,Ridge (engineered features),temp_mean_c
+New York,2027-04-01,11.986871907292873,,,Ridge (engineered features),temp_mean_c
+New York,2027-05-01,5.7576377123275195,,,Ridge (engineered features),temp_mean_c
+New York,2027-06-01,1.1420622050898963,,,Ridge (engineered features),temp_mean_c
+New York,2027-07-01,-0.6948966414023712,,,Ridge (engineered features),temp_mean_c
+New York,2027-08-01,0.6637778983826053,,,Ridge (engineered features),temp_mean_c
+New York,2027-09-01,4.771410052737268,,,Ridge (engineered features),temp_mean_c
+New York,2027-10-01,10.44121954551375,,,Ridge (engineered features),temp_mean_c
+New York,2027-11-01,16.06251422241297,,,Ridge (engineered features),temp_mean_c
+Singapore,2024-12-01,29.32655727418619,,,Ridge (engineered features),temp_mean_c
+Singapore,2025-01-01,28.334605966705936,,,Ridge (engineered features),temp_mean_c
+Singapore,2025-02-01,27.92262632147356,,,Ridge (engineered features),temp_mean_c
+Singapore,2025-03-01,27.85513965646268,,,Ridge (engineered features),temp_mean_c
+Singapore,2025-04-01,28.073504146686005,,,Ridge (engineered features),temp_mean_c
+Singapore,2025-05-01,28.489203269150202,,,Ridge (engineered features),temp_mean_c
+Singapore,2025-06-01,29.1086464682708,,,Ridge (engineered features),temp_mean_c
+Singapore,2025-07-01,29.866139750272325,,,Ridge (engineered features),temp_mean_c
+Singapore,2025-08-01,30.556513218452153,,,Ridge (engineered features),temp_mean_c
+Singapore,2025-09-01,30.846366955751577,,,Ridge (engineered features),temp_mean_c
+Singapore,2025-10-01,30.700334073191335,,,Ridge (engineered features),temp_mean_c
+Singapore,2025-11-01,30.064687346660254,,,Ridge (engineered features),temp_mean_c
+Singapore,2025-12-01,29.24111628389954,,,Ridge (engineered features),temp_mean_c
+Singapore,2026-01-01,28.420507930067345,,,Ridge (engineered features),temp_mean_c
+Singapore,2026-02-01,27.834010208916226,,,Ridge (engineered features),temp_mean_c
+Singapore,2026-03-01,27.600506391280195,,,Ridge (engineered features),temp_mean_c
+Singapore,2026-04-01,27.784258432865602,,,Ridge (engineered features),temp_mean_c
+Singapore,2026-05-01,28.346696881552365,,,Ridge (engineered features),temp_mean_c
+Singapore,2026-06-01,29.156579388290233,,,Ridge (engineered features),temp_mean_c
+Singapore,2026-07-01,30.00397209228795,,,Ridge (engineered features),temp_mean_c
+Singapore,2026-08-01,30.657863257698853,,,Ridge (engineered features),temp_mean_c
+Singapore,2026-09-01,30.93706099535928,,,Ridge (engineered features),temp_mean_c
+Singapore,2026-10-01,30.776598005527845,,,Ridge (engineered features),temp_mean_c
+Singapore,2026-11-01,30.228367694967663,,,Ridge (engineered features),temp_mean_c
+Singapore,2026-12-01,29.45834351150528,,,Ridge (engineered features),temp_mean_c
+Singapore,2027-01-01,28.680431282836796,,,Ridge (engineered features),temp_mean_c
+Singapore,2027-02-01,28.113206451697632,,,Ridge (engineered features),temp_mean_c
+Singapore,2027-03-01,27.9183664927549,,,Ridge (engineered features),temp_mean_c
+Singapore,2027-04-01,28.163672283358462,,,Ridge (engineered features),temp_mean_c
+Singapore,2027-05-01,28.80076497956226,,,Ridge (engineered features),temp_mean_c
+Singapore,2027-06-01,29.677165570154813,,,Ridge (engineered features),temp_mean_c
+Singapore,2027-07-01,30.575756322327855,,,Ridge (engineered features),temp_mean_c
+Singapore,2027-08-01,31.27436954560487,,,Ridge (engineered features),temp_mean_c
+Singapore,2027-09-01,31.606716344202102,,,Ridge (engineered features),temp_mean_c
+Singapore,2027-10-01,31.50763262841275,,,Ridge (engineered features),temp_mean_c
+Singapore,2027-11-01,31.029133714630063,,,Ridge (engineered features),temp_mean_c
+Sydney,2024-12-01,14.095057672475338,,,Ridge (engineered features),temp_mean_c
+Sydney,2025-01-01,13.201317053249719,,,Ridge (engineered features),temp_mean_c
+Sydney,2025-02-01,14.083133577929125,,,Ridge (engineered features),temp_mean_c
+Sydney,2025-03-01,16.20509580151845,,,Ridge (engineered features),temp_mean_c
+Sydney,2025-04-01,19.21560927626057,,,Ridge (engineered features),temp_mean_c
+Sydney,2025-05-01,22.13088721077042,,,Ridge (engineered features),temp_mean_c
+Sydney,2025-06-01,24.245741582751915,,,Ridge (engineered features),temp_mean_c
+Sydney,2025-07-01,24.960792107326363,,,Ridge (engineered features),temp_mean_c
+Sydney,2025-08-01,24.234005056171927,,,Ridge (engineered features),temp_mean_c
+Sydney,2025-09-01,22.063602912623196,,,Ridge (engineered features),temp_mean_c
+Sydney,2025-10-01,19.015530234375852,,,Ridge (engineered features),temp_mean_c
+Sydney,2025-11-01,15.920134643165621,,,Ridge (engineered features),temp_mean_c
+Sydney,2025-12-01,13.746748653228044,,,Ridge (engineered features),temp_mean_c
+Sydney,2026-01-01,12.952214606333445,,,Ridge (engineered features),temp_mean_c
+Sydney,2026-02-01,13.790905825471258,,,Ridge (engineered features),temp_mean_c
+Sydney,2026-03-01,16.02517566539897,,,Ridge (engineered features),temp_mean_c
+Sydney,2026-04-01,19.069811753029363,,,Ridge (engineered features),temp_mean_c
+Sydney,2026-05-01,22.10438291135588,,,Ridge (engineered features),temp_mean_c
+Sydney,2026-06-01,24.32232180766745,,,Ridge (engineered features),temp_mean_c
+Sydney,2026-07-01,25.131733090085362,,,Ridge (engineered features),temp_mean_c
+Sydney,2026-08-01,24.318188204156023,,,Ridge (engineered features),temp_mean_c
+Sydney,2026-09-01,22.098277839921344,,,Ridge (engineered features),temp_mean_c
+Sydney,2026-10-01,19.076461356737905,,,Ridge (engineered features),temp_mean_c
+Sydney,2026-11-01,16.073503455739676,,,Ridge (engineered features),temp_mean_c
+Sydney,2026-12-01,13.902388222307733,,,Ridge (engineered features),temp_mean_c
+Sydney,2027-01-01,13.148628066553224,,,Ridge (engineered features),temp_mean_c
+Sydney,2027-02-01,14.024143092201795,,,Ridge (engineered features),temp_mean_c
+Sydney,2027-03-01,16.303690111581915,,,Ridge (engineered features),temp_mean_c
+Sydney,2027-04-01,19.387294699014785,,,Ridge (engineered features),temp_mean_c
+Sydney,2027-05-01,22.45948830949888,,,Ridge (engineered features),temp_mean_c
+Sydney,2027-06-01,24.709000098681017,,,Ridge (engineered features),temp_mean_c
+Sydney,2027-07-01,25.545599477124398,,,Ridge (engineered features),temp_mean_c
+Sydney,2027-08-01,24.758593721622645,,,Ridge (engineered features),temp_mean_c
+Sydney,2027-09-01,22.573349869716452,,,Ridge (engineered features),temp_mean_c
+Sydney,2027-10-01,19.590975365105802,,,Ridge (engineered features),temp_mean_c
+Sydney,2027-11-01,16.626698952443597,,,Ridge (engineered features),temp_mean_c

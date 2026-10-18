@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-10-18 09:10:10",
+  "runtime_seconds": 22.4,
+  "seed": 42,
+  "rows_raw": 2715,
+  "rows_clean": 2700,
+  "rows_featured": 2700,
+  "regions": [
+    "Hyderabad",
+    "London",
+    "New York",
+    "Singapore",
+    "Sydney"
+  ],
+  "date_min": "1980-01-01",
+  "date_max": "2024-12-01",
+  "anomalies": 337,
+  "figures": [
+    "/home/user/Climate-Trend-Analyzer/outputs/figures/00_architecture_diagram.png",
+    "/home/user/Climate-Trend-Analyzer/outputs/figures/00_raw_data_preview.png",
+    "/home/user/Climate-Trend-Analyzer/outputs/figures/01_data_quality.png",
+    "/home/user/Climate-Trend-Analyzer/outputs/figures/02_temperature_trend.png",
+    "/home/user/Climate-Trend-Analyzer/outputs/figures/03_rainfall_trend.png",
+    "/home/user/Climate-Trend-Analyzer/outputs/figures/04_seasonal_heatmap.png",
+    "/home/user/Climate-Trend-Analyzer/outputs/figures/05_seasonal_profile.png",
+    "/home/user/Climate-Trend-Analyzer/outputs/figures/06_yearly_comparison.png",
+    "/home/user/Climate-Trend-Analyzer/outputs/figures/07_warming_rate_by_region.png",
+    "/home/user/Climate-Trend-Analyzer/outputs/figures/08_seasonal_decomposition.png",
+    "/home/user/Climate-Trend-Analyzer/outputs/figures/09_anomaly_detection.png",
+    "/home/user/Climate-Trend-Analyzer/outputs/figures/10_anomaly_timeline.png",
+    "/home/user/Climate-Trend-Analyzer/outputs/figures/11_extreme_events_by_decade.png",
+    "/home/user/Climate-Trend-Analyzer/outputs/figures/12_co2_vs_temperature.png",
+    "/home/user/Climate-Trend-Analyzer/outputs/figures/13_sea_level_rise.png",
+    "/home/user/Climate-Trend-Analyzer/outputs/figures/14_forecast.png",
+    "/home/user/Climate-Trend-Analyzer/outputs/figures/15_model_comparison.png"
+  ],
+  "key_numbers": {
+    "rows_analysed": 2700,
+    "regions": 5,
+    "fastest_warming_region": "London",
+    "fastest_warming_c_per_decade": 0.3763,
+    "mean_warming_c_per_decade": 0.2834,
+    "anomalies_detected": 337,
+    "best_forecast_rmse": 0.8962,
+    "data_completeness_pct": 100.0
+  }
+}
