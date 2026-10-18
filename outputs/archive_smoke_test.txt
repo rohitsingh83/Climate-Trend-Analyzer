@@ -1,0 +1,24 @@
+EXTRACTED ZIP SMOKE TEST
+Pipeline exit: 0
+e-archive-smoke/Climate-Trend-Analyzer/outputs/run_summary.json
+======================================================================
+PIPELINE COMPLETE in 17.3s
+  figures   : 18  -> /home/user/.cache/climate-archive-smoke/Climate-Trend-Analyzer/outputs/figures
+  tables    : 8 -> /home/user/.cache/climate-archive-smoke/Climate-Trend-Analyzer/outputs/tables
+  report    : /home/user/.cache/climate-archive-smoke/Climate-Trend-Analyzer/outputs/reports/climate_trend_report.html
+======================================================================
+
+HEADLINE NUMBERS
+  rows_analysed                   : 2700
+  regions                         : 5
+  fastest_warming_region          : London
+  fastest_warming_c_per_decade    : 0.3976
+  mean_warming_c_per_decade       : 0.2984
+  anomalies_detected              : 362
+  best_forecast_rmse              : 1.3148
+  data_completeness_pct           : 100.0
+
+Pytest exit: 0
+..........................                                               [100%]
+26 passed in 6.19s
+

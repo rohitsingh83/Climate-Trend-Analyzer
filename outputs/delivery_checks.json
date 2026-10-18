@@ -27,12 +27,7 @@
       "error_outputs": 0
     }
   },
-  "broken_local_markdown_links": [
-    {
-      "file": "docs/PROJECT_GUIDE.md",
-      "link": "images/09_dashboard.png"
-    }
-  ],
+  "broken_local_markdown_links": [],
   "noaa_checksum_matches": true,
   "figure_count": 18,
   "csv_table_count": 8,
