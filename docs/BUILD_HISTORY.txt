@@ -1,0 +1,13 @@
+cc3d570 | 2026-10-18T09:35:43Z | fix: validate climate methodology and deliver complete student handbook
+6955c99 | 2026-10-18T09:15:05Z | data: commit the processed clean and feature-engineered datasets
+065b236 | 2026-10-18T09:15:03Z | docs: add README, methodology, dataset card and all generated outputs
+cc69683 | 2026-10-18T09:15:02Z | ci: add GitHub Actions workflow
+f987d18 | 2026-10-18T09:15:02Z | test: add pytest suite covering the pipeline and the statistics
+d4a0d22 | 2026-10-18T09:15:02Z | feat(app): add interactive Streamlit dashboard
+cbfb204 | 2026-10-18T09:15:02Z | feat(viz): add visualisation engine, insight generator and reporting
+fc45a5a | 2026-10-18T09:15:02Z | feat(forecast): add back-tested forecasting module
+ff60a0d | 2026-10-18T09:15:02Z | feat(analysis): add EDA, trend analysis and anomaly detection
+f5f5cbc | 2026-10-18T09:15:02Z | feat(features): add feature-engineering module
+3876b03 | 2026-10-18T09:15:02Z | feat(clean): add data cleaning and quality-control module
+8c7cc5c | 2026-10-18T09:15:02Z | feat(data): add virtual climate simulator and data access layer
+1b44589 | 2026-10-18T09:15:02Z | chore: initialise project scaffolding and central configuration
