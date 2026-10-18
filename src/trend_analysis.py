@@ -9,7 +9,7 @@ Two complementary, industry-standard methods are used:
    Gives a slope in units per month, an R^2 and a p-value, and is easy to
    explain in an interview.
 
-2. **Mann-Kendall test** (non-parametric, trend-free pre-whitening).
+2. **Mann-Kendall test** (non-parametric, deseasonalised; no pre-whitening).
    It does *not* assume linearity and is the test used by IPCC/NOAA-style
    climate reports.  We implement it from scratch (no extra dependency) so
    the logic is fully visible.
@@ -116,16 +116,15 @@ def ols_trend(series: pd.Series, months=None, period: int = 12) -> dict:
     ss_res = float(np.sum((y - y_hat) ** 2))
     ss_tot = float(np.sum((y - y.mean()) ** 2))
 
-    dof = max(n - X.shape[1], 1)
-    sigma2 = ss_res / dof
-    cov = sigma2 * np.linalg.pinv(X.T @ X)
-    se = float(np.sqrt(cov[1, 1]))
-
+    # Newey-West/HAC covariance acknowledges serial dependence and unequal
+    # variance. The slope is still OLS; its uncertainty is HAC robust.
+    import statsmodels.api as sm
+    robust = sm.OLS(y, X).fit(cov_type="HAC", cov_kwds={"maxlags":12}, use_t=True)
+    se = float(robust.bse[1])
     slope_per_year = float(beta[1] * 12.0)
-    t_stat = beta[1] / se if se else np.nan
-    p_value = float(2 * (1 - stats.t.cdf(abs(t_stat), df=dof))) if se else np.nan
-    crit = stats.t.ppf(0.975, dof)
-    ci = crit * se * 12.0
+    p_value = float(robust.pvalues[1])
+    bounds = np.asarray(robust.conf_int())[1] * 12
+    ci = float((bounds[1]-bounds[0])/2)
 
     # R^2 of a plain (seasonal) regression - reported for transparency only
     raw_res = stats.linregress(t, y)
@@ -183,7 +182,7 @@ def mann_kendall(series: pd.Series, months=None, period: int = 12) -> dict:
         z = (S + 1) / np.sqrt(var_s)
     else:
         z = 0.0
-    p = 2 * (1 - stats.norm.cdf(abs(z)))
+    p = 2 * stats.norm.sf(abs(z))
 
     # Theil-Sen slope (median of pairwise slopes) -> per year
     idx = np.arange(n)
@@ -276,7 +275,7 @@ def analyze_trends(df: pd.DataFrame, indicators=None) -> pd.DataFrame:
                     "r_squared_raw": stats_ols["r_squared_raw"],
                     "p_value": stats_ols["p_value"],
                     "significance": "significant" if stats_ols["p_value"] < 0.05 else "not significant",
-                    "trend_basis": "deseasonalised (12-month normals removed)",
+                    "trend_basis": "OLS month fixed effects; HAC(12) CI; MK deseasonalised",
                     **stats_mk,
                 }
             )
@@ -311,7 +310,7 @@ def run_trend_analysis(df: pd.DataFrame) -> dict:
         "temperature_trends": temperature_trend_summary(df),
         "by_decade": warming_by_decade(df),
         "decomposition": seasonal_decomposition(
-            df[df["region"] == df["region"].iloc[0]].sort_values("date")["temp_mean_c"]
+            df[df["region"] == df["region"].iloc[0]].sort_values("date").set_index("date")["temp_mean_c"]
         ),
     }
 

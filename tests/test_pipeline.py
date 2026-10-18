@@ -214,3 +214,51 @@ def test_eda_tables_have_expected_columns(featured_df):
 
 if __name__ == "__main__":
     sys.exit(pytest.main([__file__, "-v"]))
+
+
+def test_simulator_peaks_match_hemispheres(clean_df):
+    means=clean_df.groupby(['region','month']).temp_mean_c.mean()
+    assert means['London'].idxmax()==7
+    assert means['Sydney'].idxmax()==1
+    assert means['Hyderabad'].idxmax()==4
+
+
+def test_forecast_does_not_use_validation_targets(featured_df):
+    d=featured_df[featured_df.region=='London'].sort_values('date').copy()
+    original=forecasting.ml_forecast(d,h=6,test_size=60)
+    d.loc[d.index[-60:],'observed_temp_mean_c'] += 100
+    d.loc[d.index[-60:],'temp_mean_c'] += 100
+    changed=forecasting.ml_forecast(d,h=6,test_size=60)
+    np.testing.assert_allclose(original['validation_prediction'],changed['validation_prediction'])
+
+
+def test_forecast_ignores_leaky_eda_features(featured_df):
+    d=featured_df[featured_df.region=='London'].copy()
+    a=forecasting.ml_forecast(d,h=6)
+    for c in ['temp_mean_c_roll12_mean','enso_proxy','co2_ppm']:
+        d[c]=99999
+    b=forecasting.ml_forecast(d,h=6)
+    np.testing.assert_allclose(a['validation_prediction'],b['validation_prediction'])
+    np.testing.assert_allclose(a['forecast'].prediction,b['forecast'].prediction)
+
+
+def test_original_missing_targets_preserved(clean_df):
+    assert clean_df.observed_temp_mean_c.isna().sum()>0
+    assert clean_df.temp_mean_c.isna().sum()==0
+    assert (clean_df.loc[clean_df.observed_temp_mean_c.isna(),'data_quality_flag']=='repaired').all()
+
+
+def test_public_snapshot_is_real_and_valid():
+    path=cfg.PROCESSED_DIR/'noaa_co2_monthly.csv'
+    if not path.exists():
+        pytest.skip('Run python -m src.public_data for the public companion')
+    public=pd.read_csv(path)
+    assert len(public)==540
+    assert public.co2_ppm.between(300,500).all()
+    assert public.date.is_unique
+
+
+def test_metrics_exclude_missing_truth():
+    result=forecasting.evaluate([1,np.nan,3],[1,100,5])
+    assert result['n_evaluated']==2
+    assert result['MAE']==1

@@ -1,26 +1,26 @@
 region,indicator,slope_per_year,slope_per_decade,ci_low,ci_high,r_squared,r_squared_raw,p_value,significance,trend_basis,mk_trend,mk_s,mk_z,mk_p_value,theil_sen_slope_per_year
-Hyderabad,temp_mean_c,0.025884,0.258839,0.017601,0.034167,0.908325,0.009391,0.0,significant,deseasonalised (12-month normals removed),increasing,25163,6.007252,0.0,0.026193
-Hyderabad,rainfall_mm,0.003882,0.038823,-0.473963,0.481728,0.166107,3e-05,0.987272,not significant,deseasonalised (12-month normals removed),no significant trend,-2038,-0.486319,0.626741,-0.076887
-Hyderabad,co2_ppm,2.82914,28.291397,2.812083,2.846197,0.995061,0.994578,0.0,significant,deseasonalised (12-month normals removed),increasing,142394,33.995291,0.0,2.826667
-Hyderabad,sea_level_mm,3.136348,31.363483,3.10117,3.171527,0.98311,0.982569,0.0,significant,deseasonalised (12-month normals removed),increasing,141943,33.887619,0.0,3.122222
-Hyderabad,humidity_pct,-0.026357,-0.26357,-0.047574,-0.00514,0.659864,0.005784,0.014999,significant,deseasonalised (12-month normals removed),decreasing,-11035,-2.634297,0.008431,-0.028887
-London,temp_mean_c,0.037625,0.376251,0.029227,0.046023,0.946644,0.007057,0.0,significant,deseasonalised (12-month normals removed),increasing,34191,8.162618,0.0,0.036677
-London,rainfall_mm,0.095866,0.958663,-0.225897,0.41763,0.22035,0.000516,0.558599,not significant,deseasonalised (12-month normals removed),no significant trend,-999,-0.238265,0.811675,-0.03001
-London,co2_ppm,2.823395,28.233954,2.806063,2.840727,0.99488,0.994429,0.0,significant,deseasonalised (12-month normals removed),increasing,142442,34.00675,0.0,2.820981
-London,sea_level_mm,3.147843,31.478426,3.112346,3.183339,0.982932,0.982475,0.0,significant,deseasonalised (12-month normals removed),increasing,141774,33.847276,0.0,3.141366
-London,humidity_pct,-0.047095,-0.470949,-0.068101,-0.026089,0.797309,0.006791,1.3e-05,significant,deseasonalised (12-month normals removed),decreasing,-18195,-4.343698,1.4e-05,-0.046667
-New York,temp_mean_c,0.030992,0.309915,0.022707,0.039276,0.978567,0.001801,0.0,significant,deseasonalised (12-month normals removed),increasing,29151,6.959356,0.0,0.029882
-New York,rainfall_mm,-0.029438,-0.294379,-0.698031,0.639155,0.175185,3e-06,0.931106,not significant,deseasonalised (12-month normals removed),no significant trend,220,0.052285,0.958302,0.011148
-New York,co2_ppm,2.824075,28.240747,2.807343,2.840806,0.99523,0.994731,0.0,significant,deseasonalised (12-month normals removed),increasing,142461,34.011288,0.0,2.81976
-New York,sea_level_mm,3.147806,31.478063,3.112318,3.183294,0.98294,0.982496,0.0,significant,deseasonalised (12-month normals removed),increasing,141911,33.879983,0.0,3.138068
-New York,humidity_pct,-0.033684,-0.336836,-0.055584,-0.011783,0.895529,0.001464,0.002638,significant,deseasonalised (12-month normals removed),decreasing,-12908,-3.081462,0.00206,-0.035645
-Singapore,temp_mean_c,0.020877,0.208771,0.012745,0.02901,0.487612,0.028675,1e-06,significant,deseasonalised (12-month normals removed),increasing,22231,5.307254,0.0,0.021875
-Singapore,rainfall_mm,-0.664349,-6.643489,-1.88576,0.557063,0.143068,0.002422,0.285777,not significant,deseasonalised (12-month normals removed),no significant trend,-5708,-1.362505,0.173039,-0.594297
-Singapore,co2_ppm,2.829448,28.294484,2.812654,2.846243,0.995212,0.994684,0.0,significant,deseasonalised (12-month normals removed),increasing,142468,34.012958,0.0,2.823599
-Singapore,sea_level_mm,3.138699,31.386989,3.103155,3.174243,0.982789,0.982319,0.0,significant,deseasonalised (12-month normals removed),increasing,141698,33.82913,0.0,3.138961
-Singapore,humidity_pct,-0.044014,-0.440141,-0.064817,-0.023211,0.177322,0.029307,3.8e-05,significant,deseasonalised (12-month normals removed),decreasing,-17398,-4.153421,3.3e-05,-0.044843
-Sydney,temp_mean_c,0.026301,0.263009,0.017607,0.034995,0.913969,0.006422,0.0,significant,deseasonalised (12-month normals removed),increasing,22851,5.455276,0.0,0.024965
-Sydney,rainfall_mm,-0.424035,-4.240349,-1.059168,0.211099,0.160899,0.002953,0.190245,not significant,deseasonalised (12-month normals removed),no significant trend,-2940,-0.701665,0.482888,-0.168827
-Sydney,co2_ppm,2.827869,28.27869,2.81056,2.845178,0.99491,0.994331,0.0,significant,deseasonalised (12-month normals removed),increasing,142410,33.999111,0.0,2.822352
-Sydney,sea_level_mm,3.144924,31.449242,3.10914,3.180708,0.982628,0.982076,0.0,significant,deseasonalised (12-month normals removed),increasing,141905,33.87855,0.0,3.144737
-Sydney,humidity_pct,-0.021636,-0.216359,-0.042385,-0.000887,0.705745,0.002669,0.041009,significant,deseasonalised (12-month normals removed),no significant trend,-7160,-1.709167,0.08742,-0.018234
+Hyderabad,temp_mean_c,0.026873,0.268729,0.009677,0.044068,0.882755,0.004645,0.00225,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,increasing,25157,6.005817,0.0,0.027169
+Hyderabad,rainfall_mm,-0.160853,-1.608531,-0.80422,0.482514,0.241028,0.000344,0.623522,not significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,no significant trend,-3404,-0.812442,0.416538,-0.135371
+Hyderabad,co2_ppm,2.82914,28.291397,2.759112,2.899168,0.995061,0.994578,0.0,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,increasing,142394,33.995291,0.0,2.826667
+Hyderabad,sea_level_mm,3.136348,31.363483,2.988911,3.283786,0.98311,0.982569,0.0,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,increasing,141943,33.887619,0.0,3.122222
+Hyderabad,humidity_pct,-0.027655,-0.276548,-0.055091,-0.000218,0.656063,0.002497,0.048213,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,decreasing,-11262,-2.688493,0.007178,-0.030275
+London,temp_mean_c,0.03976,0.397601,0.02311,0.05641,0.932273,0.010013,3e-06,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,increasing,33706,8.046828,0.0,0.037916
+London,rainfall_mm,0.005166,0.051658,-0.345375,0.355706,0.156538,5e-06,0.976916,not significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,no significant trend,-4023,-0.960223,0.336943,-0.11432
+London,co2_ppm,2.823395,28.233954,2.752806,2.893984,0.99488,0.994429,0.0,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,increasing,142442,34.00675,0.0,2.820981
+London,sea_level_mm,3.147843,31.478426,2.999691,3.295994,0.982932,0.982475,0.0,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,increasing,141774,33.847276,0.0,3.141366
+London,humidity_pct,-0.047582,-0.475823,-0.073721,-0.021444,0.759765,0.0092,0.000381,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,decreasing,-17264,-4.121429,3.8e-05,-0.044912
+New York,temp_mean_c,0.031811,0.318107,0.015321,0.0483,0.974271,0.002821,0.000168,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,increasing,28469,6.796535,0.0,0.030308
+New York,rainfall_mm,0.026707,0.267073,-0.654426,0.70784,0.114213,6e-06,0.938631,not significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,no significant trend,-819,-0.195292,0.845165,-0.03636
+New York,co2_ppm,2.824075,28.240747,2.755806,2.892343,0.99523,0.994731,0.0,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,increasing,142461,34.011288,0.0,2.81976
+New York,sea_level_mm,3.147806,31.478063,2.999252,3.296361,0.98294,0.982496,0.0,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,increasing,141911,33.879983,0.0,3.138068
+New York,humidity_pct,-0.035247,-0.35247,-0.060375,-0.010119,0.889993,0.002368,0.006061,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,decreasing,-12569,-3.000527,0.002695,-0.034263
+Singapore,temp_mean_c,0.022831,0.228309,0.004883,0.040779,0.427659,0.022085,0.01276,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,increasing,22739,5.428535,0.0,0.02319
+Singapore,rainfall_mm,-1.298512,-12.985123,-2.751548,0.154523,0.18745,0.005369,0.079744,not significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,decreasing,-8323,-1.986817,0.046943,-0.872511
+Singapore,co2_ppm,2.829448,28.294484,2.760884,2.898013,0.995212,0.994684,0.0,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,increasing,142468,34.012958,0.0,2.823599
+Singapore,sea_level_mm,3.138699,31.386989,2.989781,3.287616,0.982789,0.982319,0.0,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,increasing,141698,33.82913,0.0,3.138961
+Singapore,humidity_pct,-0.046063,-0.460628,-0.074329,-0.017797,0.177694,0.026128,0.00145,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,decreasing,-18152,-4.333431,1.5e-05,-0.047059
+Sydney,temp_mean_c,0.027901,0.279007,0.011925,0.043876,0.899059,0.005679,0.000649,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,increasing,23515,5.6138,0.0,0.02647
+Sydney,rainfall_mm,-0.234948,-2.349484,-0.977902,0.508005,0.184945,0.000569,0.534712,not significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,no significant trend,-2437,-0.581577,0.560851,-0.149179
+Sydney,co2_ppm,2.827869,28.27869,2.757074,2.898664,0.99491,0.994331,0.0,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,increasing,142410,33.999111,0.0,2.822352
+Sydney,sea_level_mm,3.144924,31.449242,2.99515,3.294698,0.982628,0.982076,0.0,significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,increasing,141905,33.87855,0.0,3.144737
+Sydney,humidity_pct,-0.023661,-0.236605,-0.04924,0.001919,0.710803,0.002224,0.06977,not significant,OLS month fixed effects; HAC(12) CI; MK deseasonalised,no significant trend,-7652,-1.826627,0.067756,-0.020102

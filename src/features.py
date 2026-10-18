@@ -45,6 +45,10 @@ def add_time_features(df: pd.DataFrame) -> pd.DataFrame:
     df["decade"] = (df["year"] // 10) * 10
     df["t"] = (df["year"] - df["year"].min()) * 12 + (df["month"] - 1)
     df["date_ordinal"] = (df["date"] - pd.Timestamp("1980-01-01")).dt.days
+    # Meteorological seasons reverse in the southern hemisphere.
+    southern = df["latitude"] < 0
+    opposite = {"Winter":"Summer","Spring":"Autumn","Summer":"Winter","Autumn":"Spring"}
+    df.loc[southern,"season"] = df.loc[southern,"season"].map(opposite)
     return df
 
 

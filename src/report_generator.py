@@ -55,7 +55,7 @@ def build_markdown_report(bundle: dict) -> Path:
         if p is None:
             return ""
         try:
-            return str(Path(p).relative_to(cfg.PROJECT_ROOT)).replace("\\", "/")
+            return str(Path("..") / Path(p).relative_to(cfg.OUTPUTS_DIR)).replace("\\", "/")
         except ValueError:
             return str(p)
 
@@ -81,7 +81,7 @@ def build_markdown_report(bundle: dict) -> Path:
     A(f"| Mean warming rate | {numbers['mean_warming_c_per_decade']:+.3f} °C per decade |")
     A(f"| Fastest warming region | {numbers['fastest_warming_region']} "
       f"({numbers['fastest_warming_c_per_decade']:+.3f} °C/decade) |")
-    A(f"| Anomalies detected | {numbers['anomalies_detected']:,} |")
+    A(f"| Detector records (overlapping methods) | {numbers['anomalies_detected']:,} |")
     A(f"| Best forecast RMSE | {numbers['best_forecast_rmse']} °C |")
     A(f"| Post-cleaning completeness | {numbers['data_completeness_pct']:.2f} % |")
     A("")
@@ -118,11 +118,11 @@ def build_markdown_report(bundle: dict) -> Path:
     A("")
     A("### Descriptive statistics")
     A("")
-    A(_md_table(eda["summary"]))
+    A(_md_table(eda["summary"].reset_index(names="indicator")))
     A("")
     A("### Correlation matrix")
     A("")
-    A(_md_table(eda["correlations"], "{:.2f}"))
+    A(_md_table(eda["correlations"].reset_index(names="indicator"), "{:.2f}"))
     A("")
     A("### Warmest years in the record")
     A("")
@@ -164,7 +164,7 @@ def build_markdown_report(bundle: dict) -> Path:
     # ---------------- anomalies ----------------
     A("## 4. Anomaly Detection")
     A("")
-    A(f"{len(anomalies):,} anomalies were registered by the four-method ensemble. "
+    A(f"{len(anomalies):,} detector records were registered (methods can flag the same city-month) by the four-method ensemble. "
       f"The full register is saved to `outputs/tables/anomalies.csv`.")
     A("")
     A("### Anomalies per region")
@@ -188,7 +188,7 @@ def build_markdown_report(bundle: dict) -> Path:
     # ---------------- forecasting ----------------
     A("## 5. Forecasting")
     A("")
-    A("Every model was scored on the same 60-month hold-out window, then the winner "
+    A("Every model was scored on the same 60-month chronological validation window, then the winner "
       "was refit on the full series to project the next 36 months.")
     A("")
     A(_md_table(fc["metrics"]))
@@ -216,15 +216,24 @@ def build_markdown_report(bundle: dict) -> Path:
     A(bundle["insights_text"].split("## Key Findings", 1)[-1].strip())
     A("")
 
+    if bundle.get("public_data"):
+        A("## Separate real public-data companion — NOAA/Scripps CO2")
+        A("")
+        A("Real public observations are analyzed independently, never joined to synthetic cities. Concentration is in ppm, not emissions. Source/citation and retrieval checksum are preserved in data/raw/noaa_provenance.json.")
+        A("")
+        if figs.get("public_noaa"):
+            A(f"![Public CO2 observations]({rel(figs['public_noaa'])})")
+        A("")
+
     # ---------------- limits ----------------
     A("## 8. Methodology Notes & Limitations")
     A("")
     A("- The input is a **simulated** dataset that reproduces realistic statistical "
       "structure; it is not an observational climate record.")
-    A("- OLS trends assume linearity; the Mann-Kendall test is provided as a "
-      "distribution-free cross-check and both agree in this dataset.")
-    A("- Forecasts are statistical extrapolations of the historical trend, not "
-      "physical climate-model projections.")
+    A("- OLS uses monthly fixed effects and HAC(12) uncertainty. Full-model R² includes seasonality. "
+      "MK is a descriptive cross-check without serial-dependence or multiple-testing adjustment.")
+    A("- Forecasts are fixed-origin statistical extrapolations from end-2024, not physical climate-model projections. "
+      "Model selection uses a validation block, not an independent test; non-ARIMA bands are approximate and uncalibrated.")
     A("- Anomaly thresholds (z > 2.5, |STL residual| > 2 sigma, IQR fences, "
       "2 % Isolation Forest contamination) are configurable in `src/config.py`.")
     A("")
@@ -313,7 +322,10 @@ def build_html_report(bundle: dict) -> Path:
   <h2>Key Findings</h2>
   <pre>{html.escape(bundle['insights_text'])}</pre>
 
-  <h2>Temperature trend by region</h2>
+  <h2>Real public-data companion — NOAA/Scripps CO2</h2>
+  <p>Public observations are analyzed separately; no simulated city is presented as real.</p>
+  {img('public_noaa', 'Mauna Loa CO2 concentration — real public observations, not emissions')}
+  <h2>Temperature trend by region — SYNTHETIC</h2>
   {img('temperature', 'Fig. 1 - Monthly temperature with 12-month rolling mean, all regions')}
   {img('warming_bar', 'Fig. 2 - OLS warming rate per region with 95% confidence interval')}
   {img('decomposition', 'Fig. 3 - STL decomposition: trend, seasonality and residuals')}
@@ -341,7 +353,7 @@ def build_html_report(bundle: dict) -> Path:
   produced by the project's own generator. It reproduces seasonality, autocorrelation,
   long-term trends and extreme events, but it is not an observational climate record.
   The pipeline is designed so a real public dataset (NASA GISTEMP, NOAA, Our World in Data)
-  can be dropped into <code>data/raw/</code> without changing any downstream code.</div>
+  requires a source-specific adapter that preserves real measurements, units and coverage.</div>
 
   <h2>Trend statistics</h2>
   <pre>{html.escape(bundle['trend_results']['temperature_trends'].round(4).to_string(index=False))}</pre>

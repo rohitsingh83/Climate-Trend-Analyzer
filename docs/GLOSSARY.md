@@ -64,7 +64,7 @@ mean on monthly data smooths the seasonal cycle and reveals the underlying trend
 **Climatological z-score** - `(value − normal) / σ_normal`. The unit-free way to say "how
 unusual is this month for this place".
 
-**STL decomposition** - Splits a series into **Seasonal**, **Trend** and **Lo** (residual)
+**STL decomposition** - Seasonal-Trend decomposition using LOESS; it separates seasonal, trend and residual
 components. The residual is the "noise + extremes" layer.
 
 **OLS (Ordinary Least Squares)** - Linear regression that minimises the sum of squared
@@ -81,8 +81,7 @@ Note that R² on a *seasonal* series is naturally small; the fixed-effects model
 were true. `p < 0.05` = "significant at the 5 % level". *A p-value is not the probability that
 the trend is real.*
 
-**Confidence interval (CI)** - The plausible range for the true slope. A 95 % CI of
-`+0.376 ± 0.014 °C/decade` means the estimate is precise.
+**Confidence interval (CI)** - The plausible range for the true slope. A confidence interval communicates slope uncertainty; compare the bounds and units in the actual trend table.
 
 **Mann-Kendall test** - A non-parametric trend test that only assumes the trend is monotonic.
 Robust to outliers and to non-normal errors; the standard tool in climate-trend work.
@@ -102,8 +101,8 @@ rolling mean used as a *predictor*, or fitting a scaler on the full dataset befo
 **Back-testing / hold-out** - Evaluating a model on a period it never saw. This is the only
 honest way to compare models.
 
-**MAE / RMSE / MAPE / R²** - Forecast error metrics. MAE = average absolute error,
-RMSE = penalises large errors more, MAPE = percentage error, R² = variance explained.
+**MAE / RMSE / R²** - Forecast error metrics. MAE = average absolute error,
+RMSE = penalises large errors more, R² = variance explained.
 
 **ARIMA(p,d,q)** - AutoRegressive Integrated Moving Average: *p* auto-regressive lags, *d*
 differencing order, *q* moving-average lags. `d=1` removes a linear trend.

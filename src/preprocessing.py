@@ -141,6 +141,15 @@ def clean_dataset(df: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
     report["impossible_values_found"] = outliers_found
     report["rows_with_impossible_values"] = int(outlier_mask.sum())
 
+    # Preserve observed targets for leakage-free temporal evaluation.  The
+    # historical analysis may interpolate both ways; forecasting must not.
+    df["observed_temp_mean_c"] = df["temp_mean_c"]
+    df["data_quality_flag"] = np.where(
+        df[[c for c in cfg.CLIMATE_COLUMNS if c in df]].isna().any(axis=1),
+        "repaired", "original",
+    )
+    df = df.sort_values(["region", "date"])
+
     # ---- 7. imputation ----------------------------------------------------
     imputed_counts: dict = {}
     for col in cfg.CLIMATE_COLUMNS:
@@ -169,11 +178,6 @@ def clean_dataset(df: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
             df[col] = df[col].round(1)
     if "co2_ppm" in df:
         df["co2_ppm"] = df["co2_ppm"].round(2)
-
-    # data-quality flag: was the row touched by the cleaning process?
-    df["data_quality_flag"] = np.where(
-        outlier_mask.reindex(df.index, fill_value=False), "repaired", "original"
-    )
 
     report["rows_out"] = int(len(df))
     report["rows_dropped"] = report["rows_in"] - report["rows_out"]

@@ -87,11 +87,11 @@ Record this script - it is the single most convincing asset for an interview:
 | --- | --- | --- |
 | 0:00 | Terminal, `python main.py --step all` | "One command runs the whole pipeline" |
 | 0:10 | The log scrolling, stage timings | "Cleaning, features, EDA, trends, anomalies, forecast" |
-| 0:25 | The HEADLINE NUMBERS block | "2,700 records, 5 regions, 337 anomalies, RMSE 0.9" |
+| 0:25 | The HEADLINE NUMBERS block | "2,700 records, 5 regions, method-level anomaly records, validation metrics" |
 | 0:35 | Open `outputs/figures/02_temperature_trend.png` | "All five regions are warming" |
-| 0:45 | Open `07_warming_rate_by_region.png` | "London fastest, with 95 % confidence intervals" |
-| 0:55 | Open `09_anomaly_detection.png` | "337 anomalies, from four independent detectors" |
-| 1:05 | Open `14_forecast.png` | "36-month projection with a 95 % interval" |
+| 0:45 | Open `07_warming_rate_by_region.png` | "London fastest in this simulation, with HAC uncertainty" |
+| 0:55 | Open `09_anomaly_detection.png` | "method-level anomaly records, from four independent detectors" |
+| 1:05 | Open `14_forecast.png` | "36-month fixed-origin projection with an approximate band" |
 | 1:15 | Open the Streamlit dashboard, click a region | "And it is interactive" |
 
 **Tooling:** Windows → `Win + Alt + R` (Xbox Game Bar) · macOS → `Cmd + Shift + 5` ·
@@ -117,12 +117,12 @@ Keep it under 5 MB, or GitHub will refuse it.
 ## 6. Checklist before you publish
 
 - [ ] README renders correctly (no broken image links)
-- [ ] The green **CI** badge is visible
-- [ ] `outputs/figures/` contains all 17 charts
-- [ ] `outputs/tables/` contains all 6 tables
+- [ ] The actual remote CI run has passed (only after pushing)
+- [ ] `outputs/figures/` contains all 18 charts including public CO2
+- [ ] `outputs/tables/` contains all 7 tables including public CO2
 - [ ] The HTML report opens in a browser
 - [ ] The dashboard starts with `streamlit run app/app.py`
-- [ ] `pytest -v` shows 20 passed
+- [ ] `pytest -v` shows 26 passed
 - [ ] The repository description, topics and social preview image are set
 - [ ] The terminal screenshot and the GitHub screenshot are in `images/`
 - [ ] The commit history is meaningful (not "update", "fix", "changes")

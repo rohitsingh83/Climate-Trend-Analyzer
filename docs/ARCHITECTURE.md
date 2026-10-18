@@ -13,7 +13,7 @@
 | **Reproducibility** | The simulator is seeded (`RANDOM_SEED = 42`). The same numbers appear on every machine, every run. |
 | **Auditability** | The cleaning stage returns a report dictionary of every counter; the report prints it as a table. |
 | **No hidden state** | Each function takes a DataFrame and returns a DataFrame. The pipeline is the only place that wires them together. |
-| **Testability** | 20 pytest tests cover the statistics, not just the plumbing. |
+| **Testability** | 26 pytest tests cover the statistics, not just the plumbing. |
 
 ---
 
@@ -117,10 +117,10 @@ Each stage accepts and returns a **DataFrame with a documented schema** - this i
 | Features | clean | + `quarter, season, decade, t, temp_clim, temp_std_clim, temp_anomaly, temp_anomaly_z, temp_anomaly_pct, rain_normal, rain_std_clim, rain_anomaly_pct, rain_anomaly_z, rain_pct_of_normal, *_roll12_mean, *_roll12_std, *_lag1/2/3/12, heatwave_month, heatwave_event, drought_month, drought_event, extreme_event, enso_proxy, month_sin, month_cos` | 2,700 |
 | EDA | featured | 8 summary tables | — |
 | Trends | featured | 25 rows (5 regions × 5 indicators) | — |
-| Anomalies | featured | one row per detected event | 337 |
+| Anomalies | featured | one row per method flag (overlaps possible) | method-level records |
 | Forecast | featured | 5 × 36 = 180 projected rows | 180 |
 
-**Swapping in a real dataset** only requires placing a CSV with the same column names in `data/raw/` - no downstream code changes.
+**Swapping in a real dataset** only requires placing a CSV with the same column names in `data/raw/` with an appropriate source adapter; arbitrary datasets are not drop-in replacements.
 
 ---
 
@@ -134,3 +134,14 @@ Each stage accepts and returns a **DataFrame with a documented schema** - this i
 | A new forecasting model | a function in `forecasting.py` returning `{"model", "metrics", "forecast"}` |
 | A new chart | a `plot_*()` function in `visualizations.py` + one call in `pipeline.stage_visualize` |
 | A live API feed | replace `data_loader.load_raw()` - the rest of the system is unchanged |
+
+
+## Final validated implementation notes
+
+- Forecasting bypasses retrospective centered/target-derived features. Ridge uses calendar/time only.
+- ARIMA order is chosen by training AIC; a 60-month validation block chooses among models.
+- Original target observations are retained; missing validation truth is not interpolated.
+- OLS uncertainty uses HAC(12); full-model R² includes seasonal fixed effects. MK is exploratory, not pre-whitened.
+- `src/public_data.py` independently analyzes real NOAA/Scripps CO₂, preserving attribution/checksum. It never joins it to synthetic city data.
+- Public-source replacement needs a source-specific schema/coverage adapter, not renamed fictional variables.
+- The full, current A–P guide and file-by-file source listing are in PROJECT_GUIDE.md and FULL_CODE.md.

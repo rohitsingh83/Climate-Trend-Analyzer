@@ -1,0 +1,9 @@
+metric,value
+Rows loaded (raw),2715.0
+Rows dropped (bad dates / duplicates),15.0
+Rows in clean dataset,2700.0
+Unparseable dates removed,0.0
+Duplicate rows removed,15.0
+Rows containing impossible values,12.0
+Total values imputed,132.0
+Completeness after cleaning (%),100.0

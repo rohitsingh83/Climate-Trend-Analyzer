@@ -75,7 +75,7 @@ test(preprocessing): assert that impossible values never survive cleaning
 
 ## Pull request checklist
 
-- [ ] `pytest -v` passes locally (20 tests)
+- [ ] `pytest -v` passes locally (26 tests)
 - [ ] `python main.py --step all` runs without errors
 - [ ] New code is commented and follows the existing style
 - [ ] New behaviour has a test

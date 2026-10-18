@@ -117,7 +117,7 @@ def plot_temperature_trend(df: pd.DataFrame) -> Path:
         roll = g["temp_mean_c"].rolling(12, center=True, min_periods=6).mean()
         ax.plot(g["date"], roll, lw=2.4, color=_region_color(region),
                 label=f"{region} (12-mo mean)")
-    ax.set_title("Global Temperature Trend by Region (1980-2024)")
+    ax.set_title("SYNTHETIC Temperature Trend by Region (1980-2024)")
     ax.set_xlabel("Date")
     ax.set_ylabel("Mean temperature (°C)")
     ax.legend(ncol=3, fontsize=9)
@@ -200,7 +200,7 @@ def plot_yearly_comparison(df: pd.DataFrame) -> Path:
         axes[0].plot(g["year"], g["temp_mean_c"], marker="o", ms=3, lw=1.6,
                      color=_region_color(region), label=region)
     gy = df.groupby("year")["temp_mean_c"].mean()
-    axes[0].plot(gy.index, gy.values, lw=3, color="black", label="All regions")
+    axes[0].plot(gy.index, gy.values, lw=3, color="black", label="Unweighted city mean")
     axes[0].set_title("Yearly Mean Temperature by Region (1980-2024)")
     axes[0].set_xlabel("Year"); axes[0].set_ylabel("Mean temperature (°C)")
     axes[0].legend(fontsize=8, ncol=2)
@@ -208,7 +208,7 @@ def plot_yearly_comparison(df: pd.DataFrame) -> Path:
     axes[1].bar(gy.index, gy.values, color="#ff7f0e", alpha=0.75)
     axes[1].axhline(gy.mean(), color="black", ls="--", lw=1.5,
                     label=f"Mean {gy.mean():.2f}°C")
-    axes[1].set_title("Global Mean Temperature per Year")
+    axes[1].set_title("Unweighted Five-City Mean per Year — SYNTHETIC")
     axes[1].set_xlabel("Year"); axes[1].set_ylabel("Mean temperature (°C)")
     axes[1].legend(fontsize=9)
     axes[1].tick_params(axis="x", rotation=60)
@@ -225,7 +225,7 @@ def plot_regional_warming_bar(trends: pd.DataFrame) -> Path:
     ax.barh(t["region"], t["slope_per_decade"], xerr=err, color=colors, alpha=0.85,
             capsize=4, edgecolor="black", linewidth=0.6)
     ax.axvline(0, color="black", lw=1)
-    ax.set_title("Warming Rate by Region (OLS trend, 95% CI, °C per decade)")
+    ax.set_title("Warming Rate by Region (OLS trend, HAC-robust 95% CI, °C per decade)")
     ax.set_xlabel("Temperature change (°C per decade)")
     for y, v in enumerate(t["slope_per_decade"]):
         ax.text(v + (0.005 if v >= 0 else -0.005), y, f"{v:+.3f}",
@@ -321,7 +321,7 @@ def plot_co2_vs_temperature(df: pd.DataFrame) -> Path:
     slope, intercept, r, p, _ = st.linregress(gy["co2_ppm"], gy["temp_mean_c"])
     x = np.linspace(gy["co2_ppm"].min(), gy["co2_ppm"].max(), 50)
     axes[0].plot(x, intercept + slope * x, color="black", lw=2.4,
-                 label=f"Global fit: R²={r**2:.3f}, p={p:.2e}")
+                 label=f"Five-city fit: R²={r**2:.3f}, p={p:.2e}")
     axes[0].set_title("CO₂ Concentration vs Mean Temperature")
     axes[0].set_xlabel("CO₂ (ppm)"); axes[0].set_ylabel("Mean temperature (°C)")
     axes[0].legend(fontsize=8, ncol=2)
@@ -376,7 +376,7 @@ def plot_forecast(result: dict, region: str | None = None) -> Path:
             label=f"Forecast - {res['best_model']}")
     if "ci_low" in fc and fc["ci_low"].notna().any():
         ax.fill_between(fc["date"], fc["ci_low"], fc["ci_high"],
-                        color="#d62728", alpha=0.15, label="95% prediction interval")
+                        color="#d62728", alpha=0.15, label="Approximate 95% prediction band")
     ax.axvline(hist["date"].max(), color="grey", ls=":", lw=1.4)
     ax.set_title(f"Climate Forecast - {res['region']} "
                  f"({len(fc)} months ahead, model: {res['best_model']})")

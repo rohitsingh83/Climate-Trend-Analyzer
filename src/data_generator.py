@@ -4,7 +4,7 @@ data_generator.py
 **Virtual simulation of a climate data collection system.**
 
 This module fabricates a *realistic* monthly climate dataset (1980-2024) for
-six? no - five regions, so that the whole project can be built, demonstrated
+five regions, so that the whole project can be built, demonstrated
 and evaluated **without access to any institutional or government system**.
 
 What is simulated (and why it matters)
@@ -54,7 +54,7 @@ def _ar1_noise(n: int, rho: float, rng: np.random.Generator) -> np.ndarray:
 def _seasonal_wave(months: np.ndarray, amp: float, peak_month: int) -> np.ndarray:
     """Cosine seasonal cycle peaking at `peak_month` (1-12)."""
     phase = 2.0 * np.pi * (months - peak_month) / 12.0
-    return -amp * np.cos(phase)
+    return amp * np.cos(phase)
 
 
 def _simulate_region(
@@ -88,6 +88,12 @@ def _simulate_region(
 
     # --- 5. Temperature ----------------------------------------------------
     temp_mean = base_temp + seasonal + trend + enso + noise
+    # Explicit synthetic heat-stress injections: three non-overlapping runs.
+    # These are monthly stress episodes, not daily WMO-defined heat waves.
+    heatwave = np.zeros(n, dtype=int)
+    for start in (120, 300, 480):
+        heatwave[start:start+3] = 1
+    temp_mean = temp_mean + 4.5 * heatwave
     # Southern hemisphere seasons are offset -> slightly different spread
     diurnal_spread = 3.2 + 2.5 * np.cos(2 * np.pi * (months - 6) / 12) ** 2
     temp_max = temp_mean + diurnal_spread + rng.normal(0, 0.6, n)
@@ -96,12 +102,20 @@ def _simulate_region(
     # --- 6. Rainfall (gamma distributed, strongly seasonal) -----------------
     # wet-season factor: high where the seasonal cycle is at its minimum
     wet_factor = 1.0 - 0.55 * (seasonal / max(amp, 1e-6))
+    if name == "Hyderabad":
+        # Approximate monsoon rainfall peak in July, not a calibrated station model.
+        wet_factor = 1.0 + 0.75 * np.cos(2*np.pi*(months-7)/12)
     wet_factor = np.clip(wet_factor, 0.25, 1.8)
     # ENSO modulates rainfall: positive ENSO -> wetter, negative -> drought
     wet_factor = wet_factor * (1.0 + 0.28 * enso)
     shape = 1.4
     scale = rain_base * wet_factor / shape
     rainfall = rng.gamma(shape=shape, scale=np.clip(scale, 1.0, None))
+
+    drought = np.zeros(n, dtype=int)
+    for start in (180, 360, 504):
+        drought[start:start+3] = 1
+    rainfall = np.where(drought == 1, rainfall * 0.15, rainfall)
 
     # --- 7. Humidity (inverse relation with temperature) -------------------
     humidity = humid_base - 1.15 * (temp_mean - base_temp) + rng.normal(0, 3.0, n)
@@ -114,11 +128,7 @@ def _simulate_region(
     sea_level = 1.6 * (years - 1980) + 0.035 * (years - 1980) ** 2
     sea_level = sea_level + rng.normal(0, 1.2, n)
 
-    # --- 9. Extreme-event ground truth (used later for validation) --------
-    heatwave = np.zeros(n, dtype=int)
-    heatwave[temp_mean > np.quantile(temp_mean, 0.97)] = 1
-    drought = np.zeros(n, dtype=int)
-    drought[rainfall < 0.35 * np.median(rainfall)] = 1
+    # `sim_*` are explicit injected-event labels, never model predictors.
 
     return pd.DataFrame(
         {

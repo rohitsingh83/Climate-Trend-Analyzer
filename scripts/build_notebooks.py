@@ -36,11 +36,11 @@ from pathlib import Path
 warnings.filterwarnings("ignore")
 
 PROJECT_ROOT = Path.cwd()
-if not (PROJECT_ROOT / "src").exists():          # allow running from anywhere
-    PROJECT_ROOT = Path(r"{root}")
-    sys.path.insert(0, str(PROJECT_ROOT))
-else:
-    sys.path.insert(0, str(PROJECT_ROOT))
+if not (PROJECT_ROOT / "src").exists():
+    PROJECT_ROOT = PROJECT_ROOT.parent
+if not (PROJECT_ROOT / "src").exists():
+    raise RuntimeError("Launch Jupyter from the project root or notebooks directory")
+sys.path.insert(0, str(PROJECT_ROOT))
 
 import pandas as pd, numpy as np
 import matplotlib.pyplot as plt
@@ -247,7 +247,7 @@ feat.head()
         md("## 3.1 Seasonal decomposition (STL)"),
         code("""
 decomp = trend_analysis.seasonal_decomposition(
-    feat[feat.region == "London"].sort_values("date")["temp_mean_c"], period=12)
+    feat[feat.region == "London"].sort_values("date").set_index("date")["temp_mean_c"], period=12)
 viz.plot_decomposition(decomp, "London")
 """),
         md("""The red line is the **trend** - it rises steadily. The green line is the
@@ -258,8 +258,9 @@ plus the extremes, which is exactly what the anomaly detector will look for.""")
 raw_series = feat[feat.region == "London"].sort_values("date")["temp_mean_c"]
 
 print("Plain OLS on the raw series (WRONG - seasonality leaks in):")
-res = trend_analysis.ols_trend(raw_series, months=None)
-print(f"   slope = {res['slope_per_year']*10:+.3f} C/decade,  R2 = {res['r_squared_raw']:.4f}")
+from scipy.stats import linregress
+plain = linregress(np.arange(len(raw_series)),raw_series)
+print(f"   slope = {plain.slope*120:+.3f} C/decade,  R2 = {plain.rvalue**2:.4f}")
 
 print()
 print("OLS with monthly fixed effects (CORRECT):")
@@ -366,7 +367,7 @@ print(f"Injected heat-wave months : {len(truth)}")
 print(f"Also flagged as anomalies  : {hit}")
 print(f"Recall                    : {100*hit/max(len(truth),1):.1f}%")
 """),
-        md("### ✅ Checkpoint\n* 4 detection methods agree on a common register\n* Recall against the injected ground truth is high\n* The register is exported to `outputs/tables/anomalies.csv`"),
+        md("### ✅ Checkpoint\n* 4 detection methods agree on a common register\n* Recall against the injected ground truth is measured (not assumed)\n* The register is exported to `outputs/tables/anomalies.csv`"),
     ])
 
 
@@ -382,19 +383,19 @@ def notebook_5() -> nbf.NotebookNode:
 ### Forecasting done properly
 The most common mistake in portfolio projects is *fitting a model and
 plotting it* without ever checking whether it can predict. Here every
-candidate model is scored on the **same 60-month hold-out window** that was
-never seen during training:
+candidate model is scored on the **same 60-month chronological validation window** that was
+not used during training, but used to select the model:
 
 | Model | Idea |
 | --- | --- |
 | Naive | "next month = this month" - the benchmark everyone must beat |
 | Seasonal naive | "next month = the same month last year" |
 | Drift | "the historical slope continues" |
-| Ridge + engineered features | the machine-learning approach |
+| Ridge + calendar/time features | the machine-learning approach |
 | ARIMA | the classic statistical time-series model |
 
 The winner is then refit on the full history to project the next 36 months
-with a 95 % prediction interval.
+with an approximate 95 % prediction band.
 """),
         code(PRELUDE),
         code("""
@@ -429,9 +430,7 @@ bundle = {
     "anomaly_results": anomaly_detection.run_anomaly_detection(feat),
     "forecast_results": res,
     "eda": eda.run_eda(feat),
-    "clean_report": {"rows_in": 2715, "rows_out": len(feat), "rows_dropped": 15,
-                     "values_imputed": {"temp_mean_c": 41, "rainfall_mm": 41, "humidity_pct": 41},
-                     "rows_with_impossible_values": 12, "completeness_pct": 100.0},
+    "clean_report": preprocessing.clean_dataset(data_loader.load_raw())[1],
 }
 text = ins.generate_insights(bundle)
 print(text[:2500])
@@ -448,8 +447,8 @@ for k, v in summary.items():
 """),
         md("""
 ### ✅ Checkpoint
-* The best model beats every baseline on the hold-out window
-* A 36-month projection with a 95 % interval is produced per region
+* Compare validation errors with every baseline; winning is not assumed
+* A 36-month projection with an approximate residual band is produced per region
 * Findings are generated automatically from the numbers
 """),
     ])
@@ -484,7 +483,7 @@ def main() -> int:
                 [sys.executable, "-m", "jupyter", "nbconvert",
                  "--to", "notebook", "--execute", "--inplace",
                  f"--ExecutePreprocessor.timeout=600", str(path)],
-                cwd=str(ROOT), check=False,
+                cwd=str(ROOT), check=True,
             )
     return 0
 

@@ -83,12 +83,12 @@ def generate_insights(bundle: dict) -> str:
       f"across {df['region'].nunique()} regions.*\n")
 
     A("### 1. Warming trend\n")
-    A(f"- **Every region is warming.** All {len(warming)} of {len(temp_trends)} simulated "
+    A(f"- **Synthetic warming signal.** {len(warming)} of {len(temp_trends)} simulated "
       f"regions show a statistically significant positive temperature trend "
       f"({len(significant)} of {len(trends)} region x indicator combinations are significant at p < 0.05).")
-    A(f"- **Fastest warming:** {fastest['region']} at "
+    A(f"- **Fastest synthetic warming:** {fastest['region']} at "
       f"**{_fmt(fastest['slope_per_decade'])} °C per decade** "
-      f"(OLS slope {_fmt(fastest['slope_per_year'], 4)} °C/yr, R² = {_fmt(fastest['r_squared'])}, "
+      f"(OLS slope {_fmt(fastest['slope_per_year'], 4)} °C/yr, full model R² (including seasonal effects) = {_fmt(fastest['r_squared'])}, "
       f"p = {fastest['p_value']:.2e}).")
     A(f"- **Slowest warming:** {slowest['region']} at "
       f"{_fmt(slowest['slope_per_decade'])} °C per decade.")
@@ -101,53 +101,73 @@ def generate_insights(bundle: dict) -> str:
       f"which is exactly why regionalisation matters for policy.\n")
 
     A("### 2. Seasonal structure\n")
-    monthly = df.groupby("month")["temp_mean_c"].mean()
-    peak_m = int(monthly.idxmax()); trough_m = int(monthly.idxmin())
     names = {1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June",
              7: "July", 8: "August", 9: "September", 10: "October", 11: "November", 12: "December"}
-    A(f"- The dataset has a clear seasonal cycle: peak mean temperature in "
-      f"**{names[peak_m]}** ({_fmt(monthly.max(), 2)} °C) and minimum in "
-      f"**{names[trough_m]}** ({_fmt(monthly.min(), 2)} °C), a swing of "
-      f"**{_fmt(monthly.max() - monthly.min(), 2)} °C**.")
-    A(f"- {int((df.groupby('region')['month'].apply(lambda s: s.value_counts().idxmax())).nunique())} "
-      f"distinct seasonal peaks were detected across regions, confirming that the simulator "
-      f"reproduces hemisphere-aware seasonality.")
+    # peak / trough month PER REGION (a pooled average would mix the hemispheres)
+    reg_month = df.groupby(["region", "month"])["temp_mean_c"].mean()
+    region_peak = reg_month.groupby("region").idxmax().map(lambda x: int(x[1]))
+    region_trough = reg_month.groupby("region").idxmin().map(lambda x: int(x[1]))
+    swing = (reg_month.groupby("region").max() - reg_month.groupby("region").min())
+
+    peak_list = ", ".join(f"{r} ({names[m]})" for r, m in region_peak.items())
+    A(f"- **Every region has its own seasonal peak:** {peak_list}. "
+      f"The ~6-month phase shift between the northern and southern hemispheres "
+      f"(London peaks in July, Sydney in January) is exactly what a climate-aware "
+      f"model has to capture.")
+    A(f"- The seasonal swing differs sharply by climate: "
+      f"**{swing.idxmax()}** swings {_fmt(swing.max(), 1)} °C between its warmest and "
+      f"coolest month, while **{swing.idxmin()}** swings only {_fmt(swing.min(), 1)} °C - "
+      f"a {int(swing.max() / max(swing.min(), 1e-6))}x difference in seasonal amplitude.")
+    A(f"- {len(set(region_peak))} distinct peak months appear across the {len(region_peak)} regions, "
+      f"confirming the simulator reproduces hemisphere-aware seasonality.")
     A("- Seasonality is the main source of variance, so every model in this project "
-      "uses a 12-month baseline (climatology) or a seasonal-naive benchmark.\n")
+      "uses a 12-month baseline (climatology) or a seasonal-naive benchmark, and every "
+      "trend statistic is computed on a **deseasonalised** series.\n")
 
     A("### 3. Anomalies and extreme events\n")
-    A(f"- **{n_anom:,} anomalies** were detected by the four-method ensemble "
+    A(f"- **{n_anom:,} detector records** were detected by the four-method ensemble "
       f"(z-score, STL residual, IQR, Isolation Forest).")
-    A(f"- Direction split: **{hot} hot**, **{cold} cold**, **{drought} dry**, **{wet} wet** months.")
+    A(f"- Detector-record direction split (methods can flag the same month): **{hot} hot**, **{cold} cold**, **{drought} dry**, **{wet} wet** months.")
     if not notable.empty:
         top = notable.iloc[0]
         A(f"- Most extreme event: **{top['description']}** in {top['region']} "
           f"on {pd.Timestamp(top['date']):%d %b %Y} (score {top['score']}).")
-    ev = df.groupby("decade")["extreme_event"].sum()
+    # extreme events normalised per year, because the last decade is incomplete
+    ev = df.groupby("decade").agg(events=("extreme_event", "sum"),
+                                  months=("extreme_event", "size"))
+    ev["per_year"] = ev["events"] / (ev["months"] / 12.0)
     if len(ev) > 1:
-        A(f"- Heat-wave + drought months rise from **{int(ev.iloc[0])}** in the "
-          f"{int(ev.index[0])}s to **{int(ev.iloc[-1])}** in the {int(ev.index[-1])}s "
-          f"({_fmt((ev.iloc[-1] / max(ev.iloc[0], 1) - 1) * 100, 1)} % change) - "
-          f"extremes are increasing faster than the mean.\n")
+        first, last = ev.iloc[0], ev.iloc[-1]
+        change = 100.0 * (last["per_year"] / max(first["per_year"], 1e-9) - 1)
+        direction = "rising" if change > 0 else "falling"
+        A(f"- Heat-wave + drought months occur at **{_fmt(first['per_year'], 1)} per year** in the "
+          f"{int(ev.index[0])}s and **{_fmt(last['per_year'], 1)} per year** in the "
+          f"{int(ev.index[-1])}s - a {direction} rate "
+          f"({_fmt(abs(change), 1)} % {'more' if change > 0 else 'fewer'}). "
+          f"(The {int(ev.index[-1])}s are a partial decade, so the rate is used instead of the raw count.)")
+        A(f"- The mean warming rate is "
+          f"{_fmt(float(temp_trends['slope_per_decade'].mean()), 3)} °C/decade; "
+          f"extremes and the mean therefore move **"
+          f"{'in the same direction' if (change > 0) == (temp_trends['slope_per_decade'].mean() > 0) else 'in opposite directions'}**, "
+          f"but these planted simulation episodes are not evidence that real-world extreme frequency increased.\n")
 
     A("### 4. Drivers\n")
-    A(f"- Atmospheric CO₂ and mean temperature show a strong global correlation of "
-      f"**r = {co2_corr:.3f}** (Pearson, monthly global means).")
+    A(f"- Atmospheric CO₂ and mean temperature have a monthly, unweighted five-city correlation of "
+      f"**r = {co2_corr:.3f}** (Pearson, monthly unweighted five-city means).")
     co2_trend = trends[(trends["indicator"] == "co2_ppm")]
     if not co2_trend.empty:
         c = co2_trend.iloc[0]
         A(f"- CO₂ is rising at about **{_fmt(c['slope_per_year'] * 10, 2)} ppm per decade** "
-          f"(R² = {_fmt(c['r_squared'])}) - the fastest-moving driver in the dataset.")
-    A("- The residual variance that CO₂ does not explain appears in the seasonal and "
-      "event columns: local extremes are driven by circulation (ENSO proxy) and "
-      "land-ocean patterns, not only by the global trend.\n")
+          f"(R² = {_fmt(c['r_squared'])}) (concentration, not emissions).")
+    A("- Shared time trends can create spurious correlation; these simulated associations "
+      "do not establish causal attribution. This five-city mean is NOT a global climate index.\n")
 
     A("### 5. Forecasting\n")
     if not fc["metrics"].empty and not fc_tbl.empty:
         avg_rmse = float(fc["metrics"]["RMSE"].min())
-        A(f"- The best model per region was selected by **60-month hold-out back-testing**: "
+        A(f"- The best model per region was selected by **60-month chronological validation**: "
           f"{', '.join(f'{r} -> {m}' for r, m in best_models.items())}.")
-        A(f"- Best achievable RMSE across all candidates: **{_fmt(avg_rmse, 3)} °C** "
+        A(f"- Lowest validation RMSE among candidates: **{_fmt(avg_rmse, 3)} °C** "
           f"on a monthly average temperature series.")
         last = fc_tbl.sort_values("date").groupby("region").tail(1)
         for _, r in last.iterrows():
@@ -168,8 +188,7 @@ def generate_insights(bundle: dict) -> str:
 
     A("### 7. Business & policy implications\n")
     A("- **Energy & utilities:** a reliable regional warming signal supports "
-      "peak-demand and cooling-load forecasting (10-15 % operational savings is the "
-      "range usually quoted for better demand management).")
+      "peak-demand and cooling-load planning; no cost savings are measured by this project.")
     A("- **Agriculture:** seasonal rainfall anomalies identify drought and flood "
       "risk windows for crop planning and irrigation scheduling.")
     A("- **Insurance & finance:** anomaly frequency and trend severity are the "

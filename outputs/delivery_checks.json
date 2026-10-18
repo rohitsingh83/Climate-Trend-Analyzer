@@ -1,0 +1,41 @@
+{
+  "source_compiles": true,
+  "notebooks": {
+    "05_Forecasting_and_Insights.ipynb": {
+      "code_cells": 8,
+      "all_executed": true,
+      "error_outputs": 0
+    },
+    "04_Anomaly_Detection.ipynb": {
+      "code_cells": 8,
+      "all_executed": true,
+      "error_outputs": 0
+    },
+    "02_Exploratory_Data_Analysis.ipynb": {
+      "code_cells": 10,
+      "all_executed": true,
+      "error_outputs": 0
+    },
+    "01_Data_Loading_and_Cleaning.ipynb": {
+      "code_cells": 8,
+      "all_executed": true,
+      "error_outputs": 0
+    },
+    "03_Climate_Trend_Analysis.ipynb": {
+      "code_cells": 9,
+      "all_executed": true,
+      "error_outputs": 0
+    }
+  },
+  "broken_local_markdown_links": [
+    {
+      "file": "docs/PROJECT_GUIDE.md",
+      "link": "images/09_dashboard.png"
+    }
+  ],
+  "noaa_checksum_matches": true,
+  "figure_count": 18,
+  "csv_table_count": 8,
+  "pytest_log": "..........................                                               [100%]\n26 passed in 6.17s",
+  "remote_ci_executed": false
+}

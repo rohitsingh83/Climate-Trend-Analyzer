@@ -1,0 +1,7 @@
+{
+  "source_url": "https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.csv",
+  "retrieved_at_utc": "2026-10-18T09:20:00.099529+00:00",
+  "sha256": "d895fb5b4a59fb5e4cd98e69b7667fe5bef595c6581f630852b12cb41c07f675",
+  "citation": "Xin Lan, NOAA/GML, and Ralph Keeling, Scripps Institution of Oceanography; https://gml.noaa.gov/ccgg/trends/data.html",
+  "license_note": "NOAA public data: preserve source attribution and file usage notes; not relicensed under project MIT"
+}

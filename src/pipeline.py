@@ -62,6 +62,8 @@ def stage_clean(raw: pd.DataFrame | None = None) -> tuple[pd.DataFrame, dict]:
     raw = raw if raw is not None else data_loader.load_raw(cfg.RAW_CSV)
     clean, report = preprocessing.clean_dataset(raw)
     clean.to_csv(cfg.CLEAN_CSV, index=False)
+    preprocessing.quality_report_table(report).to_csv(cfg.TABLES_DIR / "cleaning_audit.csv", index=False)
+    data_loader.save_json(report, cfg.OUTPUTS_DIR / "cleaning_audit.json")
     print(f"[pipeline] Clean dataset -> {cfg.CLEAN_CSV} {clean.shape}")
     return clean, report
 
@@ -80,7 +82,7 @@ def stage_eda(featured: pd.DataFrame) -> dict:
     """Exploratory data analysis."""
     bundle = eda_mod.run_eda(featured)
     data_loader.save_table(bundle["yearly"], cfg.YEARLY_CSV)
-    data_loader.save_table(bundle["correlations"], cfg.CORR_CSV)
+    data_loader.save_table(bundle["correlations"].reset_index(names="indicator"), cfg.CORR_CSV)
     print(f"[pipeline] EDA complete ({len(bundle['yearly'])} yearly rows)")
     return bundle
 
@@ -221,6 +223,11 @@ def run_pipeline(
     bundle["figures"] = stage_visualize(bundle)
     _log("stage 8/9  visualisations done", t0)
 
+    # Real observations are a separate companion track, never synthetic joins.
+    from .public_data import analyze as analyze_public, PATH as public_path
+    if public_path.exists():
+        bundle["public_data"] = analyze_public()
+        bundle["figures"]["public_noaa"] = cfg.FIGURES_DIR / "16_public_noaa_co2.png"
     stage_insights(bundle)
     stage_report(bundle)
     _log("stage 9/9  insights + report done", t0)

@@ -1,0 +1,78 @@
+======================================================================
+CLIMATE TREND ANALYZER - END-TO-END PIPELINE
+======================================================================
+[pipeline] Raw dataset already present: /home/user/Climate-Trend-Analyzer/data/raw/climate_raw.csv
+[data_loader] Loaded raw dataset: /home/user/Climate-Trend-Analyzer/data/raw/climate_raw.csv -> shape (2715, 14)
+[pipeline] stage 1/9  ingestion done  (+0.0s)
+[data_loader] Saved json  -> /home/user/Climate-Trend-Analyzer/outputs/cleaning_audit.json
+[pipeline] Clean dataset -> /home/user/Climate-Trend-Analyzer/data/processed/climate_clean.csv (2700, 18)
+[pipeline] stage 2/9  cleaning done  (+0.1s)
+[pipeline] Featured dataset -> /home/user/Climate-Trend-Analyzer/data/processed/climate_featured.csv (2700, 57)
+[pipeline] stage 3/9  feature engineering done  (+0.3s)
+[data_loader] Saved table -> /home/user/Climate-Trend-Analyzer/outputs/tables/yearly_summary.csv (225 rows)
+[data_loader] Saved table -> /home/user/Climate-Trend-Analyzer/outputs/tables/correlation_matrix.csv (7 rows)
+[pipeline] EDA complete (225 yearly rows)
+[pipeline] stage 4/9  EDA done  (+0.4s)
+[data_loader] Saved table -> /home/user/Climate-Trend-Analyzer/outputs/tables/trend_summary.csv (25 rows)
+[pipeline] Trend analysis complete (25 region x indicator rows)
+[pipeline] stage 5/9  trend analysis done  (+1.0s)
+[data_loader] Saved table -> /home/user/Climate-Trend-Analyzer/outputs/tables/anomalies.csv (362 rows)
+[pipeline] Anomaly detection complete (362 anomalies)
+[pipeline] stage 6/9  anomaly detection done  (+2.3s)
+[data_loader] Saved table -> /home/user/Climate-Trend-Analyzer/outputs/tables/model_metrics.csv (25 rows)
+[data_loader] Saved table -> /home/user/Climate-Trend-Analyzer/outputs/tables/forecast_next_36m.csv (180 rows)
+[pipeline] Forecasting complete (180 projected rows)
+[pipeline] stage 7/9  forecasting done  (+10.5s)
+[viz] saved 00_architecture_diagram.png
+[viz] saved 00_raw_data_preview.png
+[viz] saved 01_data_quality.png
+[viz] saved 02_temperature_trend.png
+[viz] saved 03_rainfall_trend.png
+[viz] saved 04_seasonal_heatmap.png
+[viz] saved 05_seasonal_profile.png
+[viz] saved 06_yearly_comparison.png
+[viz] saved 07_warming_rate_by_region.png
+[viz] saved 08_seasonal_decomposition.png
+[viz] saved 09_anomaly_detection.png
+[viz] saved 10_anomaly_timeline.png
+[viz] saved 11_extreme_events_by_decade.png
+[viz] saved 12_co2_vs_temperature.png
+[viz] saved 13_sea_level_rise.png
+[viz] saved 14_forecast.png
+[viz] saved 15_model_comparison.png
+[pipeline] stage 8/9  visualisations done  (+17.5s)
+{
+  "dataset": "NOAA/Scripps Mauna Loa monthly atmospheric CO2",
+  "data_type": "PUBLIC OBSERVATIONS, separate from synthetic city data",
+  "n_months": 540,
+  "start": "1980-01-01",
+  "end": "2024-12-01",
+  "n_complete_years": 45,
+  "linear_slope_ppm_per_year": 1.9157590030742204,
+  "first_complete_year_mean_ppm": 338.7625,
+  "last_complete_year_mean_ppm": 424.6041666666667,
+  "source": "https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.csv",
+  "citation": "Xin Lan, NOAA/GML, and Ralph Keeling, Scripps Institution of Oceanography; https://gml.noaa.gov/ccgg/trends/data.html",
+  "caveats": "Station CO2 concentration in ppm, not emissions; linear summary of accelerating series. Source notes include measurement-site interruptions and interpolation."
+}
+[report] Markdown report -> /home/user/Climate-Trend-Analyzer/outputs/reports/climate_trend_report.md
+[report] HTML report -> /home/user/Climate-Trend-Analyzer/outputs/reports/climate_trend_report.html
+[report] Insights doc -> /home/user/Climate-Trend-Analyzer/docs/INSIGHTS.md
+[pipeline] stage 9/9  insights + report done  (+17.8s)
+[data_loader] Saved json  -> /home/user/Climate-Trend-Analyzer/outputs/run_summary.json
+======================================================================
+PIPELINE COMPLETE in 17.8s
+  figures   : 18  -> /home/user/Climate-Trend-Analyzer/outputs/figures
+  tables    : 8 -> /home/user/Climate-Trend-Analyzer/outputs/tables
+  report    : /home/user/Climate-Trend-Analyzer/outputs/reports/climate_trend_report.html
+======================================================================
+
+HEADLINE NUMBERS
+  rows_analysed                   : 2700
+  regions                         : 5
+  fastest_warming_region          : London
+  fastest_warming_c_per_decade    : 0.3976
+  mean_warming_c_per_decade       : 0.2984
+  anomalies_detected              : 362
+  best_forecast_rmse              : 1.3148
+  data_completeness_pct           : 100.0

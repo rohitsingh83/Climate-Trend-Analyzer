@@ -1,176 +1,116 @@
-# Methodology
+# Methodology and scientific limitations
 
-> The statistical thinking behind every number in this project.
+## Scope and data separation
 
----
+The regional pipeline uses an **educational simulation**, not calibrated city observations. A separate NOAA/Scripps Mauna Loa CO₂ track demonstrates public-data ingestion. It is never joined to synthetic city measurements or presented as regional atmospheric monitoring. The five-city unweighted mean is not a global, area-weighted climate index.
 
-## 1. Why the data is simulated
+The default analysis period is January 1980–December 2024. The 36-month forecast starts January 2025 from that record cutoff, regardless of execution date. It is a fixed-origin demonstration, not a forecast issued today.
 
-The project must be reproducible on any laptop, with no access to institutional
-data systems and no API keys. Instead of pretending the data is real, the
-project **simulates a climate system** whose statistical structure is
-deliberately realistic, and then runs a genuine analysis on it.
+## Simulation
 
-What the simulator reproduces:
-
-| Real climate property | How it is simulated |
-| --- | --- |
-| Seasonal cycle | Cosine wave, hemisphere-aware peak month (Sydney peaks in January, London in July) |
-| Long-term warming trend | Region-specific linear slope of 0.020 - 0.028 °C / year |
-| Interannual variability (ENSO) | Two superimposed multi-year sine waves (4.3-year and 2.1-year periods) |
-| Serial correlation | AR(1) noise with ρ = 0.25 (weather is not white noise) |
-| Extreme events | Heat waves (top 3 % of months) and droughts (rain < 35 % of median) |
-| Global drivers | CO₂ with an accelerating curve; sea level rising ~3.2 mm / year |
-| Data-quality defects | Missing values, duplicates, impossible values (`-999 °C`), mixed date formats |
-
-**The simulation is the *input*, never the output.** Every result the project
-reports is computed from the data by a real statistical method - the numbers
-are not hard-coded.
-
----
-
-## 2. Cleaning methodology
-
-The cleaning stage follows the ISO 8000-style data-quality dimensions and is
-fully auditable.
-
-| Step | Action | Rationale |
-| --- | --- | --- |
-| 1 | Lower-case / strip column names | Consistent schema across sources |
-| 2 | Parse dates with an ISO-first, US-format-fallback strategy | The raw file mixes `YYYY-MM-DD` and `MM/DD/YYYY` |
-| 3 | Drop rows with unparseable dates | They cannot be placed on a time axis |
-| 4 | Drop duplicate (date, region) pairs | Retried uploads |
-| 5 | Coerce numerics with `errors="coerce"` | Non-numeric strings become NaN and are counted |
-| 6 | Range check against physical bounds | `-999 °C` is a sensor placeholder, not a measurement |
-| 7 | Impute: time interpolation → regional median | Preserves continuity; the median fallback handles the edges |
-| 8 | Flag repaired rows in `data_quality_flag` | Lets a reviewer audit what was touched |
-
-**Outcome on the shipped dataset:** 2,715 raw rows → 2,700 clean rows,
-15 duplicates removed, 12 impossible values repaired, ~123 values imputed,
-**100 % completeness**.
-
----
-
-## 3. Feature engineering
-
-| Feature group | Features | Why |
-| --- | --- | --- |
-| Calendar | `year, month, quarter, season, decade, t` | lets the model learn seasonality and measure the trend |
-| Smoothing | 12-month rolling mean & std (centred) | removes short-term noise; a centred window keeps the series aligned |
-| Climatology | `temp_clim, temp_std_clim, rain_normal, rain_std_clim` | the *normal* for that calendar month |
-| Anomalies | `temp_anomaly, temp_anomaly_z, temp_anomaly_pct, rain_anomaly_pct, rain_anomaly_z, rain_pct_of_normal` | expresses "unusual for this place and month" |
-| Persistence | `lag1, lag2, lag3, lag12` | what a forecaster may legitimately look back at |
-| Events | `heatwave_month/event, drought_month/event, extreme_event` | business-defined (not statistical) extreme events |
-| Drivers | `co2_ppm, enso_proxy, co2_change_rate, sea_level_change_rate` | the physical context of the series |
-| Cyclical | `month_sin, month_cos` | lets tree/linear models learn a smooth annual cycle |
-
-**Leakage control:** every lag and rolling feature uses only *past* values
-(`.shift()` and backward-looking windows), and the scaler inside the
-forecasting pipeline is fitted on the training fold only.
-
----
-
-## 4. Trend estimation
-
-### 4.1 The problem with a naive regression
-
-A monthly temperature series swings ±12 °C between summer and winter. If we
-regress it on time directly, the seasonal cycle contaminates the trend
-estimate (R² collapses to ~0.01 and the estimate becomes unstable).
-
-### 4.2 The fix - two independent methods
-
-**(a) OLS with monthly fixed effects**
+For each of five regions and each monthly date:
 
 ```
-value_t  =  b0  +  b1 · t  +  Σ_k β_k · MonthDummy_k  +  ε_t
+T = city_baseline + amplitude*cos(2π(month−warm_peak)/12)
+    + city_slope*(year−1980) + multi_year_oscillations + AR1_and_independent_noise
 ```
 
-The month dummies absorb the seasonal cycle, so `b1` is a clean estimate of
-the long-term trend. Standard errors come from the OLS covariance matrix
-`σ²(XᵀX)⁻¹`, and the confidence interval uses a *t* distribution with
-`n − k` degrees of freedom. Reported as °C per year and °C per decade.
+The cosine has a **positive** sign: the configured peak month is warmest. London/New York peak in July, Hyderabad April, Singapore March, Sydney January. Rainfall is nonnegative gamma-distributed and seasonally modulated; Hyderabad has an illustrative July monsoon peak. Humidity is temperature-associated plus noise, clipped to physical bounds. Illustrative CO₂ and sea level follow accelerating curves. These statistical patterns are not validated physical climate dynamics or evidence of causation.
 
-**(b) Mann-Kendall test (implemented from scratch, no extra dependency)**
+Three three-month hot-stress runs (+4.5 °C) and three dry runs (rain multiplied by 0.15) are explicitly injected into each city's record. `sim_heatwave`/`sim_drought` are ground-truth **injection labels**, not temperature-quantile labels or model inputs. They describe monthly experiments, not accepted daily heatwave or drought index definitions.
 
-1. Deseasonalise: subtract the mean of each calendar month.
-2. `S = Σ_{i<j} sign(x_j − x_i)` - the trend statistic.
-3. `Var(S) = [n(n−1)(2n+5) − Σ_t(t−1)(2t+5)] / 18` (tie correction).
-4. `z = (S−1)/√Var(S)` → two-sided p-value (normal approximation).
-5. **Theil-Sen slope** = median of all pairwise slopes - a robust trend size
-   that a single extreme month cannot distort.
+Missing values, mixed explicit date formats, duplicate keys and impossible readings are then added to create reproducible cleaning tasks. Seed 42 controls simulation randomness; timestamps, PNG metadata, model convergence and numerical libraries mean not every generated byte is guaranteed identical across systems.
 
-**Why run both?** OLS assumes a linear trend and independent errors; Mann-Kendall
-assumes only monotonicity. When they agree (as they do here for all 5 regions),
-the finding is credible. This agreement is a *result* of the project, not a
-coincidence.
+## Cleaning and auditability
 
-### 4.3 Seasonal decomposition
+1. Normalize column names.
+2. Parse ISO dates, then explicitly try US dates. Do not guess ambiguous day/month order.
+3. Drop unparseable dates and duplicate `(date,region)` keys.
+4. Coerce numeric values and convert physically impossible measurements to missing.
+5. Preserve the pre-imputation temperature in `observed_temp_mean_c`.
+6. Flag rows with missing/invalid climate measurements **before sorting**, preserving alignment.
+7. Sort by city/date, interpolate historical analysis gaps using actual dates and use a region median fallback.
+8. Save quality counts, original observations and repaired analysis values separately.
 
-`statsmodels` STL (robust, period = 12) splits the series into **trend +
-seasonal + residual**. The residual is the noise floor that the anomaly
-detector works against.
+This is an auditable teaching workflow, not certified ISO compliance. Historical interpolation uses later information and is acceptable only for explicitly retrospective analysis. It is **not** used as forecast validation truth. Entirely absent measurement columns need a source adapter or rejection, not fabricated values.
 
----
+## Descriptive features vs prediction features
 
-## 5. Anomaly detection
-
-| Method | Statistic | Threshold | Catches |
-| --- | --- | --- | --- |
-| Climatology z-score | `(x − normal_month) / σ_month` | \|z\| ≥ 2.5 | months far from their own seasonal normal |
-| STL residual | `resid / σ(resid)` | \|z\| ≥ 2.0 | deviations from trend + seasonality |
-| IQR (Tukey fences) | `Q1 − 1.5·IQR`, `Q3 + 1.5·IQR` | outside fences | gross outliers |
-| Isolation Forest | unsupervised, 300 trees | contamination = 2 % | unusual *combinations* of variables |
-
-All four emit the **same schema** (`date, region, variable, method, value,
-expected, deviation, score, severity, direction, description`) and are merged
-into one **anomaly register** with a unique `anomaly_id`.
-
-*Severity* is `high` when the score exceeds the threshold by one more sigma;
-*direction* is `hot / cold / drought / wet / high / low`.
-
-**Validation:** the simulator knows exactly where it injected heat waves, so
-the notebook measures recall against that ground truth.
-
----
-
-## 6. Forecasting
-
-### 6.1 Protocol
-
-1. Reserve the **last 60 months** as a hold-out window.
-2. Fit every candidate on the remaining history.
-3. Score them all on the same window with MAE, RMSE, MAPE and R².
-4. Pick the winner per region.
-5. Refit the winner on the **full** history and project 36 months.
-6. For ARIMA, add a 95 % prediction interval from the model's own covariance.
-
-### 6.2 Candidates
-
-| Model | Rationale |
+| Retrospective exploration | Forecasting |
 | --- | --- |
-| Naive | the benchmark every serious model must beat |
-| Seasonal naive | "the same month last year" - captures the annual cycle for free |
-| Drift | "the historical slope continues" - the simplest trend extrapolation |
-| Ridge + engineered features | the machine-learning route: lags, rolling means, cyclical month, CO₂, ENSO proxy |
-| ARIMA(p,d,q) | small grid search (p ≤ 2, d ≤ 1, q ≤ 2), selected by hold-out RMSE |
+| Centered 12-month rolling means/std | Never used |
+| Full-record month climatologies and z-scores | Never used |
+| Lagged measurements | Available for explanation but not used by the final Ridge model |
+| Target-derived smoothed ENSO proxy | Never used; not a physical measured ENSO index |
+| Temperature percentage anomalies | Descriptive only; Celsius percentages have limited meaning |
+| Future CO₂ or sea level | Never used |
+| Calendar/time | The only Ridge predictors: linear month index and month sine/cosine |
 
-### 6.3 Honest limitations
+The full-record normal is a descriptive baseline, **not** an official 30-year 1991–2020 climate normal. A prospective detector would need a past-only fixed baseline and out-of-period evaluation.
 
-* These are **statistical extrapolations**, not physical climate-model output.
-  A policy-grade projection would need CMIP6 scenarios.
-* Monthly-mean temperature is a smooth target; the RMSE of ~1 °C reflects the
-  irreducible monthly noise, not a modelling failure.
-* The forecast assumes the historical regime continues - it does not model
-  tipping points, policy changes or feedback effects.
+## Trend inference
 
----
+OLS fits:
 
-## 7. Reproducibility
+`value_t = intercept + β_time*t + month_fixed_effects + residual_t`.
 
-* `RANDOM_SEED = 42` controls the simulator, the Isolation Forest and the
-  train/test splits.
-* `pytest` verifies the pipeline end-to-end (20 tests).
-* GitHub Actions runs the same checks on every push (Python 3.10 / 3.11 / 3.12).
-* Every artefact (tables, figures, reports) is regenerated from scratch by
-  `python main.py --step all` - nothing is hand-edited.
+Eleven month dummies absorb annual seasonality. β is converted from per-month to per-year (×12) and per-decade (×120). Standard errors and confidence intervals use **HAC/Newey–West covariance with maximum lag 12**, via statsmodels. HAC is a pragmatic finite-sample approximation, not a guarantee against all model misspecification.
+
+- `slope_per_decade` is per decade.
+- `ci_low` and `ci_high` are per **year**; multiply by 10 to compare with decade slopes.
+- `r_squared` is for the **whole trend-plus-seasonality model**. A high value does not mean the warming trend alone explains that percentage of temperature variance.
+- `r_squared_raw` is a plain time-only comparison.
+- p-values are not probabilities that a trend is true. A displayed rounded zero means very small, not mathematically zero.
+
+Mann–Kendall operates on a deseasonalized series:
+
+`S = sum_{i<j} sign(x_j−x_i)`.
+
+Tie-adjusted variance and normal approximation provide the conventional p-value. Theil–Sen uses the median of pairwise slopes. The current MK implementation **does not pre-whiten or adjust for serial dependence**, and comparisons across 25 indicator-region tests are **not corrected for multiple testing**. Thus MK significance is an exploratory cross-check, not independently definitive evidence. Future work: corrected seasonal MK, annual-series sensitivity analysis and block bootstrap. The implementation is quadratic in record length and is intended for small monthly series, not millions of daily observations.
+
+Robust STL (period 12) decomposes a complete regular monthly record into trend, seasonal and residual terms. Irregular real series need an explicit calendar/coverage adapter first.
+
+## Anomalies and persistence proxies
+
+| Detector | Rule | Limitation |
+| --- | --- | --- |
+| Calendar z-score | |value−normal_month| / std_month ≥ 2.5 | Full-record baseline, non-normal rainfall |
+| STL residual | |residual| / residual_std ≥ 2.0 | Retrospective decomposition and model choice |
+| Tukey fences | Outside Q1−1.5IQR / Q3+1.5IQR for temperature/humidity | Applied to raw values, therefore less season-aware |
+| Isolation Forest | 300 trees, contamination 0.02 | Pooled city humidity can confound region with unusualness; contamination is a modeling choice |
+
+The merged register is a union of **detector records**, not a consensus vote or set of independent events. Methods may flag the same city-month. Counts, directions and scores have detector-specific meaning. Ranking absolute scores across heterogeneous methods is heuristic, not a calibrated cross-method risk ranking. Dry rainfall often cannot reach −2.5σ in a nonnegative skewed distribution, so no dry z flags does not establish absence of drought.
+
+The separate event features flag >1.5σ hot months or rain below 40% of month normal after a run of at least three months. They flag confirmation and subsequent months, not all earlier run positions. They are educational persistence proxies, not WMO heatwaves, SPI/SPEI droughts or disaster labels. Decadal rates are normalized per region-year because the 2020s segment is incomplete. Planted events are not evidence that real extreme-event frequency changed.
+
+## Forecast evaluation
+
+Every candidate predicts the entire last **60 monthly dates** from the same fixed origin. This chronological block selects the winner, so it is **validation**, not a final untouched test estimate. Original missing validation targets are excluded; `n_evaluated` records the denominator. Training gaps are forward filled within training only with a training median fallback at the start. No interpolation across the split is permitted.
+
+Candidates:
+- Naive: repeat last training observation.
+- Seasonal naive: repeat the last observed training year.
+- Drift: endpoint-derived linear drift.
+- Ridge: standardized deterministic time/sine/cosine features, alpha 1.0; scaler fit on training only.
+- ARIMA: small `(p,d,q)` grid, p/q ≤2, d in {0,1}; order chosen by **training AIC** and failed/nonconverged fits skipped.
+
+MAE and RMSE are in °C. R² compares with the validation-period mean. MAPE is intentionally omitted: Celsius can cross zero and percentage errors depend on the arbitrary temperature origin. Leakage tests perturb withheld targets and exploratory centered features and assert identical validation predictions.
+
+After selection, models are refit on the full historical observed record for January 2025–December 2027. This extrapolates a statistical regime; it does not incorporate emissions scenarios, feedbacks or physical climate-model ensembles.
+
+### Uncertainty
+
+- ARIMA uses model-based interval estimates subject to model assumptions.
+- Ridge/baseline display `prediction ±1.96 × validation RMSE` as an **approximate, uncalibrated residual band**.
+- These are not guaranteed 95% coverage, independently calibrated intervals or IPCC projection ranges. The selection window is reused for approximate width, and uncertainty does not fully capture parameter, regime or horizon effects.
+- Next upgrade: independent calibration/test windows, rolling-origin evaluation, coverage by horizon and interval-width reporting.
+
+## Public-data track
+
+Source: https://gml.noaa.gov/ccgg/trends/data.html and its monthly Mauna Loa CSV. Attribution: Xin Lan, NOAA/GML; Ralph Keeling, Scripps Institution of Oceanography. Preserve the source header, citation and usage notes. The project MIT license does not relicense externally sourced data.
+
+The bundled full snapshot has source creation information; `data/raw/noaa_provenance.json` records retrieval UTC time, URL and SHA256. The companion analyzes completed January 1980–December 2024 observations. Source sentinels below zero become missing; only complete 12-month years enter annual means. A linear annual slope is a descriptive summary of an accelerating station concentration series, **not emissions**, a regional measurement or a causal regression. The source explains measurement interruptions and interpolated months; retain those qualifications in scientific use.
+
+## Honest reporting
+
+No area-weighted global-temperature index, observational regional trend attribution, market forecast, crop-loss reduction or measured cost saving is produced. All claims must identify the dataset, units, method, period and uncertainty. Local tests do not imply remote CI has run. Screenshots and generated assets demonstrate execution, not sole authorship or institutional endorsement.

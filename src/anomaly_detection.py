@@ -88,7 +88,7 @@ def zscore_anomalies(
                         "direction": direction,
                         "description": (
                             f"{direction.capitalize()}: {r['rainfall_mm']:.0f} mm vs normal "
-                            f"{r['rain_normal']:.0f} mm ({r['rain_anomaly_pct']:.0f}% of normal, {z:+.1f}σ)"
+                            f"{r['rain_normal']:.0f} mm ({r['rain_pct_of_normal']:.0f}% of normal, {z:+.1f}σ)"
                         ),
                     }
                 )

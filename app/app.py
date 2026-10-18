@@ -136,6 +136,7 @@ if view.empty:
 # Header + KPI cards
 # --------------------------------------------------------------------------
 st.title("Climate Trend Analyzer")
+st.info("City charts use SYNTHETIC data (1980–2024). NOAA/Scripps observations are a separate CO2 companion below. No institutional access or sensor hardware is used.")
 st.markdown(
     f"**{variable_label}** · {len(selected_regions)} region(s) · "
     f"{view['date'].min():%d %b %Y} → {view['date'].max():%d %b %Y} · "
@@ -151,20 +152,22 @@ kpi[0].metric("Mean level", f"{view[variable].mean():.2f}")
 if variable == "temp_mean_c" and not trends.empty:
     t = trends[(trends["indicator"] == "temp_mean_c") & (trends["region"].isin(selected_regions))]
     if not t.empty:
-        kpi[1].metric("Warming rate", f"{t['slope_per_decade'].mean():+.3f} °C/decade")
+        kpi[1].metric("Warming (°C/decade)", f"{t['slope_per_decade'].mean():+.3f}")
         kpi[2].metric("Trend significance", f"{int((t['p_value'] < 0.05).sum())}/{len(t)} regions",
                       help="p < 0.05 in the seasonal fixed-effects OLS model")
     else:
         kpi[1].metric("Warming rate", "n/a")
         kpi[2].metric("Trend significance", "n/a")
 else:
-    kpi[1].metric("Change over window", f"{view[variable].iloc[-1] - view[variable].iloc[0]:+.2f}")
+    monthly = view.groupby("date")[variable].mean()
+    kpi[1].metric("Endpoint city-mean change", f"{monthly.iloc[-1] - monthly.iloc[0]:+.2f}")
     kpi[2].metric("Std deviation", f"{view[variable].std():.2f}")
 
 # 4. anomalies
 if not anomalies.empty:
     a = anomalies[anomalies["region"].isin(selected_regions)]
-    kpi[3].metric("Anomalies detected", f"{len(a):,}")
+    a = a[(a.date >= pd.Timestamp(date_range[0])) & (a.date <= pd.Timestamp(date_range[1]))]
+    kpi[3].metric("Detector records", f"{len(a):,}", help="Different methods may flag the same region-month; not unique events")
 else:
     kpi[3].metric("Anomalies detected", "0")
 
@@ -172,7 +175,7 @@ else:
 if not metrics.empty:
     best = metrics[metrics["region"].isin(selected_regions)]
     if not best.empty:
-        kpi[4].metric("Best model", best.iloc[0]["model"], help=f"RMSE = {best.iloc[0]['RMSE']:.3f}")
+        kpi[4].metric("Best model", best.iloc[0]["model"].split(" (")[0], help=f"RMSE = {best.iloc[0]['RMSE']:.3f}")
     else:
         kpi[4].metric("Best model", "n/a")
 else:
@@ -207,8 +210,16 @@ with tab1:
             title=f"{variable_label} over time",
             labels={"value": variable_label, "date": "Date", "region": "Region"},
         )
-        fig.add_scatter(x=long["date"], y=long["rolling_mean"], mode="lines",
-                        line=dict(width=3, dash="dot"), name="12-month rolling mean")
+        for region, g in long.groupby("region"):
+            g = g.sort_values("date")
+            fig.add_scatter(x=g["date"], y=g["rolling_mean"], mode="lines",
+                            line=dict(width=3, dash="dot"), name=f"{region} rolling mean")
+        if show_anomalies and not anomalies.empty:
+            a = anomalies[(anomalies.region.isin(selected_regions)) & (anomalies.variable==variable)
+                          & (anomalies.date>=pd.Timestamp(date_range[0])) & (anomalies.date<=pd.Timestamp(date_range[1]))]
+            a = a.drop_duplicates(["date","region"])
+            fig.add_scatter(x=a.date,y=a.value,mode="markers",name="Flagged months",
+                            marker=dict(color="#dd5440",size=7,symbol="diamond"))
         fig.update_layout(height=430, legend_title_text="Region")
         st.plotly_chart(fig, use_container_width=True)
 
@@ -232,7 +243,8 @@ with tab1:
     st.plotly_chart(fig3, use_container_width=True)
 
     if not trends.empty:
-        st.subheader("Trend statistics (seasonal fixed-effects OLS + Mann-Kendall)")
+        st.subheader("Full-record trend statistics (OLS + monthly fixed effects, HAC uncertainty)")
+        st.caption("Trend KPIs and this table use the full 1980–2024 record, not the date slider. R² includes seasonality; MK p-values are exploratory and not serial-correlation corrected. CI bounds are per year; slope headline is per decade.")
         t = trends[trends["region"].isin(selected_regions)]
         st.dataframe(
             t[["region", "indicator", "slope_per_decade", "ci_low", "ci_high",
@@ -280,6 +292,7 @@ with tab2:
 
 # ------------------------------- FORECAST ---------------------------------
 with tab3:
+    st.caption("Forecast horizon: January 2025–December 2027 from the record ending December 2024. This is an educational, fixed-origin demonstration, not a forecast issued today. Bands are approximate; see methodology.")
     if forecast.empty:
         st.info("No forecast available - run `python main.py --step forecast`.")
     else:
@@ -298,15 +311,15 @@ with tab3:
                        labels={"value": "Mean temperature (°C)", "date": "Date"})
         if f["ci_low"].notna().any():
             fig6.add_scatter(x=f["date"], y=f["ci_low"], mode="lines",
-                             line=dict(width=0, color="gray"), name="95% lower")
+                             line=dict(width=0, color="gray"), name="Approximate lower band")
             fig6.add_scatter(x=f["date"], y=f["ci_high"], mode="lines",
-                             line=dict(width=0, color="gray"), name="95% upper",
+                             line=dict(width=0, color="gray"), name="Approximate upper band",
                              fill="tonexty")
         fig6.update_layout(height=430)
         st.plotly_chart(fig6, use_container_width=True)
 
         if not metrics.empty:
-            st.subheader("Model back-testing (60-month hold-out)")
+            st.subheader("Model selection (60-month chronological validation)")
             m = metrics[metrics["region"] == sel].sort_values("RMSE")
             fig7 = px.bar(m, x="model", y="RMSE", color="model",
                           title="Forecast error by model (lower is better)",
@@ -359,6 +372,14 @@ with tab4:
 # --------------------------------------------------------------------------
 # Footer
 # --------------------------------------------------------------------------
+st.divider()
+public_path = cfg.PROCESSED_DIR / "noaa_co2_monthly.csv"
+if public_path.exists():
+    st.subheader("PUBLIC DATA — NOAA/Scripps Mauna Loa CO2")
+    public = pd.read_csv(public_path, parse_dates=["date"])
+    st.caption("Real public observations, independently analyzed; NOT joined to simulated cities. Concentration in ppm, not emissions. Source: gml.noaa.gov/ccgg/trends/data.html")
+    st.plotly_chart(px.line(public,x="date",y="co2_ppm",labels={"co2_ppm":"CO2 concentration (ppm)"}), use_container_width=True)
+    st.download_button("Download public CO2 analysis CSV", public.to_csv(index=False), file_name="noaa_co2_monthly.csv", mime="text/csv")
 st.divider()
 st.markdown(
     """

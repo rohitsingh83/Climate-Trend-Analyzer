@@ -1,181 +1,181 @@
-region,date,prediction,ci_low,ci_high,model,target
-Hyderabad,2024-12-01,31.22059334521796,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2025-01-01,28.15797819135748,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2025-02-01,25.33633150242602,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2025-03-01,23.278817526988053,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2025-04-01,22.594532411665863,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2025-05-01,23.26496001560201,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2025-06-01,25.579106427565684,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2025-07-01,28.31885124700382,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2025-08-01,31.195267170966964,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2025-09-01,32.508340565553176,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2025-10-01,33.372421573178165,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2025-11-01,32.47243904619988,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2025-12-01,30.652014439981368,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2026-01-01,27.83211525292845,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2026-02-01,25.043533708319384,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2026-03-01,22.96516675572277,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2026-04-01,22.210062463569123,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2026-05-01,22.92290650719622,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2026-06-01,24.95076348108904,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2026-07-01,27.66212000571382,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2026-08-01,30.366502712008504,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2026-09-01,32.234537597478926,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2026-10-01,32.92681175935569,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2026-11-01,32.122391002253174,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2026-12-01,30.08615730373366,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2027-01-01,27.26812757976185,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2027-02-01,24.45241417118621,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2027-03-01,22.371774262907252,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2027-04-01,21.5852085202959,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2027-05-01,22.277811343292512,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2027-06-01,24.25101033420579,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2027-07-01,26.947491489068227,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2027-08-01,29.63265966345133,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2027-09-01,31.56034225654755,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2027-10-01,32.21600571173204,,,Ridge (engineered features),temp_mean_c
-Hyderabad,2027-11-01,31.39002051452953,,,Ridge (engineered features),temp_mean_c
-London,2024-12-01,19.110660002722838,,,Ridge (engineered features),temp_mean_c
-London,2025-01-01,20.222728917586394,,,Ridge (engineered features),temp_mean_c
-London,2025-02-01,19.033867865780692,,,Ridge (engineered features),temp_mean_c
-London,2025-03-01,16.1716580310861,,,Ridge (engineered features),temp_mean_c
-London,2025-04-01,12.44411167375244,,,Ridge (engineered features),temp_mean_c
-London,2025-05-01,8.717983379356426,,,Ridge (engineered features),temp_mean_c
-London,2025-06-01,5.890208166280024,,,Ridge (engineered features),temp_mean_c
-London,2025-07-01,4.636496057966862,,,Ridge (engineered features),temp_mean_c
-London,2025-08-01,5.500792304429404,,,Ridge (engineered features),temp_mean_c
-London,2025-09-01,8.219756540249872,,,Ridge (engineered features),temp_mean_c
-London,2025-10-01,12.044869940926505,,,Ridge (engineered features),temp_mean_c
-London,2025-11-01,15.864636879429398,,,Ridge (engineered features),temp_mean_c
-London,2025-12-01,18.622894822075537,,,Ridge (engineered features),temp_mean_c
-London,2026-01-01,19.617429147272546,,,Ridge (engineered features),temp_mean_c
-London,2026-02-01,18.601397953577916,,,Ridge (engineered features),temp_mean_c
-London,2026-03-01,15.837235712935996,,,Ridge (engineered features),temp_mean_c
-London,2026-04-01,12.036880928113925,,,Ridge (engineered features),temp_mean_c
-London,2026-05-01,8.193444272777365,,,Ridge (engineered features),temp_mean_c
-London,2026-06-01,5.321158464756416,,,Ridge (engineered features),temp_mean_c
-London,2026-07-01,4.1812993173046005,,,Ridge (engineered features),temp_mean_c
-London,2026-08-01,5.061863292354121,,,Ridge (engineered features),temp_mean_c
-London,2026-09-01,7.701649102480996,,,Ridge (engineered features),temp_mean_c
-London,2026-10-01,11.366617341124858,,,Ridge (engineered features),temp_mean_c
-London,2026-11-01,15.051193201908031,,,Ridge (engineered features),temp_mean_c
-London,2026-12-01,17.74717046242124,,,Ridge (engineered features),temp_mean_c
-London,2027-01-01,18.70845743944858,,,Ridge (engineered features),temp_mean_c
-London,2027-02-01,17.648896248721925,,,Ridge (engineered features),temp_mean_c
-London,2027-03-01,14.820562951927409,,,Ridge (engineered features),temp_mean_c
-London,2027-04-01,10.948360857332064,,,Ridge (engineered features),temp_mean_c
-London,2027-05-01,7.036326891113787,,,Ridge (engineered features),temp_mean_c
-London,2027-06-01,4.097823950182268,,,Ridge (engineered features),temp_mean_c
-London,2027-07-01,2.8830331697089253,,,Ridge (engineered features),temp_mean_c
-London,2027-08-01,3.6779146899413977,,,Ridge (engineered features),temp_mean_c
-London,2027-09-01,6.228135588232363,,,Ridge (engineered features),temp_mean_c
-London,2027-10-01,9.807492737696373,,,Ridge (engineered features),temp_mean_c
-London,2027-11-01,13.412270425090353,,,Ridge (engineered features),temp_mean_c
-New York,2024-12-01,25.00384557625499,,,Ridge (engineered features),temp_mean_c
-New York,2025-01-01,26.542827389494963,,,Ridge (engineered features),temp_mean_c
-New York,2025-02-01,24.942618289238375,,,Ridge (engineered features),temp_mean_c
-New York,2025-03-01,20.315452858955243,,,Ridge (engineered features),temp_mean_c
-New York,2025-04-01,14.403168619450906,,,Ridge (engineered features),temp_mean_c
-New York,2025-05-01,8.55473669296116,,,Ridge (engineered features),temp_mean_c
-New York,2025-06-01,4.155062938517034,,,Ridge (engineered features),temp_mean_c
-New York,2025-07-01,2.479440765806487,,,Ridge (engineered features),temp_mean_c
-New York,2025-08-01,4.131043081163105,,,Ridge (engineered features),temp_mean_c
-New York,2025-09-01,8.466104769549226,,,Ridge (engineered features),temp_mean_c
-New York,2025-10-01,14.404908660576723,,,Ridge (engineered features),temp_mean_c
-New York,2025-11-01,20.397950652774345,,,Ridge (engineered features),temp_mean_c
-New York,2025-12-01,24.75063930233881,,,Ridge (engineered features),temp_mean_c
-New York,2026-01-01,26.252445752676156,,,Ridge (engineered features),temp_mean_c
-New York,2026-02-01,24.52295868354507,,,Ridge (engineered features),temp_mean_c
-New York,2026-03-01,19.997343004282627,,,Ridge (engineered features),temp_mean_c
-New York,2026-04-01,13.912172133305656,,,Ridge (engineered features),temp_mean_c
-New York,2026-05-01,7.850931086502334,,,Ridge (engineered features),temp_mean_c
-New York,2026-06-01,3.393085889005235,,,Ridge (engineered features),temp_mean_c
-New York,2026-07-01,1.712603082825682,,,Ridge (engineered features),temp_mean_c
-New York,2026-08-01,3.2446642761278337,,,Ridge (engineered features),temp_mean_c
-New York,2026-09-01,7.529956884080136,,,Ridge (engineered features),temp_mean_c
-New York,2026-10-01,13.388890184002094,,,Ridge (engineered features),temp_mean_c
-New York,2026-11-01,19.21348815168398,,,Ridge (engineered features),temp_mean_c
-New York,2026-12-01,23.391421503750735,,,Ridge (engineered features),temp_mean_c
-New York,2027-01-01,24.751931044462346,,,Ridge (engineered features),temp_mean_c
-New York,2027-02-01,22.882919230463145,,,Ridge (engineered features),temp_mean_c
-New York,2027-03-01,18.230865812955802,,,Ridge (engineered features),temp_mean_c
-New York,2027-04-01,11.986871907292873,,,Ridge (engineered features),temp_mean_c
-New York,2027-05-01,5.7576377123275195,,,Ridge (engineered features),temp_mean_c
-New York,2027-06-01,1.1420622050898963,,,Ridge (engineered features),temp_mean_c
-New York,2027-07-01,-0.6948966414023712,,,Ridge (engineered features),temp_mean_c
-New York,2027-08-01,0.6637778983826053,,,Ridge (engineered features),temp_mean_c
-New York,2027-09-01,4.771410052737268,,,Ridge (engineered features),temp_mean_c
-New York,2027-10-01,10.44121954551375,,,Ridge (engineered features),temp_mean_c
-New York,2027-11-01,16.06251422241297,,,Ridge (engineered features),temp_mean_c
-Singapore,2024-12-01,29.32655727418619,,,Ridge (engineered features),temp_mean_c
-Singapore,2025-01-01,28.334605966705936,,,Ridge (engineered features),temp_mean_c
-Singapore,2025-02-01,27.92262632147356,,,Ridge (engineered features),temp_mean_c
-Singapore,2025-03-01,27.85513965646268,,,Ridge (engineered features),temp_mean_c
-Singapore,2025-04-01,28.073504146686005,,,Ridge (engineered features),temp_mean_c
-Singapore,2025-05-01,28.489203269150202,,,Ridge (engineered features),temp_mean_c
-Singapore,2025-06-01,29.1086464682708,,,Ridge (engineered features),temp_mean_c
-Singapore,2025-07-01,29.866139750272325,,,Ridge (engineered features),temp_mean_c
-Singapore,2025-08-01,30.556513218452153,,,Ridge (engineered features),temp_mean_c
-Singapore,2025-09-01,30.846366955751577,,,Ridge (engineered features),temp_mean_c
-Singapore,2025-10-01,30.700334073191335,,,Ridge (engineered features),temp_mean_c
-Singapore,2025-11-01,30.064687346660254,,,Ridge (engineered features),temp_mean_c
-Singapore,2025-12-01,29.24111628389954,,,Ridge (engineered features),temp_mean_c
-Singapore,2026-01-01,28.420507930067345,,,Ridge (engineered features),temp_mean_c
-Singapore,2026-02-01,27.834010208916226,,,Ridge (engineered features),temp_mean_c
-Singapore,2026-03-01,27.600506391280195,,,Ridge (engineered features),temp_mean_c
-Singapore,2026-04-01,27.784258432865602,,,Ridge (engineered features),temp_mean_c
-Singapore,2026-05-01,28.346696881552365,,,Ridge (engineered features),temp_mean_c
-Singapore,2026-06-01,29.156579388290233,,,Ridge (engineered features),temp_mean_c
-Singapore,2026-07-01,30.00397209228795,,,Ridge (engineered features),temp_mean_c
-Singapore,2026-08-01,30.657863257698853,,,Ridge (engineered features),temp_mean_c
-Singapore,2026-09-01,30.93706099535928,,,Ridge (engineered features),temp_mean_c
-Singapore,2026-10-01,30.776598005527845,,,Ridge (engineered features),temp_mean_c
-Singapore,2026-11-01,30.228367694967663,,,Ridge (engineered features),temp_mean_c
-Singapore,2026-12-01,29.45834351150528,,,Ridge (engineered features),temp_mean_c
-Singapore,2027-01-01,28.680431282836796,,,Ridge (engineered features),temp_mean_c
-Singapore,2027-02-01,28.113206451697632,,,Ridge (engineered features),temp_mean_c
-Singapore,2027-03-01,27.9183664927549,,,Ridge (engineered features),temp_mean_c
-Singapore,2027-04-01,28.163672283358462,,,Ridge (engineered features),temp_mean_c
-Singapore,2027-05-01,28.80076497956226,,,Ridge (engineered features),temp_mean_c
-Singapore,2027-06-01,29.677165570154813,,,Ridge (engineered features),temp_mean_c
-Singapore,2027-07-01,30.575756322327855,,,Ridge (engineered features),temp_mean_c
-Singapore,2027-08-01,31.27436954560487,,,Ridge (engineered features),temp_mean_c
-Singapore,2027-09-01,31.606716344202102,,,Ridge (engineered features),temp_mean_c
-Singapore,2027-10-01,31.50763262841275,,,Ridge (engineered features),temp_mean_c
-Singapore,2027-11-01,31.029133714630063,,,Ridge (engineered features),temp_mean_c
-Sydney,2024-12-01,14.095057672475338,,,Ridge (engineered features),temp_mean_c
-Sydney,2025-01-01,13.201317053249719,,,Ridge (engineered features),temp_mean_c
-Sydney,2025-02-01,14.083133577929125,,,Ridge (engineered features),temp_mean_c
-Sydney,2025-03-01,16.20509580151845,,,Ridge (engineered features),temp_mean_c
-Sydney,2025-04-01,19.21560927626057,,,Ridge (engineered features),temp_mean_c
-Sydney,2025-05-01,22.13088721077042,,,Ridge (engineered features),temp_mean_c
-Sydney,2025-06-01,24.245741582751915,,,Ridge (engineered features),temp_mean_c
-Sydney,2025-07-01,24.960792107326363,,,Ridge (engineered features),temp_mean_c
-Sydney,2025-08-01,24.234005056171927,,,Ridge (engineered features),temp_mean_c
-Sydney,2025-09-01,22.063602912623196,,,Ridge (engineered features),temp_mean_c
-Sydney,2025-10-01,19.015530234375852,,,Ridge (engineered features),temp_mean_c
-Sydney,2025-11-01,15.920134643165621,,,Ridge (engineered features),temp_mean_c
-Sydney,2025-12-01,13.746748653228044,,,Ridge (engineered features),temp_mean_c
-Sydney,2026-01-01,12.952214606333445,,,Ridge (engineered features),temp_mean_c
-Sydney,2026-02-01,13.790905825471258,,,Ridge (engineered features),temp_mean_c
-Sydney,2026-03-01,16.02517566539897,,,Ridge (engineered features),temp_mean_c
-Sydney,2026-04-01,19.069811753029363,,,Ridge (engineered features),temp_mean_c
-Sydney,2026-05-01,22.10438291135588,,,Ridge (engineered features),temp_mean_c
-Sydney,2026-06-01,24.32232180766745,,,Ridge (engineered features),temp_mean_c
-Sydney,2026-07-01,25.131733090085362,,,Ridge (engineered features),temp_mean_c
-Sydney,2026-08-01,24.318188204156023,,,Ridge (engineered features),temp_mean_c
-Sydney,2026-09-01,22.098277839921344,,,Ridge (engineered features),temp_mean_c
-Sydney,2026-10-01,19.076461356737905,,,Ridge (engineered features),temp_mean_c
-Sydney,2026-11-01,16.073503455739676,,,Ridge (engineered features),temp_mean_c
-Sydney,2026-12-01,13.902388222307733,,,Ridge (engineered features),temp_mean_c
-Sydney,2027-01-01,13.148628066553224,,,Ridge (engineered features),temp_mean_c
-Sydney,2027-02-01,14.024143092201795,,,Ridge (engineered features),temp_mean_c
-Sydney,2027-03-01,16.303690111581915,,,Ridge (engineered features),temp_mean_c
-Sydney,2027-04-01,19.387294699014785,,,Ridge (engineered features),temp_mean_c
-Sydney,2027-05-01,22.45948830949888,,,Ridge (engineered features),temp_mean_c
-Sydney,2027-06-01,24.709000098681017,,,Ridge (engineered features),temp_mean_c
-Sydney,2027-07-01,25.545599477124398,,,Ridge (engineered features),temp_mean_c
-Sydney,2027-08-01,24.758593721622645,,,Ridge (engineered features),temp_mean_c
-Sydney,2027-09-01,22.573349869716452,,,Ridge (engineered features),temp_mean_c
-Sydney,2027-10-01,19.590975365105802,,,Ridge (engineered features),temp_mean_c
-Sydney,2027-11-01,16.626698952443597,,,Ridge (engineered features),temp_mean_c
+region,date,prediction,ci_low,ci_high,model,target,interval_method
+Hyderabad,2025-01-01,28.69397699580246,25.48640417297614,31.901549818628776,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-02-01,31.421183413819083,28.213610590992765,34.6287562366454,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-03-01,33.401469765309876,30.19389694248356,36.6090425881362,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-04-01,34.10481723845946,30.897244415633143,37.31239006128578,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-05-01,33.3433617626879,30.13578893986158,36.55093458551422,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-06-01,31.32173203464938,28.11415921182306,34.5293048574757,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-07-01,28.582219424215545,25.374646601389227,31.789792247041863,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-08-01,25.85947143985597,22.65189861702965,29.067044262682288,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-09-01,23.883643522022222,20.676070699195904,27.09121634484854,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-10-01,23.184754482529684,19.977181659703366,26.392327305356,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-11-01,23.950668391958303,20.743095569131984,27.15824121478462,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-12-01,25.97675655365387,22.769183730827553,29.18432937648019,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-01-01,28.72072759774476,25.51315477491844,31.928300420571077,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-02-01,31.447934015761383,28.240361192935065,34.655506838587705,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-03-01,33.42822036725218,30.220647544425862,36.6357931900785,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-04-01,34.131567840401765,30.923995017575447,37.339140663228086,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-05-01,33.370112364630195,30.162539541803877,36.57768518745652,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-06-01,31.34848263659168,28.14090981376536,34.556055459418,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-07-01,28.608970026157845,25.401397203331527,31.816542848984163,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-08-01,25.88622204179827,22.67864921897195,29.093794864624588,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-09-01,23.910394123964522,20.702821301138204,27.11796694679084,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-10-01,23.211505084471987,20.00393226164567,26.419077907298306,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-11-01,23.977418993900603,20.769846171074285,27.18499181672692,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-12-01,26.003507155596168,22.79593433276985,29.211079978422486,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2027-01-01,28.74747819968706,25.53990537686074,31.955051022513377,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2027-02-01,31.474684617703684,28.267111794877366,34.68225744053,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2027-03-01,33.45497096919448,30.24739814636816,36.6625437920208,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2027-04-01,34.15831844234406,30.950745619517743,37.36589126517038,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2027-05-01,33.3968629665725,30.18929014374618,36.60443578939882,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2027-06-01,31.37523323853398,28.16766041570766,34.5828060613603,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2027-07-01,28.635720628100145,25.428147805273827,31.843293450926463,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2027-08-01,25.91297264374057,22.705399820914252,29.120545466566888,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2027-09-01,23.937144725906823,20.729571903080505,27.14471754873314,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2027-10-01,23.238255686414284,20.030682863587966,26.445828509240602,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2027-11-01,24.004169595842903,20.796596773016585,27.21174241866922,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2027-12-01,26.03025775753847,22.822684934712154,29.23783058036479,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-01-01,5.485933943350658,2.1760562536593877,8.795811633041929,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-02-01,6.54377362023946,3.233895930548189,9.85365130993073,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-03-01,9.265642028104779,5.955764338413508,12.575519717796048,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-04-01,12.92314879436285,9.613271104671579,16.233026484054122,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-05-01,16.537200003890998,13.227322314199728,19.847077693582268,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-06-01,19.140345622898963,15.830467933207693,22.450223312590232,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-07-01,20.036006954200484,16.726129264509215,23.345884643891754,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-08-01,18.985124336589074,15.675246646897804,22.295002026280343,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-09-01,16.27021298800114,12.960335298309872,19.58009067769241,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-10-01,12.619663281020458,9.309785591329188,15.929540970711727,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-11-01,9.012569130769705,5.702691441078435,12.322446820460975,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-12-01,6.416380571039126,3.106502881347856,9.726258260730397,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-01-01,5.527676299014994,2.217798609323723,8.837553988706265,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-02-01,6.585515975903795,3.2756382862125246,9.895393665595066,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-03-01,9.307384383769113,5.997506694077843,12.617262073460385,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-04-01,12.964891150027185,9.655013460335915,16.274768839718455,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-05-01,16.578942359555334,13.269064669864065,19.888820049246604,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-06-01,19.182087978563295,15.872210288872026,22.491965668254565,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-07-01,20.07774930986482,16.76787162017355,23.38762699955609,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-08-01,19.026866692253407,15.716989002562137,22.336744381944676,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-09-01,16.311955343665478,13.002077653974208,19.621833033356747,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-10-01,12.661405636684792,9.35152794699352,15.971283326376064,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-11-01,9.054311486434042,5.744433796742771,12.364189176125311,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-12-01,6.458122926703462,3.1482452370121914,9.768000616394733,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-01-01,5.569418654679329,2.2595409649880587,8.8792963443706,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-02-01,6.62725833156813,3.317380641876859,9.9371360212594,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-03-01,9.34912673943345,6.039249049742179,12.659004429124721,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-04-01,13.006633505691521,9.696755816000252,16.31651119538279,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-05-01,16.620684715219667,13.310807025528398,19.930562404910937,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-06-01,19.22383033422763,15.913952644536362,22.5337080239189,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-07-01,20.119491665529154,16.809613975837884,23.429369355220423,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-08-01,19.068609047917743,15.758731358226473,22.378486737609013,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-09-01,16.353697699329814,13.043820009638544,19.663575389021084,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-10-01,12.703147992349129,9.393270302657857,16.0130256820404,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-11-01,9.096053842098376,5.786176152407106,12.405931531789648,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-12-01,6.499865282367797,3.189987592676527,9.809742972059068,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2025-01-01,2.518797905132475,-0.05821489713724759,5.095810707402197,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2025-02-01,4.039482069875087,1.462469267605364,6.616494872144809,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2025-03-01,8.300948536011909,5.723935733742186,10.877961338281631,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2025-04-01,14.162043126630977,11.585030324361254,16.739055928900697,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2025-05-01,20.052992600675204,17.475979798405483,22.630005402944924,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2025-06-01,24.396024125183594,21.819011322913873,26.973036927453315,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2025-07-01,26.02812823172294,23.451115429453218,28.60514103399266,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2025-08-01,24.512686264244202,21.93567346197448,27.089699066513923,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2025-09-01,20.256461995371254,17.679449193101533,22.833474797640974,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2025-10-01,14.40060960201606,11.823596799746337,16.977622404285782,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2025-11-01,8.51490232523572,5.937889522965998,11.091915127505443,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2025-12-01,4.177112997991198,1.6001001957214758,6.754125800260921,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2026-01-01,2.550251088715733,-0.026761713553989708,5.127263890985455,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2026-02-01,4.0709352534583445,1.493922451188622,6.647948055728067,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2026-03-01,8.332401719595168,5.755388917325446,10.90941452186489,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2026-04-01,14.193496310214234,11.616483507944512,16.770509112483957,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2026-05-01,20.084445784258463,17.507432981988742,22.661458586528184,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2026-06-01,24.427477308766854,21.850464506497133,27.004490111036574,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2026-07-01,26.059581415306194,23.48256861303647,28.63659421757592,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2026-08-01,24.54413944782746,21.96712664555774,27.121152250097182,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2026-09-01,20.287915178954513,17.710902376684793,22.864927981224234,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2026-10-01,14.432062785599319,11.855049983329597,17.00907558786904,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2026-11-01,8.546355508818978,5.969342706549256,11.1233683110887,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2026-12-01,4.208566181574458,1.6315533793047354,6.7855789838441805,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2027-01-01,2.5817042722989925,0.004691470029269951,5.158717074568715,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2027-02-01,4.102388437041604,1.5253756347718816,6.679401239311327,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2027-03-01,8.363854903178428,5.786842100908705,10.94086770544815,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2027-04-01,14.224949493797494,11.647936691527772,16.801962296067217,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2027-05-01,20.115898967841723,17.538886165572002,22.692911770111444,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2027-06-01,24.458930492350113,21.881917690080392,27.035943294619834,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2027-07-01,26.091034598889454,23.51402179661973,28.66804740115918,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2027-08-01,24.57559263141072,21.998579829141,27.152605433680442,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2027-09-01,20.319368362537773,17.742355560268052,22.896381164807494,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2027-10-01,14.463515969182577,11.886503166912854,17.0405287714523,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2027-11-01,8.577808692402236,6.000795890132514,11.154821494671959,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2027-12-01,4.240019365157716,1.6630065628879933,6.817032167427438,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2025-01-01,29.79886239411827,26.228761683828306,33.36896310440823,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2025-02-01,30.382275740166516,26.812175029876553,33.95237645045648,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2025-03-01,30.562794095614127,26.992693385324163,34.13289480590409,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2025-04-01,30.29257438471847,26.722473674428507,33.862675095008434,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2025-05-01,29.64454843261156,26.074447722321597,33.21464914290152,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2025-06-01,28.792880941653408,25.222780231363444,32.36298165194337,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2025-07-01,27.966302200084634,24.39620148979467,31.536402910374598,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2025-08-01,27.38681998600788,23.816719275717915,30.956920696297843,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2025-09-01,27.21023276253176,23.640132052241796,30.780333472821724,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2025-10-01,27.484383605398907,23.914282895108943,31.05448431568887,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2025-11-01,28.136340689477304,24.56623997918734,31.706441399767268,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2025-12-01,28.991939312406952,25.42183860211699,32.56204002269691,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2026-01-01,29.822449185947217,26.252348475657254,33.39254989623718,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2026-02-01,30.405862531995464,26.8357618217055,33.975963242285424,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2026-03-01,30.586380887443077,27.016280177153114,34.15648159773304,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2026-04-01,30.31616117654742,26.746060466257457,33.88626188683738,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2026-05-01,29.668135224440512,26.098034514150548,33.238235934730476,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2026-06-01,28.816467733482355,25.24636702319239,32.38656844377232,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2026-07-01,27.98988899191358,24.419788281623617,31.559989702203545,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2026-08-01,27.410406777836826,23.840306067546862,30.98050748812679,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2026-09-01,27.233819554360707,23.663718844070743,30.80392026465067,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2026-10-01,27.507970397227854,23.93786968693789,31.078071107517818,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2026-11-01,28.159927481306255,24.58982677101629,31.73002819159622,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2026-12-01,29.015526104235903,25.44542539394594,32.58562681452587,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2027-01-01,29.846035977776168,26.275935267486204,33.41613668806613,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2027-02-01,30.429449323824414,26.85934861353445,33.99955003411438,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2027-03-01,30.609967679272025,27.03986696898206,34.18006838956199,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2027-04-01,30.33974796837637,26.769647258086405,33.90984867866633,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2027-05-01,29.69172201626946,26.121621305979495,33.26182272655942,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2027-06-01,28.840054525311302,25.26995381502134,32.410155235601266,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2027-07-01,28.01347578374253,24.443375073452565,31.583576494032492,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2027-08-01,27.433993569665777,23.863892859375813,31.00409427995574,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2027-09-01,27.257406346189654,23.68730563589969,30.827507056479618,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2027-10-01,27.5315571890568,23.961456478766838,31.101657899346765,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2027-11-01,28.183514273135202,24.61341356284524,31.753614983425166,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Singapore,2027-12-01,29.03911289606485,25.469012185774886,32.609213606354814,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2025-01-01,25.703417044166944,22.573939506337958,28.83289458199593,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2025-02-01,24.966542102680485,21.837064564851502,28.096019640509468,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2025-03-01,22.815004223950837,19.685526686121854,25.94448176177982,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2025-04-01,19.825952042644676,16.69647450481569,22.955429580473663,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2025-05-01,16.80094547445358,13.671467936624596,19.930423012282567,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2025-06-01,14.5511783839993,11.421700846170316,17.680655921828283,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2025-07-01,13.680119843903277,10.550642306074293,16.80959738173226,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2025-08-01,14.421815084120576,11.292337546291591,17.55129262194956,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2025-09-01,16.578173261581068,13.448695723752083,19.707650799410054,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2025-10-01,19.57204574161807,16.442568203789087,22.701523279447052,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2025-11-01,22.601872608540003,19.472395070711016,25.73135014636899,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2025-12-01,24.856459997725125,21.726982459896142,27.985937535554108,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2026-01-01,25.73233883655199,22.602861298723006,28.86181637438097,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2026-02-01,24.995463895065534,21.86598635723655,28.124941432894516,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2026-03-01,22.84392601633588,19.714448478506895,25.973403554164868,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2026-04-01,19.85487383502972,16.72539629720074,22.984351372858704,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2026-05-01,16.829867266838626,13.700389729009641,19.95934480466761,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2026-06-01,14.580100176384347,11.450622638555362,17.70957771421333,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2026-07-01,13.709041636288323,10.579564098459338,16.83851917411731,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2026-08-01,14.450736876505623,11.321259338676638,17.580214414334606,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2026-09-01,16.607095053966113,13.477617516137128,19.736572591795095,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2026-10-01,19.600967534003118,16.471489996174135,22.7304450718321,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2026-11-01,22.630794400925048,19.501316863096065,25.76027193875403,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2026-12-01,24.885381790110173,21.75590425228119,28.014859327939156,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2027-01-01,25.761260628937038,22.631783091108055,28.89073816676602,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2027-02-01,25.02438568745058,21.894908149621592,28.153863225279565,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2027-03-01,22.872847808720927,19.743370270891944,26.00232534654991,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2027-04-01,19.88379562741477,16.754318089585787,23.013273165243753,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2027-05-01,16.858789059223675,13.72931152139469,19.988266597052657,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2027-06-01,14.609021968769394,11.47954443094041,17.73849950659838,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2027-07-01,13.737963428673371,10.608485890844387,16.867440966502357,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2027-08-01,14.479658668890668,11.350181131061683,17.609136206719654,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2027-09-01,16.63601684635116,13.506539308522177,19.765494384180144,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2027-10-01,19.629889326388163,16.500411788559177,22.75936686421715,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2027-11-01,22.659716193310096,19.530238655481114,25.78919373113908,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2027-12-01,24.91430358249522,21.784826044666232,28.043781120324205,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
