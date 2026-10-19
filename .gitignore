@@ -65,3 +65,12 @@ models/*.pkl
 *.h5
 *.hdf5
 *.nc
+*.zip
+*.log
+.jupyter/
+.sudo_as_admin_successful
+capture_final.py
+finalize_fixes.py
+finish_text.py
+fix_app.py
+refine_project.py

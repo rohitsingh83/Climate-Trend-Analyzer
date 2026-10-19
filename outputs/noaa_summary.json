@@ -5,7 +5,7 @@
   "start": "1980-01-01",
   "end": "2024-12-01",
   "n_complete_years": 45,
-  "linear_slope_ppm_per_year": 1.9157590030742204,
+  "linear_slope_ppm_per_year": 1.9157590030742209,
   "first_complete_year_mean_ppm": 338.7625,
   "last_complete_year_mean_ppm": 424.6041666666667,
   "source": "https://gml.noaa.gov/webdata/ccgg/trends/co2/co2_mm_mlo.csv",

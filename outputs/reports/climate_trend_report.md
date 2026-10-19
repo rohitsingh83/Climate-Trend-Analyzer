@@ -1,6 +1,6 @@
 # Climate Trend Analyzer - Analytical Report
 
-*Generated on 18 October 2026, 09:34 by the `Climate-Trend-Analyzer` pipeline (seed = 42).*
+*Generated on 19 October 2026, 11:31 by the `Climate-Trend-Analyzer` pipeline (seed = 42).*
 
 ---
 
@@ -17,7 +17,7 @@
 | Best forecast RMSE | 1.3148 °C |
 | Post-cleaning completeness | 100.00 % |
 
-*Generated automatically on 2026-10-18 09:34 from 2,700 cleaned monthly records (1980-01 to 2024-12) across 5 regions.*
+*Generated automatically on 2026-10-19 11:31 from 2,700 cleaned monthly records (1980-01 to 2024-12) across 5 regions.*
 
 ## 1. Data Ingestion & Quality Control
 
@@ -185,7 +185,7 @@ Every model was scored on the same 60-month chronological validation window, the
 
 ## 7. Key Findings
 
-*Generated automatically on 2026-10-18 09:34 from 2,700 cleaned monthly records (1980-01 to 2024-12) across 5 regions.*
+*Generated automatically on 2026-10-19 11:31 from 2,700 cleaned monthly records (1980-01 to 2024-12) across 5 regions.*
 
 ### 1. Warming trend
 

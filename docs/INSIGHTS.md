@@ -2,7 +2,7 @@
 
 ## Key Findings
 
-*Generated automatically on 2026-10-18 09:34 from 2,700 cleaned monthly records (1980-01 to 2024-12) across 5 regions.*
+*Generated automatically on 2026-10-19 11:31 from 2,700 cleaned monthly records (1980-01 to 2024-12) across 5 regions.*
 
 ### 1. Warming trend
 

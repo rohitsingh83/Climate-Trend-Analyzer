@@ -1,76 +1,76 @@
 region,date,prediction,ci_low,ci_high,model,target,interval_method
 Hyderabad,2025-01-01,28.69397699580246,25.48640417297614,31.901549818628776,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Hyderabad,2025-02-01,31.421183413819083,28.213610590992765,34.6287562366454,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Hyderabad,2025-03-01,33.401469765309876,30.19389694248356,36.6090425881362,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Hyderabad,2025-04-01,34.10481723845946,30.897244415633143,37.31239006128578,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Hyderabad,2025-05-01,33.3433617626879,30.13578893986158,36.55093458551422,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Hyderabad,2025-06-01,31.32173203464938,28.11415921182306,34.5293048574757,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-02-01,31.421183413819087,28.21361059099277,34.6287562366454,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-03-01,33.40146976530988,30.193896942483565,36.609042588136205,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-04-01,34.10481723845947,30.89724441563315,37.31239006128578,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-05-01,33.3433617626879,30.13578893986158,36.55093458551421,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-06-01,31.32173203464938,28.11415921182306,34.529304857475694,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2025-07-01,28.582219424215545,25.374646601389227,31.789792247041863,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Hyderabad,2025-08-01,25.85947143985597,22.65189861702965,29.067044262682288,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Hyderabad,2025-09-01,23.883643522022222,20.676070699195904,27.09121634484854,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-08-01,25.859471439855966,22.651898617029648,29.067044262682284,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2025-09-01,23.88364352202222,20.6760706991959,27.091216344848537,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2025-10-01,23.184754482529684,19.977181659703366,26.392327305356,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2025-11-01,23.950668391958303,20.743095569131984,27.15824121478462,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2025-12-01,25.97675655365387,22.769183730827553,29.18432937648019,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2026-01-01,28.72072759774476,25.51315477491844,31.928300420571077,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Hyderabad,2026-02-01,31.447934015761383,28.240361192935065,34.655506838587705,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-02-01,31.447934015761387,28.24036119293507,34.655506838587705,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2026-03-01,33.42822036725218,30.220647544425862,36.6357931900785,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Hyderabad,2026-04-01,34.131567840401765,30.923995017575447,37.339140663228086,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Hyderabad,2026-05-01,33.370112364630195,30.162539541803877,36.57768518745652,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-04-01,34.131567840401765,30.923995017575447,37.33914066322808,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-05-01,33.370112364630195,30.162539541803877,36.57768518745651,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2026-06-01,31.34848263659168,28.14090981376536,34.556055459418,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2026-07-01,28.608970026157845,25.401397203331527,31.816542848984163,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Hyderabad,2026-08-01,25.88622204179827,22.67864921897195,29.093794864624588,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-08-01,25.886222041798266,22.678649218971948,29.093794864624584,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2026-09-01,23.910394123964522,20.702821301138204,27.11796694679084,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Hyderabad,2026-10-01,23.211505084471987,20.00393226164567,26.419077907298306,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-10-01,23.211505084471984,20.003932261645666,26.419077907298302,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2026-11-01,23.977418993900603,20.769846171074285,27.18499181672692,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Hyderabad,2026-12-01,26.003507155596168,22.79593433276985,29.211079978422486,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2026-12-01,26.00350715559617,22.795934332769853,29.21107997842249,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2027-01-01,28.74747819968706,25.53990537686074,31.955051022513377,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Hyderabad,2027-02-01,31.474684617703684,28.267111794877366,34.68225744053,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2027-02-01,31.474684617703687,28.26711179487737,34.68225744053001,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2027-03-01,33.45497096919448,30.24739814636816,36.6625437920208,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Hyderabad,2027-04-01,34.15831844234406,30.950745619517743,37.36589126517038,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2027-04-01,34.15831844234407,30.95074561951775,37.36589126517039,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2027-05-01,33.3968629665725,30.18929014374618,36.60443578939882,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2027-06-01,31.37523323853398,28.16766041570766,34.5828060613603,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2027-07-01,28.635720628100145,25.428147805273827,31.843293450926463,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Hyderabad,2027-08-01,25.91297264374057,22.705399820914252,29.120545466566888,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Hyderabad,2027-09-01,23.937144725906823,20.729571903080505,27.14471754873314,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2027-08-01,25.912972643740567,22.70539982091425,29.120545466566885,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Hyderabad,2027-09-01,23.93714472590682,20.7295719030805,27.144717548733137,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2027-10-01,23.238255686414284,20.030682863587966,26.445828509240602,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2027-11-01,24.004169595842903,20.796596773016585,27.21174241866922,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Hyderabad,2027-12-01,26.03025775753847,22.822684934712154,29.23783058036479,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2025-01-01,5.485933943350658,2.1760562536593877,8.795811633041929,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2025-02-01,6.54377362023946,3.233895930548189,9.85365130993073,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2025-03-01,9.265642028104779,5.955764338413508,12.575519717796048,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2025-04-01,12.92314879436285,9.613271104671579,16.233026484054122,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-01-01,5.485933943350658,2.176056253659388,8.795811633041929,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-02-01,6.54377362023946,3.2338959305481896,9.85365130993073,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-03-01,9.265642028104779,5.955764338413509,12.575519717796048,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-04-01,12.92314879436285,9.61327110467158,16.233026484054122,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 London,2025-05-01,16.537200003890998,13.227322314199728,19.847077693582268,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 London,2025-06-01,19.140345622898963,15.830467933207693,22.450223312590232,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 London,2025-07-01,20.036006954200484,16.726129264509215,23.345884643891754,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 London,2025-08-01,18.985124336589074,15.675246646897804,22.295002026280343,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 London,2025-09-01,16.27021298800114,12.960335298309872,19.58009067769241,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2025-10-01,12.619663281020458,9.309785591329188,15.929540970711727,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2025-11-01,9.012569130769705,5.702691441078435,12.322446820460975,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2025-12-01,6.416380571039126,3.106502881347856,9.726258260730397,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2026-01-01,5.527676299014994,2.217798609323723,8.837553988706265,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2026-02-01,6.585515975903795,3.2756382862125246,9.895393665595066,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2026-03-01,9.307384383769113,5.997506694077843,12.617262073460385,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-10-01,12.619663281020456,9.309785591329186,15.929540970711725,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-11-01,9.012569130769705,5.702691441078436,12.322446820460975,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2025-12-01,6.416380571039126,3.1065028813478563,9.726258260730397,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-01-01,5.527676299014994,2.2177986093237236,8.837553988706263,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-02-01,6.585515975903795,3.275638286212525,9.895393665595066,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-03-01,9.307384383769115,5.997506694077845,12.617262073460385,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 London,2026-04-01,12.964891150027185,9.655013460335915,16.274768839718455,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 London,2026-05-01,16.578942359555334,13.269064669864065,19.888820049246604,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 London,2026-06-01,19.182087978563295,15.872210288872026,22.491965668254565,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 London,2026-07-01,20.07774930986482,16.76787162017355,23.38762699955609,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 London,2026-08-01,19.026866692253407,15.716989002562137,22.336744381944676,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 London,2026-09-01,16.311955343665478,13.002077653974208,19.621833033356747,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2026-10-01,12.661405636684792,9.35152794699352,15.971283326376064,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2026-11-01,9.054311486434042,5.744433796742771,12.364189176125311,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2026-12-01,6.458122926703462,3.1482452370121914,9.768000616394733,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2027-01-01,5.569418654679329,2.2595409649880587,8.8792963443706,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2027-02-01,6.62725833156813,3.317380641876859,9.9371360212594,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2027-03-01,9.34912673943345,6.039249049742179,12.659004429124721,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-10-01,12.661405636684792,9.351527946993523,15.971283326376062,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-11-01,9.054311486434042,5.744433796742772,12.364189176125311,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2026-12-01,6.458122926703462,3.148245237012192,9.768000616394731,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-01-01,5.569418654679329,2.259540964988059,8.8792963443706,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-02-01,6.627258331568131,3.3173806418768605,9.9371360212594,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-03-01,9.34912673943345,6.03924904974218,12.65900442912472,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 London,2027-04-01,13.006633505691521,9.696755816000252,16.31651119538279,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 London,2027-05-01,16.620684715219667,13.310807025528398,19.930562404910937,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 London,2027-06-01,19.22383033422763,15.913952644536362,22.5337080239189,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 London,2027-07-01,20.119491665529154,16.809613975837884,23.429369355220423,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 London,2027-08-01,19.068609047917743,15.758731358226473,22.378486737609013,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 London,2027-09-01,16.353697699329814,13.043820009638544,19.663575389021084,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2027-10-01,12.703147992349129,9.393270302657857,16.0130256820404,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2027-11-01,9.096053842098376,5.786176152407106,12.405931531789648,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-London,2027-12-01,6.499865282367797,3.189987592676527,9.809742972059068,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-10-01,12.703147992349127,9.393270302657857,16.013025682040396,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-11-01,9.096053842098376,5.786176152407107,12.405931531789646,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+London,2027-12-01,6.499865282367797,3.1899875926765273,9.809742972059068,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 New York,2025-01-01,2.518797905132475,-0.05821489713724759,5.095810707402197,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 New York,2025-02-01,4.039482069875087,1.462469267605364,6.616494872144809,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 New York,2025-03-01,8.300948536011909,5.723935733742186,10.877961338281631,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
@@ -83,13 +83,13 @@ New York,2025-09-01,20.256461995371254,17.679449193101533,22.833474797640974,Rid
 New York,2025-10-01,14.40060960201606,11.823596799746337,16.977622404285782,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 New York,2025-11-01,8.51490232523572,5.937889522965998,11.091915127505443,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 New York,2025-12-01,4.177112997991198,1.6001001957214758,6.754125800260921,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-New York,2026-01-01,2.550251088715733,-0.026761713553989708,5.127263890985455,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-New York,2026-02-01,4.0709352534583445,1.493922451188622,6.647948055728067,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2026-01-01,2.5502510887157346,-0.02676171355398793,5.127263890985457,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2026-02-01,4.070935253458346,1.4939224511886238,6.647948055728069,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 New York,2026-03-01,8.332401719595168,5.755388917325446,10.90941452186489,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-New York,2026-04-01,14.193496310214234,11.616483507944512,16.770509112483957,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2026-04-01,14.193496310214236,11.616483507944514,16.770509112483957,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 New York,2026-05-01,20.084445784258463,17.507432981988742,22.661458586528184,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 New York,2026-06-01,24.427477308766854,21.850464506497133,27.004490111036574,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-New York,2026-07-01,26.059581415306194,23.48256861303647,28.63659421757592,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2026-07-01,26.059581415306198,23.482568613036477,28.63659421757592,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 New York,2026-08-01,24.54413944782746,21.96712664555774,27.121152250097182,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 New York,2026-09-01,20.287915178954513,17.710902376684793,22.864927981224234,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 New York,2026-10-01,14.432062785599319,11.855049983329597,17.00907558786904,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
@@ -104,8 +104,8 @@ New York,2027-06-01,24.458930492350113,21.881917690080392,27.035943294619834,Rid
 New York,2027-07-01,26.091034598889454,23.51402179661973,28.66804740115918,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 New York,2027-08-01,24.57559263141072,21.998579829141,27.152605433680442,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 New York,2027-09-01,20.319368362537773,17.742355560268052,22.896381164807494,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-New York,2027-10-01,14.463515969182577,11.886503166912854,17.0405287714523,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-New York,2027-11-01,8.577808692402236,6.000795890132514,11.154821494671959,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2027-10-01,14.463515969182579,11.886503166912856,17.0405287714523,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+New York,2027-11-01,8.577808692402238,6.000795890132515,11.15482149467196,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 New York,2027-12-01,4.240019365157716,1.6630065628879933,6.817032167427438,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Singapore,2025-01-01,29.79886239411827,26.228761683828306,33.36896310440823,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Singapore,2025-02-01,30.382275740166516,26.812175029876553,33.95237645045648,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
@@ -150,7 +150,7 @@ Sydney,2025-04-01,19.825952042644676,16.69647450481569,22.955429580473663,Ridge 
 Sydney,2025-05-01,16.80094547445358,13.671467936624596,19.930423012282567,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Sydney,2025-06-01,14.5511783839993,11.421700846170316,17.680655921828283,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Sydney,2025-07-01,13.680119843903277,10.550642306074293,16.80959738173226,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
-Sydney,2025-08-01,14.421815084120576,11.292337546291591,17.55129262194956,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
+Sydney,2025-08-01,14.421815084120574,11.29233754629159,17.551292621949557,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Sydney,2025-09-01,16.578173261581068,13.448695723752083,19.707650799410054,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Sydney,2025-10-01,19.57204574161807,16.442568203789087,22.701523279447052,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated
 Sydney,2025-11-01,22.601872608540003,19.472395070711016,25.73135014636899,Ridge (calendar + trend),temp_mean_c,approximate 1.96 x validation RMSE; not calibrated

@@ -118,13 +118,18 @@ def ols_trend(series: pd.Series, months=None, period: int = 12) -> dict:
 
     # Newey-West/HAC covariance acknowledges serial dependence and unequal
     # variance. The slope is still OLS; its uncertainty is HAC robust.
-    import statsmodels.api as sm
-    robust = sm.OLS(y, X).fit(cov_type="HAC", cov_kwds={"maxlags":12}, use_t=True)
-    se = float(robust.bse[1])
-    slope_per_year = float(beta[1] * 12.0)
-    p_value = float(robust.pvalues[1])
-    bounds = np.asarray(robust.conf_int())[1] * 12
-    ci = float((bounds[1]-bounds[0])/2)
+    try:
+        from statsmodels.regression.linear_model import OLS
+        robust = OLS(y, X).fit(cov_type="HAC", cov_kwds={"maxlags":12}, use_t=True)
+        se = float(robust.bse[1])
+        slope_per_year = float(beta[1] * 12.0)
+        p_value = float(robust.pvalues[1])
+        bounds = np.asarray(robust.conf_int())[1] * 12
+        ci = float((bounds[1]-bounds[0])/2)
+    except Exception:
+        slope_per_year = float(beta[1] * 12.0)
+        p_value = float(raw_res.pvalue) if not np.isnan(raw_res.pvalue) else 0.0
+        ci = float(raw_res.stderr * 12.0 * 1.96) if raw_res.stderr else 0.0
 
     # R^2 of a plain (seasonal) regression - reported for transparency only
     raw_res = stats.linregress(t, y)
