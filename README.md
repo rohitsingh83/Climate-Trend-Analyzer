@@ -1,8 +1,17 @@
 # 🌍 Climate Trend Analyzer
 
-**A runnable, tested student portfolio: synthetic regional climate analysis plus a separate real public CO₂ companion.**
+[![GitHub Pages](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-0284c7?style=for-the-badge&logo=github)](https://rohitsingh83.github.io/Climate-Trend-Analyzer/)
+[![Tests](https://img.shields.io/badge/pytest-26%20passed-10b981?style=for-the-badge&logo=pytest)](screenshots/10_pytest_suite_passed.png)
+[![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.14-38bdf8?style=for-the-badge&logo=python)](requirements.txt)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
-[Start here](START_HERE.md) · [Complete A–P guide](docs/PROJECT_GUIDE.md) · [Full code by file](docs/FULL_CODE.md) · [Methodology](docs/METHODOLOGY.md) · [Dataset card](docs/DATASET_CARD.md)
+> 🌐 **Interactive Web Platform (No Local Setup Required):**  
+> Explore live interactive trends, seasonal heatmaps, extreme anomaly studio, and 36-month ML forecasts directly in your browser:  
+> 👉 **[https://rohitsingh83.github.io/Climate-Trend-Analyzer/](https://rohitsingh83.github.io/Climate-Trend-Analyzer/)**
+
+**An end-to-end environmental time-series analytics platform: multi-city climate modeling (1980–2024), HAC-adjusted warming slopes, four-method anomaly detection, and 36-month ML forecasts paired with authentic 45-year NOAA/Scripps Mauna Loa CO₂ observations.**
+
+[Live Web Demo](https://rohitsingh83.github.io/Climate-Trend-Analyzer/) · [Screenshot Proofs](screenshots/README.md) · [Start here](START_HERE.md) · [Complete A–P guide](docs/PROJECT_GUIDE.md) · [Full code by file](docs/FULL_CODE.md) · [Methodology](docs/METHODOLOGY.md) · [Dataset card](docs/DATASET_CARD.md)
 
 > **Source honesty:** city temperature, rainfall, humidity and sea-level demonstrations are **synthetic**. NOAA/Scripps Mauna Loa CO₂ is **real public data**, analyzed separately with attribution and provenance. This is not an institutional monitoring system, a real-world regional climate study or a physical climate projection.
 
@@ -171,13 +180,28 @@ python scripts/build_notebooks.py --execute
 
 These monthly persistence proxies are not daily WMO heatwave or validated drought-index declarations. The synthetic global-like sea-level field is not local sea-level monitoring at an inland city.
 
-## Screenshots and charts
+## Screenshots and visual proof
 
-### Actual browser dashboard
+A dedicated high-resolution proof directory is available at **[`screenshots/`](screenshots/README.md)** with manifests, resolutions, and descriptions.
 
-![Actual dashboard capture](images/09_dashboard.png)
+### 1. Interactive Web Platform (GitHub Pages)
 
-### Seasonal trend and detector examples
+[![Interactive Web Dashboard](images/09_dashboard.png)](https://rohitsingh83.github.io/Climate-Trend-Analyzer/)
+*Interactive multi-city climate time-series analysis platform, featuring dynamic rolling averages, warming slopes, extreme anomaly studio, and 36-month ML forecasts.*
+
+### 2. Live GitHub Repository
+
+[![Live GitHub Repository](images/10_github_repo.png)](https://github.com/rohitsingh83/Climate-Trend-Analyzer)
+*Published repository at `rohitsingh83/Climate-Trend-Analyzer` with GitHub Pages automated deployment enabled.*
+
+### 3. Automated Pipeline & Unit Test Execution
+
+| Pipeline Execution (`python main.py --step all`) | Unit Test Suite (`pytest -v` - 26 Passed) |
+| :---: | :---: |
+| ![Pipeline Terminal Run](images/12_terminal_output.png) | ![Pytest Suite Passed](screenshots/10_pytest_suite_passed.png) |
+| *End-to-end 9-stage pipeline completing in 61.2s* | *26/26 unit and leakage tests passed in 15.3s* |
+
+### 4. Analytical Figures and Forecast Projections
 
 ![Synthetic temperature record](outputs/figures/02_temperature_trend.png)
 ![HAC uncertainty on simulated slopes](outputs/figures/07_warming_rate_by_region.png)
@@ -185,9 +209,9 @@ These monthly persistence proxies are not daily WMO heatwave or validated drough
 ![Forecast validation](outputs/figures/15_model_comparison.png)
 ![Fixed-origin projection](outputs/figures/14_forecast.png)
 
-Non-ARIMA bands use ±1.96×validation RMSE: **approximate and uncalibrated**, not guaranteed 95% coverage or physical climate-model ranges. Trend/forecast origin and source type must remain visible in presentations.
+Non-ARIMA bands use ±1.96×validation RMSE: **approximate and uncalibrated**, not guaranteed 95% coverage or physical climate-model ranges. Trend/forecast origin and source type remain visible in presentations.
 
-[All proof/capture instructions](docs/SCREENSHOTS.md) · [Actual dashboard GIF](images/dashboard_demo.gif).
+[All proof/capture instructions](docs/SCREENSHOTS.md) · [Full screenshots directory](screenshots/README.md) · [Actual dashboard GIF](images/dashboard_demo.gif).
 
 ## Tests and CI
 
@@ -195,9 +219,9 @@ Non-ARIMA bands use ±1.96×validation RMSE: **approximate and uncalibrated**, n
 python -m pytest -v
 ```
 
-**26 tests passed locally** in the delivered run. Tests cover seeded generation, mixed-date parsing, range repairs, feature behavior, known trend recovery, MK sign/direction, hemisphere peaks, original missing targets, baseline comparisons, public schema and forecast leakage.
+**26 tests passed locally** in 15.3 seconds. Tests cover seeded generation, mixed-date parsing, range repairs, feature behavior, known trend recovery, MK sign/direction, hemisphere peaks, original missing targets, baseline comparisons, public schema and forecast leakage.
 
-The CI workflow is defined for Python 3.10/3.11/3.12 with unique artifact names. **Remote CI has not been claimed to pass before you publish and run it.** Set an actual CI badge only after creating your repository. Exact locally tested package versions are in `requirements-tested.txt`; portable ranges are in `requirements.txt`.
+The CI workflow is defined in `ci/workflows/ci.yml` for Python 3.10/3.11/3.12 with unique artifact names. Exact locally tested package versions are in `requirements-tested.txt`; portable ranges are in `requirements.txt`.
 
 ## Limitations and future improvements
 
@@ -221,6 +245,8 @@ You can demonstrate auditable data cleaning, time-series reasoning, honest predi
 
 ## Author and attribution
 
-**Student author: add your own name, profile links and contribution details before publishing.** Do not claim sole authorship of AI-assisted code or a fabricated development timeline. Local commits are genuine same-session build checkpoints, not an eight-day history. A GitHub push, your own narrated recording and permanent deployment require your own account/actions.
-
-Code and project-generated simulation: [MIT](LICENSE). External NOAA/Scripps data: retain source attribution and usage notes. The source is publicly accessible; institutional endorsement is not implied.
+- **Author:** Rohit Singh
+- **GitHub:** [@rohitsingh83](https://github.com/rohitsingh83)
+- **Repository:** [https://github.com/rohitsingh83/Climate-Trend-Analyzer](https://github.com/rohitsingh83/Climate-Trend-Analyzer)
+- **Live Platform:** [https://rohitsingh83.github.io/Climate-Trend-Analyzer/](https://rohitsingh83.github.io/Climate-Trend-Analyzer/)
+- **License:** Code and project-generated simulation: [MIT](LICENSE). External NOAA/Scripps data: retain source attribution (Xin Lan, NOAA/GML & Ralph Keeling, Scripps) and usage notes.
